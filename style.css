@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: rgb(4, 34, 37);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color:rgb(4, 34, 37);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: rgb(4, 34, 37);
+  border: 2px solid rgb(4, 34, 37);
+}
+
+.btn-outline:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 40px 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 30px 0 20px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.feature-list {
+  list-style-type: none;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  color: #4a5568;
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+  color: rgb(4, 34, 37);
+}
+
+.feature-list li:before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.mobile-apps {
+  margin-top: 30px;
+}
+
+.app-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.app-description {
+  color: #4a5568;
+  margin-left: 0;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+      transform: scale(4);
+      opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 15px;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+  
+  .tagline {
+      font-size: 1.1rem;
+  }
+  
+  .features {
+      grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .btn {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+  
+  h2 {
+      font-size: 1.5rem;
+  }
+  
+  h3 {
+      font-size: 1.3rem;
+  }
+  
+  .app-item {
+      padding: 12px;
+  }
+}

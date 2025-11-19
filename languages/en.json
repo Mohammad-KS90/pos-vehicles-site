@@ -44,5 +44,45 @@
     "value_success_title": "Customer Success",
     "value_success_desc": "We help your business grow.",
 
-    "services_title": "Our Services"
+    "services_title": "Our Services",
+    "services_pos_solutions": "POS Solutions",
+  
+    "services_inventory_title": "Inventory Management",
+    "services_inventory_desc": "Complete vehicle inventory tracking with real-time updates and automated alerts.",
+  
+    "services_sales_title": "Sales Processing",
+    "services_sales_desc": "Streamlined sales workflows with integrated payment processing and documentation.",
+  
+    "services_crm_title": "Customer Relationship Management",
+    "services_crm_desc": "Comprehensive CRM to track customer interactions and service history.",
+  
+    "services_workshop_title": "Workshop Management",
+  
+    "services_job_title": "Job Scheduling",
+    "services_job_desc": "Efficient workshop job scheduling with technician allocation and progress tracking.",
+  
+    "services_parts_title": "Parts Inventory",
+    "services_parts_desc": "Automated parts and supplies inventory management with reorder alerts.",
+  
+    "services_history_title": "Service History",
+    "services_history_desc": "Complete vehicle service history tracking and maintenance scheduling.",
+  
+    "services_mobile_title": "Mobile Solutions",
+  
+    "services_ios_title": "iOS Application",
+    "services_ios_desc": "Native iOS app for on-the-go management and customer interactions.",
+  
+    "services_android_title": "Android Application",
+    "services_android_desc": "Full-featured Android app built on a shared codebase for consistency.",
+  
+    "services_cloud_title": "Cloud Synchronization",
+    "services_cloud_desc": "Real-time data sync across all devices and platforms.",
+  
+    "services_ready_title": "Ready to Get Started?",
+    "services_ready_desc": "Choose the plan that fits your business needs",
+  
+    "services_btn_pricing": "View Pricing",
+    "services_btn_demo": "Schedule Demo"
+  
+    
 }

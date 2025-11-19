@@ -44,5 +44,44 @@
     "value_success_title": "Succès client",
     "value_success_desc": "Votre succès est le nôtre.",
 
-    "services_title": "Nos Services"
+    "services_title": "Nos Services",
+    "services_pos_solutions": "Solutions POS",
+  
+    "services_inventory_title": "Gestion d’Inventaire",
+    "services_inventory_desc": "Suivi complet des véhicules avec mises à jour en temps réel et alertes automatiques.",
+  
+    "services_sales_title": "Traitement des Ventes",
+    "services_sales_desc": "Flux de vente simplifiés avec paiements intégrés et documentation.",
+  
+    "services_crm_title": "Gestion de la Relation Client",
+    "services_crm_desc": "CRM complet pour suivre les interactions et l’historique des services des clients.",
+  
+    "services_workshop_title": "Gestion d’Atelier",
+  
+    "services_job_title": "Planification des Travaux",
+    "services_job_desc": "Planification efficace des travaux avec allocation des techniciens et suivi de progression.",
+  
+    "services_parts_title": "Stock des Pièces",
+    "services_parts_desc": "Gestion automatisée des pièces et fournitures avec alertes de réapprovisionnement.",
+  
+    "services_history_title": "Historique d’Entretien",
+    "services_history_desc": "Suivi complet de l'historique des services et planification de maintenance.",
+  
+    "services_mobile_title": "Solutions Mobiles",
+  
+    "services_ios_title": "Application iOS",
+    "services_ios_desc": "Application native iOS pour une gestion en déplacement.",
+  
+    "services_android_title": "Application Android",
+    "services_android_desc": "Application Android complète construite sur une base de code partagée.",
+  
+    "services_cloud_title": "Synchronisation Cloud",
+    "services_cloud_desc": "Synchronisation des données en temps réel sur tous les appareils.",
+  
+    "services_ready_title": "Prêt à Commencer ?",
+    "services_ready_desc": "Choisissez le plan adapté à vos besoins",
+  
+    "services_btn_pricing": "Voir les Tarifs",
+    "services_btn_demo": "Planifier une Démo"
+  
 }

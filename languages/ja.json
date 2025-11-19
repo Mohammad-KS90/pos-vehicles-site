@@ -44,5 +44,44 @@
     "value_success_title": "お客様の成功",
     "value_success_desc": "お客様の成長をサポートします。",
 
-    "services_title": "サービス"
+    "services_title": "サービス内容",
+    "services_pos_solutions": "POSソリューション",
+  
+    "services_inventory_title": "在庫管理",
+    "services_inventory_desc": "リアルタイム更新と自動アラートによる車両在庫管理。",
+  
+    "services_sales_title": "販売処理",
+    "services_sales_desc": "支払い処理と書類管理を統合した効率的な販売ワークフロー。",
+  
+    "services_crm_title": "顧客関係管理",
+    "services_crm_desc": "顧客とのやり取りとサービス履歴を追跡する総合CRM。",
+  
+    "services_workshop_title": "ワークショップ管理",
+  
+    "services_job_title": "作業スケジューリング",
+    "services_job_desc": "技術者の割り当てと進捗追跡を備えた効率的な作業スケジューリング。",
+  
+    "services_parts_title": "部品在庫",
+    "services_parts_desc": "自動補充通知を備えた部品と用品の在庫管理。",
+  
+    "services_history_title": "サービス履歴",
+    "services_history_desc": "車両の完全なサービス履歴とメンテナンススケジュールの管理。",
+  
+    "services_mobile_title": "モバイルソリューション",
+  
+    "services_ios_title": "iOSアプリ",
+    "services_ios_desc": "外出先での管理と顧客対応が可能なネイティブiOSアプリ。",
+  
+    "services_android_title": "Androidアプリ",
+    "services_android_desc": "共有コードベースで構築されたフル機能のAndroidアプリ。",
+  
+    "services_cloud_title": "クラウド同期",
+    "services_cloud_desc": "すべてのデバイスとプラットフォーム間でリアルタイムデータ同期。",
+  
+    "services_ready_title": "準備はできていますか？",
+    "services_ready_desc": "ビジネスに最適なプランを選択してください",
+  
+    "services_btn_pricing": "料金を見る",
+    "services_btn_demo": "デモを予約"
+  
 }

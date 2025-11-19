@@ -39,5 +39,44 @@
     "value_reliability_desc": "ऐसे सिस्टम बनाना जिन पर आप भरोसा कर सकें।",
     "value_success_title": "ग्राहक सफलता",
     "value_success_desc": "हम आपके व्यवसाय को बढ़ने में मदद करते हैं।",
-    "services_title": "हमारी सेवाएं"
+    "services_title": "हमारी सेवाएँ",
+    "services_pos_solutions": "पीओएस समाधान",
+  
+    "services_inventory_title": "इन्वेंटरी प्रबंधन",
+    "services_inventory_desc": "रियल-टाइम अपडेट और स्वचालित अलर्ट के साथ वाहन इन्वेंटरी ट्रैकिंग।",
+  
+    "services_sales_title": "सेल्स प्रोसेसिंग",
+    "services_sales_desc": "इंटीग्रेटेड पेमेंट और डॉक्यूमेंटेशन के साथ सरलित बिक्री प्रक्रिया।",
+  
+    "services_crm_title": "ग्राहक संबंध प्रबंधन",
+    "services_crm_desc": "ग्राहक इंटरैक्शन और सेवा इतिहास ट्रैक करने के लिए पूर्ण CRM।",
+  
+    "services_workshop_title": "वर्कशॉप प्रबंधन",
+  
+    "services_job_title": "कार्य शेड्यूलिंग",
+    "services_job_desc": "तकनीशियन आवंटन और प्रगति ट्रैकिंग के साथ कुशल कार्य शेड्यूलिंग।",
+  
+    "services_parts_title": "पार्ट्स इन्वेंटरी",
+    "services_parts_desc": "स्वचालित पार्ट्स इन्वेंटरी प्रबंधन और रिऑर्डर अलर्ट।",
+  
+    "services_history_title": "सेवा इतिहास",
+    "services_history_desc": "वाहन सेवा इतिहास और मेंटेनेंस शेड्यूल का पूर्ण ट्रैकिंग।",
+  
+    "services_mobile_title": "मोबाइल समाधान",
+  
+    "services_ios_title": "iOS एप्लिकेशन",
+    "services_ios_desc": "चलते-फिरते प्रबंधन और ग्राहक इंटरैक्शन के लिए नैटिव iOS ऐप।",
+  
+    "services_android_title": "Android एप्लिकेशन",
+    "services_android_desc": "समान कोडबेस पर आधारित फुल-फीचर Android ऐप।",
+  
+    "services_cloud_title": "क्लाउड सिंक्रोनाइज़ेशन",
+    "services_cloud_desc": "सभी डिवाइस और प्लेटफॉर्म पर रियल-टाइम डेटा सिंक।",
+  
+    "services_ready_title": "क्या आप शुरू करने के लिए तैयार हैं?",
+    "services_ready_desc": "अपने व्यवसाय के लिए उपयुक्त प्लान चुनें",
+  
+    "services_btn_pricing": "कीमत देखें",
+    "services_btn_demo": "डेमो शेड्यूल करें"
+  
 }

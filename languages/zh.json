@@ -44,5 +44,44 @@
     "value_success_title": "客户成功",
     "value_success_desc": "助力您的业务成长。",
 
-    "services_title": "我们的服务"
+    "services_title": "我们的服务",
+    "services_pos_solutions": "POS 解决方案",
+  
+    "services_inventory_title": "库存管理",
+    "services_inventory_desc": "实时更新和自动提醒的车辆库存跟踪系统。",
+  
+    "services_sales_title": "销售处理",
+    "services_sales_desc": "简化的销售流程，集成支付和文档管理。",
+  
+    "services_crm_title": "客户关系管理",
+    "services_crm_desc": "全面 CRM 系统，用于跟踪客户互动和服务记录。",
+  
+    "services_workshop_title": "车间管理",
+  
+    "services_job_title": "工作调度",
+    "services_job_desc": "高效的车间任务调度，提供技术人员分配和进度跟踪。",
+  
+    "services_parts_title": "零件库存",
+    "services_parts_desc": "自动化零件和供应库存管理，并提供补货提醒。",
+  
+    "services_history_title": "服务记录",
+    "services_history_desc": "完整的车辆服务记录跟踪和维护计划。",
+  
+    "services_mobile_title": "移动解决方案",
+  
+    "services_ios_title": "iOS 应用",
+    "services_ios_desc": "原生 iOS 应用，用于随时随地的管理和客户互动。",
+  
+    "services_android_title": "Android 应用",
+    "services_android_desc": "基于共享代码库构建的完整 Android 应用。",
+  
+    "services_cloud_title": "云同步",
+    "services_cloud_desc": "跨所有设备和平台的实时数据同步。",
+  
+    "services_ready_title": "准备好开始了吗？",
+    "services_ready_desc": "选择适合您业务需求的方案",
+  
+    "services_btn_pricing": "查看价格",
+    "services_btn_demo": "预约演示"
+  
 }

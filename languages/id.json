@@ -44,5 +44,44 @@
     "value_success_title": "Kesuksesan Pelanggan",
     "value_success_desc": "Kami membantu bisnis Anda berkembang.",
 
-    "services_title": "Layanan Kami"
+    "services_title": "Layanan Kami",
+    "services_pos_solutions": "Solusi POS",
+  
+    "services_inventory_title": "Manajemen Inventaris",
+    "services_inventory_desc": "Pelacakan inventaris kendaraan dengan pembaruan real-time dan peringatan otomatis.",
+  
+    "services_sales_title": "Pemrosesan Penjualan",
+    "services_sales_desc": "Alur kerja penjualan yang efisien dengan pembayaran terintegrasi dan dokumentasi.",
+  
+    "services_crm_title": "Manajemen Hubungan Pelanggan",
+    "services_crm_desc": "CRM lengkap untuk melacak interaksi pelanggan dan riwayat layanan.",
+  
+    "services_workshop_title": "Manajemen Bengkel",
+  
+    "services_job_title": "Penjadwalan Pekerjaan",
+    "services_job_desc": "Penjadwalan pekerjaan bengkel yang efisien dengan pembagian teknisi dan pelacakan progress.",
+  
+    "services_parts_title": "Inventaris Suku Cadang",
+    "services_parts_desc": "Manajemen inventaris suku cadang otomatis dengan peringatan pemesanan ulang.",
+  
+    "services_history_title": "Riwayat Layanan",
+    "services_history_desc": "Pelacakan lengkap riwayat layanan kendaraan dan jadwal perawatan.",
+  
+    "services_mobile_title": "Solusi Mobile",
+  
+    "services_ios_title": "Aplikasi iOS",
+    "services_ios_desc": "Aplikasi iOS native untuk manajemen saat bepergian.",
+  
+    "services_android_title": "Aplikasi Android",
+    "services_android_desc": "Aplikasi Android lengkap yang dibangun di atas kode bersama.",
+  
+    "services_cloud_title": "Sinkronisasi Cloud",
+    "services_cloud_desc": "Sinkronisasi data real-time di semua perangkat dan platform.",
+  
+    "services_ready_title": "Siap Memulai?",
+    "services_ready_desc": "Pilih paket yang sesuai dengan kebutuhan bisnis Anda",
+  
+    "services_btn_pricing": "Lihat Harga",
+    "services_btn_demo": "Jadwalkan Demo"
+  
 }

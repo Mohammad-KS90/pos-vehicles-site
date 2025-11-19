@@ -39,5 +39,44 @@
     "value_reliability_desc": "สร้างระบบที่คุณวางใจได้",
     "value_success_title": "ความสำเร็จของลูกค้า",
     "value_success_desc": "เราช่วยให้ธุรกิจของคุณเติบโต",
-    "services_title": "บริการของเรา"
+    "services_title": "บริการของเรา",
+    "services_pos_solutions": "โซลูชัน POS",
+  
+    "services_inventory_title": "การจัดการสต็อก",
+    "services_inventory_desc": "ติดตามสต็อกยานพาหนะพร้อมอัปเดตแบบเรียลไทม์และการแจ้งเตือนอัตโนมัติ.",
+  
+    "services_sales_title": "การประมวลผลการขาย",
+    "services_sales_desc": "กระบวนการขายที่ราบรื่นพร้อมระบบชำระเงินและเอกสารที่รวมไว้.",
+  
+    "services_crm_title": "การจัดการลูกค้าสัมพันธ์",
+    "services_crm_desc": "ระบบ CRM ครบวงจรสำหรับติดตามการโต้ตอบและประวัติการให้บริการของลูกค้า.",
+  
+    "services_workshop_title": "การจัดการศูนย์บริการ",
+  
+    "services_job_title": "การจัดตารางงาน",
+    "services_job_desc": "การวางตารางงานซ่อมบำรุงอย่างมีประสิทธิภาพพร้อมการมอบหมายช่างและติดตามความคืบหน้า.",
+  
+    "services_parts_title": "สต็อกอะไหล่",
+    "services_parts_desc": "การจัดการสต็อกอะไหล่อัตโนมัติพร้อมการแจ้งเตือนเมื่อใกล้หมด.",
+  
+    "services_history_title": "ประวัติการบริการ",
+    "services_history_desc": "ติดตามประวัติการซ่อมบำรุงของรถยนต์อย่างครบถ้วนพร้อมกำหนดการบำรุงรักษา.",
+  
+    "services_mobile_title": "โซลูชันมือถือ",
+  
+    "services_ios_title": "แอป iOS",
+    "services_ios_desc": "แอป iOS แบบ Native สำหรับการจัดการงานระหว่างเดินทาง.",
+  
+    "services_android_title": "แอป Android",
+    "services_android_desc": "แอป Android แบบเต็มฟังก์ชันที่สร้างบนโค้ดร่วมกัน.",
+  
+    "services_cloud_title": "การซิงค์คลาวด์",
+    "services_cloud_desc": "การซิงโครไนซ์ข้อมูลแบบเรียลไทม์ในทุกอุปกรณ์และแพลตฟอร์ม.",
+  
+    "services_ready_title": "พร้อมเริ่มต้นหรือยัง?",
+    "services_ready_desc": "เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ",
+  
+    "services_btn_pricing": "ดูราคา",
+    "services_btn_demo": "กำหนดการสาธิต"
+  
 }

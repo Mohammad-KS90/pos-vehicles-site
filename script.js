@@ -93,8 +93,14 @@ function createRippleEffect(event) {
     const ripple = document.createElement('span');
     const rect = button.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
-    const x = event.clientX - rect.left - size/2;
-    const y = event.clientY - rect.top - size/2;
+
+    let x = event.clientX - rect.left - size/2;
+    let y = event.clientY - rect.top - size/2;
+
+    // Flip for RTL
+    if (document.documentElement.getAttribute('dir') === 'rtl') {
+        x = rect.width - x - size; 
+    }
 
     ripple.style.width = ripple.style.height = size + 'px';
     ripple.style.left = x + 'px';
@@ -104,7 +110,7 @@ function createRippleEffect(event) {
     button.querySelectorAll('.ripple').forEach(r => r.remove());
     button.appendChild(ripple);
 
-    setTimeout(() => { ripple.remove(); }, 600);
+    setTimeout(() => ripple.remove(), 600);
 }
 
 function handleButtonAction(button) {
@@ -169,17 +175,19 @@ function initHoverEffects() {
 
 // ------------------ LANGUAGE SWITCHER ------------------
 function initLanguageSwitcher() {
-    const langSelect = document.getElementById("language-switcher");
-    if (!langSelect) return;
+    const languageSwitcher = document.getElementById("language-switcher");
+    if (!languageSwitcher) return;
 
     const savedLang = localStorage.getItem("app_lang") || "en";
-    langSelect.value = savedLang;
+    languageSwitcher.value = savedLang;
     loadLanguage(savedLang);
+    applyDirection(savedLang);
 
-    langSelect.addEventListener("change", () => {
-        const selectedLang = langSelect.value;
-        loadLanguage(selectedLang);
+    languageSwitcher.addEventListener("change", () => {
+        const selectedLang = languageSwitcher.value;
         localStorage.setItem("app_lang", selectedLang);
+        loadLanguage(selectedLang);
+        applyDirection(selectedLang);
     });
 }
 
@@ -192,7 +200,23 @@ async function loadLanguage(lang) {
             const key = el.getAttribute("data-i18n");
             if (translations[key]) el.textContent = translations[key];
         });
+
+        // RTL handling
+        if (lang === "ar") {
+            document.documentElement.setAttribute("dir", "rtl");
+            document.body.classList.add("rtl");
+        } else {
+            document.documentElement.setAttribute("dir", "ltr");
+            document.body.classList.remove("rtl");
+        }
+
     } catch(err) {
         console.error("Language load error:", err);
     }
+}
+
+function applyDirection(lang) {
+    const rtlLanguages = ["ar"];
+    const html = document.documentElement;
+    html.setAttribute("dir", rtlLanguages.includes(lang) ? "rtl" : "ltr");
 }

@@ -1,0 +1,48 @@
+{
+    "title": "POS Automobile Intelligent",
+    "header_title": "POS Automobile Intelligent",
+    "header_tagline": "Gérez véhicules, ventes, atelier et inventaire depuis une seule plateforme.",
+    "tab_about": "À propos",
+    "tab_contact": "Contact",
+    "tab_who": "Qui sommes-nous",
+    "tab_services": "Nos Services",
+
+    "about_title": "À propos du POS – Véhicules",
+    "about_desc": "Une solution complète pour les concessionnaires et ateliers automobiles.",
+    "features_title": "Fonctionnalités",
+    "feature_inventory": "Gestion d’inventaire",
+    "feature_tracking": "Suivi des véhicules",
+    "feature_sales": "Ventes & facturation",
+    "feature_crm": "CRM",
+    "feature_mobile": "Applications mobiles",
+    "feature_cloud": "Service cloud",
+
+    "mobile_apps_title": "Applications Mobile",
+    "app_ios_title": "Application iOS",
+    "app_ios_desc": "Moderne, rapide et fluide.",
+    "app_android_title": "Application Android",
+    "app_android_desc": "Code partagé pour Android et backend.",
+
+    "contact_title": "Contactez-nous",
+    "contact_get_in_touch": "Entrer en contact",
+    "contact_form_title": "Envoyer un message",
+    "contact_name_label": "Votre nom",
+    "contact_email_label": "Votre email",
+    "contact_subject_label": "Sujet",
+    "contact_message_label": "Message",
+    "contact_btn_send": "Envoyer",
+
+    "who_title": "Qui sommes-nous",
+    "who_story_title": "Notre histoire",
+    "who_story_desc1": "Fondé en 2020...",
+    "who_story_desc2": "Nous avons créé une plateforme complète...",
+    "who_values_title": "Nos valeurs",
+    "value_innovation_title": "Innovation",
+    "value_innovation_desc": "Toujours en avance...",
+    "value_reliability_title": "Fiabilité",
+    "value_reliability_desc": "Des systèmes fiables 24/7.",
+    "value_success_title": "Succès client",
+    "value_success_desc": "Votre succès est le nôtre.",
+
+    "services_title": "Nos Services"
+}

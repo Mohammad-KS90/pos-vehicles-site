@@ -1,0 +1,48 @@
+{
+    "title": "نظام نقاط البيع للسيارات",
+    "header_title": "نظام نقاط البيع للسيارات",
+    "header_tagline": "إدارة المركبات والمبيعات والورشة والمخزون من منصة واحدة.",
+    "tab_about": "من نحن",
+    "tab_contact": "اتصل بنا",
+    "tab_who": "من نكون",
+    "tab_services": "خدماتنا",
+
+    "about_title": "عن نظام مركبات POS",
+    "about_desc": "حل متكامل لإدارة وكالات السيارات ومراكز الصيانة والمحلات.",
+    "features_title": "الميزات",
+    "feature_inventory": "إدارة المخزون",
+    "feature_tracking": "تتبع المركبات",
+    "feature_sales": "المبيعات والفواتير",
+    "feature_crm": "إدارة العملاء",
+    "feature_mobile": "تطبيقات الموبايل",
+    "feature_cloud": "الخدمة السحابية",
+
+    "mobile_apps_title": "تطبيقات الموبايل",
+    "app_ios_title": "تطبيق iOS",
+    "app_ios_desc": "تجربة عصرية وسريعة ومتجاوبة.",
+    "app_android_title": "تطبيق Android",
+    "app_android_desc": "كود واحد يدعم أندرويد والخدمات.",
+
+    "contact_title": "اتصل بنا",
+    "contact_get_in_touch": "تواصل معنا",
+    "contact_form_title": "أرسل رسالة",
+    "contact_name_label": "اسمك",
+    "contact_email_label": "بريدك الإلكتروني",
+    "contact_subject_label": "الموضوع",
+    "contact_message_label": "الرسالة",
+    "contact_btn_send": "إرسال",
+
+    "who_title": "من نكون",
+    "who_story_title": "قصتنا",
+    "who_story_desc1": "تأسسنا سنة 2020...",
+    "who_story_desc2": "هدفنا إنشاء منصة متكاملة...",
+    "who_values_title": "قيمنا",
+    "value_innovation_title": "الابتكار",
+    "value_innovation_desc": "نقدم حلولاً متقدمة...",
+    "value_reliability_title": "الاعتمادية",
+    "value_reliability_desc": "أنظمة تعمل باستمرار.",
+    "value_success_title": "نجاح العملاء",
+    "value_success_desc": "نجاحكم هو نجاحنا.",
+
+    "services_title": "خدماتنا"
+}

@@ -1,0 +1,48 @@
+{
+    "title": "智能汽车POS系统",
+    "header_title": "智能汽车POS系统",
+    "header_tagline": "在一个平台上管理车辆、销售、维修工单和库存。",
+    "tab_about": "关于我们",
+    "tab_contact": "联系我们",
+    "tab_who": "我们是谁",
+    "tab_services": "我们的服务",
+
+    "about_title": "关于 POS – 车辆系统",
+    "about_desc": "POS – 车辆系统是一套完整的汽车行业管理解决方案。",
+    "features_title": "功能",
+    "feature_inventory": "库存管理",
+    "feature_tracking": "车辆跟踪",
+    "feature_sales": "销售与发票",
+    "feature_crm": "客户管理",
+    "feature_mobile": "移动应用（iOS & Android）",
+    "feature_cloud": "云服务",
+
+    "mobile_apps_title": "移动应用",
+    "app_ios_title": "iOS 应用",
+    "app_ios_desc": "现代、快速、响应迅速的原生体验。",
+    "app_android_title": "Android 应用",
+    "app_android_desc": "单一代码库支持Android和服务器模型。",
+
+    "contact_title": "联系我们",
+    "contact_get_in_touch": "取得联系",
+    "contact_form_title": "发送消息",
+    "contact_name_label": "您的姓名",
+    "contact_email_label": "您的邮箱",
+    "contact_subject_label": "主题",
+    "contact_message_label": "消息内容",
+    "contact_btn_send": "发送消息",
+
+    "who_title": "我们是谁",
+    "who_story_title": "我们的故事",
+    "who_story_desc1": "成立于2020年……",
+    "who_story_desc2": "我们致力于打造一个完整的平台……",
+    "who_values_title": "我们的价值观",
+    "value_innovation_title": "创新",
+    "value_innovation_desc": "不断突破技术边界……",
+    "value_reliability_title": "可靠性",
+    "value_reliability_desc": "稳定可靠的系统。",
+    "value_success_title": "客户成功",
+    "value_success_desc": "助力您的业务成长。",
+
+    "services_title": "我们的服务"
+}

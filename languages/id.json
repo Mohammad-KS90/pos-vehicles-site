@@ -1,0 +1,48 @@
+{
+    "title": "POS Otomotif Cerdas",
+    "header_title": "POS Otomotif Cerdas",
+    "header_tagline": "Kelola kendaraan, penjualan, pekerjaan bengkel, dan inventaris dalam satu platform.",
+    "tab_about": "Tentang Kami",
+    "tab_contact": "Hubungi Kami",
+    "tab_who": "Siapa Kami",
+    "tab_services": "Layanan",
+
+    "about_title": "Tentang POS – Kendaraan",
+    "about_desc": "POS – Kendaraan adalah solusi manajemen lengkap untuk bisnis otomotif.",
+    "features_title": "Fitur",
+    "feature_inventory": "Manajemen inventaris",
+    "feature_tracking": "Pelacakan kendaraan",
+    "feature_sales": "Penjualan & faktur",
+    "feature_crm": "Manajemen pelanggan",
+    "feature_mobile": "Aplikasi mobile (iOS & Android)",
+    "feature_cloud": "Layanan cloud",
+
+    "mobile_apps_title": "Aplikasi Mobile",
+    "app_ios_title": "Aplikasi iOS",
+    "app_ios_desc": "Pengalaman aplikasi native yang modern, cepat, dan responsif.",
+    "app_android_title": "Aplikasi Android",
+    "app_android_desc": "Satu basis kode untuk Android dan model server.",
+
+    "contact_title": "Hubungi Kami",
+    "contact_get_in_touch": "Hubungi Kami",
+    "contact_form_title": "Kirim Pesan",
+    "contact_name_label": "Nama Anda",
+    "contact_email_label": "Email Anda",
+    "contact_subject_label": "Subjek",
+    "contact_message_label": "Pesan",
+    "contact_btn_send": "Kirim Pesan",
+
+    "who_title": "Siapa Kami",
+    "who_story_title": "Cerita Kami",
+    "who_story_desc1": "Didirikan pada tahun 2020...",
+    "who_story_desc2": "Kami bertujuan membangun platform yang lengkap...",
+    "who_values_title": "Nilai Kami",
+    "value_innovation_title": "Inovasi",
+    "value_innovation_desc": "Selalu mendorong batas teknologi.",
+    "value_reliability_title": "Keandalan",
+    "value_reliability_desc": "Sistem yang dapat diandalkan.",
+    "value_success_title": "Kesuksesan Pelanggan",
+    "value_success_desc": "Kami membantu bisnis Anda berkembang.",
+
+    "services_title": "Layanan Kami"
+}

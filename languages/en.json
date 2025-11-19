@@ -1,0 +1,48 @@
+{
+    "title": "Smart Automotive POS",
+    "header_title": "Smart Automotive POS",
+    "header_tagline": "Manage vehicles, sales, workshop jobs, and inventory from one platform.",
+    "tab_about": "About Us",
+    "tab_contact": "Contact Us",
+    "tab_who": "Who We Are",
+    "tab_services": "Our Services",
+
+    "about_title": "About POS – Vehicles",
+    "about_desc": "POS – Vehicles is a complete management solution for automotive businesses.",
+    "features_title": "Features",
+    "feature_inventory": "Inventory management",
+    "feature_tracking": "Vehicle tracking",
+    "feature_sales": "Sales & invoicing",
+    "feature_crm": "Customer management",
+    "feature_mobile": "Mobile app (iOS & Android)",
+    "feature_cloud": "Cloud service",
+
+    "mobile_apps_title": "Mobile Applications",
+    "app_ios_title": "iOS App",
+    "app_ios_desc": "Modern, fast, responsive native app experience.",
+    "app_android_title": "Android App",
+    "app_android_desc": "Single codebase powering Android and server models.",
+
+    "contact_title": "Contact Us",
+    "contact_get_in_touch": "Get in Touch",
+    "contact_form_title": "Send us a Message",
+    "contact_name_label": "Your Name",
+    "contact_email_label": "Your Email",
+    "contact_subject_label": "Subject",
+    "contact_message_label": "Message",
+    "contact_btn_send": "Send Message",
+
+    "who_title": "Who We Are",
+    "who_story_title": "Our Story",
+    "who_story_desc1": "Founded in 2020...",
+    "who_story_desc2": "We set out to create a complete platform...",
+    "who_values_title": "Our Values",
+    "value_innovation_title": "Innovation",
+    "value_innovation_desc": "Constantly pushing boundaries...",
+    "value_reliability_title": "Reliability",
+    "value_reliability_desc": "Building systems you can count on.",
+    "value_success_title": "Customer Success",
+    "value_success_desc": "We help your business grow.",
+
+    "services_title": "Our Services"
+}

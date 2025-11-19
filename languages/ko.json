@@ -1,0 +1,48 @@
+{
+    "title": "스마트 자동차 POS",
+    "header_title": "스마트 자동차 POS",
+    "header_tagline": "차량, 판매, 정비 작업, 재고를 하나의 플랫폼에서 관리합니다.",
+    "tab_about": "회사 소개",
+    "tab_contact": "문의하기",
+    "tab_who": "우리는 누구인가",
+    "tab_services": "서비스",
+
+    "about_title": "POS – 차량 소개",
+    "about_desc": "POS – 차량은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
+    "features_title": "기능",
+    "feature_inventory": "재고 관리",
+    "feature_tracking": "차량 추적",
+    "feature_sales": "판매 및 청구",
+    "feature_crm": "고객 관리",
+    "feature_mobile": "모바일 앱 (iOS & Android)",
+    "feature_cloud": "클라우드 서비스",
+
+    "mobile_apps_title": "모바일 앱",
+    "app_ios_title": "iOS 앱",
+    "app_ios_desc": "현대적이고 빠르고 반응성이 뛰어난 네이티브 경험.",
+    "app_android_title": "Android 앱",
+    "app_android_desc": "하나의 코드베이스로 Android와 서버 모델을 지원.",
+
+    "contact_title": "문의하기",
+    "contact_get_in_touch": "연락하기",
+    "contact_form_title": "메시지 보내기",
+    "contact_name_label": "이름",
+    "contact_email_label": "이메일",
+    "contact_subject_label": "제목",
+    "contact_message_label": "메시지",
+    "contact_btn_send": "보내기",
+
+    "who_title": "우리는 누구인가",
+    "who_story_title": "우리의 이야기",
+    "who_story_desc1": "2020년에 설립되었습니다…",
+    "who_story_desc2": "우리는 완전한 플랫폼을 만들기 위해 노력했습니다…",
+    "who_values_title": "핵심 가치",
+    "value_innovation_title": "혁신",
+    "value_innovation_desc": "끊임없이 새로운 가능성을 추구.",
+    "value_reliability_title": "신뢰성",
+    "value_reliability_desc": "항상 안정적으로 작동하는 시스템.",
+    "value_success_title": "고객 성공",
+    "value_success_desc": "고객의 성장에 기여합니다.",
+
+    "services_title": "서비스"
+}

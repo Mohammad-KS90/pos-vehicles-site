@@ -1,0 +1,87 @@
+{
+    "title": "스마트 자동차 POS",
+    "header_title": "스마트 자동차 POS",
+    "header_tagline": "차량, 판매, 정비 작업, 재고를 하나의 플랫폼에서 관리합니다.",
+    "tab_about": "회사 소개",
+    "tab_contact": "문의하기",
+    "tab_who": "우리는 누구인가",
+    "tab_services": "서비스",
+
+    "about_title": "POS – 차량 소개",
+    "about_desc": "POS – 차량은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
+    "features_title": "기능",
+    "feature_inventory": "재고 관리",
+    "feature_tracking": "차량 추적",
+    "feature_sales": "판매 및 청구",
+    "feature_crm": "고객 관리",
+    "feature_mobile": "모바일 앱 (iOS & Android)",
+    "feature_cloud": "클라우드 서비스",
+
+    "mobile_apps_title": "모바일 앱",
+    "app_ios_title": "iOS 앱",
+    "app_ios_desc": "현대적이고 빠르고 반응성이 뛰어난 네이티브 경험.",
+    "app_android_title": "Android 앱",
+    "app_android_desc": "하나의 코드베이스로 Android와 서버 모델을 지원.",
+
+    "contact_title": "문의하기",
+    "contact_get_in_touch": "연락하기",
+    "contact_form_title": "메시지 보내기",
+    "contact_name_label": "이름",
+    "contact_email_label": "이메일",
+    "contact_subject_label": "제목",
+    "contact_message_label": "메시지",
+    "contact_btn_send": "보내기",
+
+    "who_title": "우리는 누구인가",
+    "who_story_title": "우리의 이야기",
+    "who_story_desc1": "2020년에 설립되었습니다…",
+    "who_story_desc2": "우리는 완전한 플랫폼을 만들기 위해 노력했습니다…",
+    "who_values_title": "핵심 가치",
+    "value_innovation_title": "혁신",
+    "value_innovation_desc": "끊임없이 새로운 가능성을 추구.",
+    "value_reliability_title": "신뢰성",
+    "value_reliability_desc": "항상 안정적으로 작동하는 시스템.",
+    "value_success_title": "고객 성공",
+    "value_success_desc": "고객의 성장에 기여합니다.",
+
+    "services_title": "서비스",
+    "services_pos_solutions": "POS 솔루션",
+  
+    "services_inventory_title": "재고 관리",
+    "services_inventory_desc": "실시간 업데이트 및 자동 알림이 포함된 차량 재고 추적.",
+  
+    "services_sales_title": "판매 처리",
+    "services_sales_desc": "통합 결제 및 문서 관리를 통한 효율적인 판매 워크플로우.",
+  
+    "services_crm_title": "고객 관계 관리",
+    "services_crm_desc": "고객 상호작용과 서비스 기록을 추적하는 종합 CRM.",
+  
+    "services_workshop_title": "정비소 관리",
+  
+    "services_job_title": "작업 일정 관리",
+    "services_job_desc": "기술자 배정 및 진행 상황 추적이 포함된 효율적인 작업 스케줄링.",
+  
+    "services_parts_title": "부품 재고",
+    "services_parts_desc": "자동 재고 보충 알림이 포함된 부품 및 용품 관리.",
+  
+    "services_history_title": "서비스 기록",
+    "services_history_desc": "차량 서비스 기록 및 유지보수 일정 전체 관리.",
+  
+    "services_mobile_title": "모바일 솔루션",
+  
+    "services_ios_title": "iOS 앱",
+    "services_ios_desc": "외출 중에도 관리와 고객 대응이 가능한 iOS 네이티브 앱.",
+  
+    "services_android_title": "Android 앱",
+    "services_android_desc": "공유 코드 기반으로 구축된 풀 기능 Android 앱.",
+  
+    "services_cloud_title": "클라우드 동기화",
+    "services_cloud_desc": "모든 장치 및 플랫폼 간 실시간 데이터 동기화.",
+  
+    "services_ready_title": "시작할 준비가 되셨나요?",
+    "services_ready_desc": "비즈니스에 맞는 요금제를 선택하십시오",
+  
+    "services_btn_pricing": "요금 보기",
+    "services_btn_demo": "데모 예약"
+  
+}

@@ -1,146 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Automotive POS</title>
+    <title data-i18n="title">Smart Automotive POS</title>
     <link rel="stylesheet" href="style.css">
+
+    <select id="language-switcher">        
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="th">ไทย</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="hi">हिन्दी</option>
+
+    </select>
+
 </head>
+
 <body>
     <header>
-        <!-- Logo Section -->
         <div class="logo-container">
-            <img src="./assets/logo.png" alt="Smart Automotive POS Logo" class="logo">
+            <img src="./assets/logo.png" class="logo">
             <div class="logo-text">
-                <h1>Smart Automotive POS</h1>
-                <p class="tagline">Manage vehicles, sales, workshop jobs, and inventory from one platform.</p>
+                <h1 data-i18n="header_title">Smart Automotive POS</h1>
+                <p class="tagline" data-i18n="header_tagline">
+                    Manage vehicles, sales, workshop jobs, and inventory from one platform.
+                </p>
             </div>
         </div>
-        
-        <!-- <div class="cta-buttons">
-            <a href="#" class="btn btn-primary">Get Started</a>
-            <a href="#" class="btn btn-outline">Contact Us</a>
-        </div> -->
     </header>
 
-    <!-- Navigation Tabs -->
     <nav class="tabs-container">
         <div class="tabs">
-            <button class="tab-btn active" data-tab="about">About Us</button>
-            <button class="tab-btn" data-tab="contact">Contact Us</button>
-            <button class="tab-btn" data-tab="who-we-are">Who We Are</button>
-            <button class="tab-btn" data-tab="services">Our Services</button>
+            <button class="tab-btn active" data-tab="about" data-i18n="tab_about">About Us</button>
+            <button class="tab-btn" data-tab="contact" data-i18n="tab_contact">Contact Us</button>
+            <button class="tab-btn" data-tab="who-we-are" data-i18n="tab_who">Who We Are</button>
+            <button class="tab-btn" data-tab="services" data-i18n="tab_services">Our Services</button>
         </div>
     </nav>
 
-    <!-- Tab Content Sections -->
     <main class="tab-content">
-        <!-- About Us Tab -->
+
+        <!-- ABOUT US -->
         <section id="about" class="tab-pane active">
-            <h2>About POS – Vehicles</h2>
-            <p>POS – Vehicles is a complete management solution for car dealers, service centers, and automotive shops. It provides tools to manage sales, inventory, workshop jobs, and more.</p>
-            
+            <h2 data-i18n="about_title">About POS – Vehicles</h2>
+            <p data-i18n="about_desc">
+                POS – Vehicles is a complete management solution for car dealers, service centers, and automotive shops.
+            </p>
+
             <div class="features-section">
-                <h3>Features</h3>
+                <h3 data-i18n="features_title">Features</h3>
                 <div class="features">
                     <ul class="feature-list">
-                        <li>Inventory management</li>
-                        <li>Vehicle tracking</li>
-                        <li>Sales & invoicing</li>
+                        <li data-i18n="feature_inventory">Inventory management</li>
+                        <li data-i18n="feature_tracking">Vehicle tracking</li>
+                        <li data-i18n="feature_sales">Sales & invoicing</li>
                     </ul>
                     <ul class="feature-list">
-                        <li>Customer management</li>
-                        <li>Mobile app (iOS & Android)</li>
-                        <li>Cloud service</li>
+                        <li data-i18n="feature_crm">Customer management</li>
+                        <li data-i18n="feature_mobile">Mobile app (iOS & Android)</li>
+                        <li data-i18n="feature_cloud">Cloud service</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="mobile-apps">
-                <h3>Mobile Applications</h3>
+                <h3 data-i18n="mobile_apps_title">Mobile Applications</h3>
+
                 <div class="app-item">
-                    <div class="app-title">iOS App</div>
-                    <p class="app-description">Modern, fast, responsive native app experience.</p>
+                    <div class="app-title" data-i18n="app_ios_title">iOS App</div>
+                    <p class="app-description" data-i18n="app_ios_desc">
+                        Modern, fast, responsive native app experience.
+                    </p>
                 </div>
+
                 <div class="app-item">
-                    <div class="app-title">Android App</div>
-                    <p class="app-description">Single codebase powering Android and server models</p>
+                    <div class="app-title" data-i18n="app_android_title">Android App</div>
+                    <p class="app-description" data-i18n="app_android_desc">
+                        Single codebase powering Android and server models.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Us Tab -->
+        <!-- CONTACT -->
         <section id="contact" class="tab-pane">
-            <h2>Contact Us</h2>
+            <h2 data-i18n="contact_title">Contact Us</h2>
+
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-item">
-                        <strong>Email:</strong> info@smartautopos.com
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong> (555) 123-4567
-                    </div>
-                    <div class="contact-item">
-                        <strong>Address:</strong> 123 Automotive Way, Suite 100, Tech City
-                    </div>
-                    <div class="contact-item">
-                        <strong>Business Hours:</strong> Mon-Fri 9AM-6PM
-                    </div>
+                    <h3 data-i18n="contact_get_in_touch">Get in Touch</h3>
+
+                    <div class="contact-item"><strong>Email:</strong> info@smartautopos.com</div>
+                    <div class="contact-item"><strong data-i18n="contact_phone_label">Phone:</strong> (555) 123-4567</div>
+                    <div class="contact-item"><strong data-i18n="contact_address_label">Address:</strong> 123 Automotive Way</div>
+                    <div class="contact-item"><strong data-i18n="contact_hours_label">Business Hours:</strong> Mon-Fri 9AM-6PM</div>
                 </div>
-                
+
                 <form class="contact-form">
-                    <h3>Send us a Message</h3>
+                    <h3 data-i18n="contact_form_title">Send us a Message</h3>
+
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-i18n="contact_name_label">Your Name</label>
+                        <input type="text" id="name">
                     </div>
+
                     <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-i18n="contact_email_label">Your Email</label>
+                        <input type="email" id="email">
                     </div>
+
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-i18n="contact_subject_label">Subject</label>
+                        <input type="text" id="subject">
                     </div>
+
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message" data-i18n="contact_message_label">Message</label>
+                        <textarea id="message" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                    <button class="btn btn-primary" data-i18n="contact_btn_send">Send Message</button>
                 </form>
             </div>
         </section>
 
-        <!-- Who We Are Tab -->
+        <!-- WHO WE ARE -->
         <section id="who-we-are" class="tab-pane">
-            <h2>Who We Are</h2>
+            <h2 data-i18n="who_title">Who We Are</h2>
+
             <div class="team-content">
                 <div class="company-info">
-                    <h3>Our Story</h3>
-                    <p>Founded in 2020, Smart Automotive POS emerged from a simple observation: automotive businesses were struggling with disconnected systems that couldn't keep up with modern demands.</p>
-                    <p>We set out to create a comprehensive solution that brings together all aspects of automotive business management into one seamless platform.</p>
+                    <h3 data-i18n="who_story_title">Our Story</h3>
+                    <p data-i18n="who_story_desc1">
+                        Founded in 2020...
+                    </p>
+                    <p data-i18n="who_story_desc2">
+                        We set out to create a comprehensive solution...
+                    </p>
                 </div>
-                
+
                 <div class="values">
-                    <h3>Our Values</h3>
+                    <h3 data-i18n="who_values_title">Our Values</h3>
+
                     <div class="value-cards">
                         <div class="value-card">
-                            <h4>Innovation</h4>
-                            <p>Constantly pushing boundaries to deliver cutting-edge solutions for the automotive industry.</p>
+                            <h4 data-i18n="value_innovation_title">Innovation</h4>
+                            <p data-i18n="value_innovation_desc">Constantly pushing boundaries...</p>
                         </div>
+
                         <div class="value-card">
-                            <h4>Reliability</h4>
-                            <p>Building systems you can count on 24/7 for your critical business operations.</p>
+                            <h4 data-i18n="value_reliability_title">Reliability</h4>
+                            <p data-i18n="value_reliability_desc">Building systems you can count on 24/7.</p>
                         </div>
+
                         <div class="value-card">
-                            <h4>Customer Success</h4>
-                            <p>Your success is our success. We're committed to helping your business grow.</p>
+                            <h4 data-i18n="value_success_title">Customer Success</h4>
+                            <p data-i18n="value_success_desc">Your success is our success.</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- <div class="team-stats">
+
+                                <!-- <div class="team-stats">
                     <h3>Our Impact</h3>
                     <div class="stats">
                         <div class="stat">
@@ -157,77 +183,114 @@
                         </div>
                     </div>
                 </div> -->
+
             </div>
         </section>
 
-        <!-- Our Services Tab -->
+        <!-- SERVICES -->
         <section id="services" class="tab-pane">
-            <h2>Our Services</h2>
+            <h2 data-i18n="services_title">Our Services</h2>
+        
             <div class="services-content">
+        
+                <!-- POS Solutions -->
                 <div class="service-category">
-                    <h3>POS Solutions</h3>
+                    <h3 data-i18n="services_pos_solutions">POS Solutions</h3>
+        
                     <div class="service-items">
                         <div class="service-item">
-                            <h4>Inventory Management</h4>
-                            <p>Complete vehicle inventory tracking with real-time updates and automated alerts.</p>
+                            <h4 data-i18n="services_inventory_title">Inventory Management</h4>
+                            <p data-i18n="services_inventory_desc">
+                                Complete vehicle inventory tracking with real-time updates and automated alerts.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Sales Processing</h4>
-                            <p>Streamlined sales workflows with integrated payment processing and documentation.</p>
+                            <h4 data-i18n="services_sales_title">Sales Processing</h4>
+                            <p data-i18n="services_sales_desc">
+                                Streamlined sales workflows with integrated payment processing and documentation.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Customer Relationship Management</h4>
-                            <p>Comprehensive CRM to track customer interactions and service history.</p>
+                            <h4 data-i18n="services_crm_title">Customer Relationship Management</h4>
+                            <p data-i18n="services_crm_desc">
+                                Comprehensive CRM to track customer interactions and service history.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+        
+                <!-- Workshop Management -->
                 <div class="service-category">
-                    <h3>Workshop Management</h3>
+                    <h3 data-i18n="services_workshop_title">Workshop Management</h3>
+        
                     <div class="service-items">
                         <div class="service-item">
-                            <h4>Job Scheduling</h4>
-                            <p>Efficient workshop job scheduling with technician allocation and progress tracking.</p>
+                            <h4 data-i18n="services_job_title">Job Scheduling</h4>
+                            <p data-i18n="services_job_desc">
+                                Efficient workshop job scheduling with technician allocation and progress tracking.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Parts Inventory</h4>
-                            <p>Automated parts and supplies inventory management with reorder alerts.</p>
+                            <h4 data-i18n="services_parts_title">Parts Inventory</h4>
+                            <p data-i18n="services_parts_desc">
+                                Automated parts and supplies inventory management with reorder alerts.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Service History</h4>
-                            <p>Complete vehicle service history tracking and maintenance scheduling.</p>
+                            <h4 data-i18n="services_history_title">Service History</h4>
+                            <p data-i18n="services_history_desc">
+                                Complete vehicle service history tracking and maintenance scheduling.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+        
+                <!-- Mobile Solutions -->
                 <div class="service-category">
-                    <h3>Mobile Solutions</h3>
+                    <h3 data-i18n="services_mobile_title">Mobile Solutions</h3>
+        
                     <div class="service-items">
                         <div class="service-item">
-                            <h4>iOS Application</h4>
-                            <p>Native iOS app for on-the-go management and customer interactions.</p>
+                            <h4 data-i18n="services_ios_title">iOS Application</h4>
+                            <p data-i18n="services_ios_desc">
+                                Native iOS app for on-the-go management and customer interactions.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Android Application</h4>
-                            <p>Full-featured Android app built on a shared codebase for consistency.</p>
+                            <h4 data-i18n="services_android_title">Android Application</h4>
+                            <p data-i18n="services_android_desc">
+                                Full-featured Android app built on a shared codebase for consistency.
+                            </p>
                         </div>
+        
                         <div class="service-item">
-                            <h4>Cloud Synchronization</h4>
-                            <p>Real-time data sync across all devices and platforms.</p>
+                            <h4 data-i18n="services_cloud_title">Cloud Synchronization</h4>
+                            <p data-i18n="services_cloud_desc">
+                                Real-time data sync across all devices and platforms.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+        
+                <!-- CTA Section -->
                 <div class="pricing-cta">
-                    <h3>Ready to Get Started?</h3>
-                    <p>Choose the plan that fits your business needs</p>
+                    <h3 data-i18n="services_ready_title">Ready to Get Started?</h3>
+                    <p data-i18n="services_ready_desc">Choose the plan that fits your business needs</p>
+        
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary">View Pricing</a>
-                        <a href="#" class="btn btn-outline">Schedule Demo</a>
+                        <a href="#" class="btn btn-primary" data-i18n="services_btn_pricing">View Pricing</a>
+                        <a href="#" class="btn btn-outline" data-i18n="services_btn_demo">Schedule Demo</a>
                     </div>
                 </div>
+        
             </div>
         </section>
+        
     </main>
 
     <script src="script.js"></script>

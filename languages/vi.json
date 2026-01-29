@@ -1,0 +1,83 @@
+{
+    "title": "POS Ô Tô Thông Minh",
+    "header_title": "POS Ô Tô Thông Minh",
+    "header_tagline": "Quản lý xe, bán hàng, công việc xưởng và kho từ một nền tảng duy nhất",
+    "tab_about": "Về Chúng Tôi",
+    "tab_contact": "Liên Hệ",
+    "tab_who": "Chúng Tôi Là Ai",
+    "tab_services": "Dịch Vụ Của Chúng Tôi",
+    "about_title": "Về POS – Vehicles",
+    "about_desc": "POS – Vehicles là giải pháp quản lý hoàn chỉnh cho doanh nghiệp ô tô",
+    "features_title": "Tính Năng",
+    "feature_inventory": "Quản lý kho",
+    "feature_tracking": "Theo dõi xe",
+    "feature_sales": "Bán hàng & lập hóa đơn",
+    "feature_crm": "Quản lý khách hàng",
+    "feature_mobile": "Ứng dụng di động (iOS & Android)",
+    "feature_cloud": "Dịch vụ đám mây",
+    "mobile_apps_title": "Ứng dụng di động",
+    "app_ios_title": "Ứng dụng iOS",
+    "app_ios_desc": "Trải nghiệm ứng dụng gốc hiện đại, nhanh và mượt mà",
+    "app_android_title": "Ứng dụng Android",
+    "app_android_desc": "Một cơ sở mã duy nhất cho Android và server",
+    "contact_title": "Liên Hệ",
+    "contact_get_in_touch": "Liên hệ với chúng tôi",
+    "contact_form_title": "Gửi Tin Nhắn",
+    "contact_name_label": "Tên của bạn",
+    "contact_email_label": "Email của bạn",
+    "contact_subject_label": "Chủ đề",
+    "contact_message_label": "Tin nhắn",
+    "contact_btn_send": "Gửi",
+    "who_title": "Chúng Tôi Là Ai",
+    "who_story_title": "Câu Chuyện Của Chúng Tôi",
+    "who_story_desc1": "Thành lập năm 2020...",
+    "who_story_desc2": "Chúng tôi bắt đầu xây dựng nền tảng hoàn chỉnh...",
+    "who_values_title": "Giá Trị Của Chúng Tôi",
+    "value_innovation_title": "Đổi mới",
+    "value_innovation_desc": "Liên tục đẩy giới hạn...",
+    "value_reliability_title": "Đáng tin cậy",
+    "value_reliability_desc": "Xây dựng hệ thống bạn có thể tin tưởng",
+    "value_success_title": "Thành công của khách hàng",
+    "value_success_desc": "Chúng tôi giúp doanh nghiệp của bạn phát triển",
+    "services_title": "Dịch Vụ Của Chúng Tôi",
+    "services_pos_solutions": "Giải pháp POS",
+  
+    "services_inventory_title": "Quản lý Kho",
+    "services_inventory_desc": "Theo dõi kho xe với cập nhật thời gian thực và cảnh báo tự động.",
+  
+    "services_sales_title": "Xử lý Bán hàng",
+    "services_sales_desc": "Quy trình bán hàng tối ưu với thanh toán và tài liệu tích hợp.",
+  
+    "services_crm_title": "Quản lý Quan hệ Khách hàng",
+    "services_crm_desc": "CRM toàn diện để theo dõi tương tác và lịch sử dịch vụ.",
+  
+    "services_workshop_title": "Quản lý Xưởng",
+  
+    "services_job_title": "Lịch công việc",
+    "services_job_desc": "Lịch công việc hiệu quả với phân công kỹ thuật viên và theo dõi tiến độ.",
+  
+    "services_parts_title": "Kho phụ tùng",
+    "services_parts_desc": "Quản lý kho phụ tùng tự động với cảnh báo đặt hàng lại.",
+  
+    "services_history_title": "Lịch sử Dịch vụ",
+    "services_history_desc": "Theo dõi đầy đủ lịch sử dịch vụ và kế hoạch bảo trì xe.",
+  
+    "services_mobile_title": "Giải pháp Di động",
+  
+    "services_ios_title": "Ứng dụng iOS",
+    "services_ios_desc": "Ứng dụng iOS native để quản lý mọi lúc mọi nơi.",
+  
+    "services_android_title": "Ứng dụng Android",
+    "services_android_desc": "Ứng dụng Android đầy đủ tính năng xây dựng từ mã chung.",
+  
+    "services_cloud_title": "Đồng bộ đám mây",
+    "services_cloud_desc": "Đồng bộ dữ liệu thời gian thực trên mọi thiết bị và nền tảng.",
+  
+    "services_ready_title": "Sẵn sàng bắt đầu?",
+    "services_ready_desc": "Chọn gói phù hợp với nhu cầu kinh doanh của bạn",
+  
+    "services_btn_pricing": "Xem Giá",
+    "services_btn_demo": "Đặt Lịch Demo"
+  
+
+}

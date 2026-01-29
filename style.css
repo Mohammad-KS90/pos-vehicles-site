@@ -1,16 +1,9 @@
 :root {
   --primary-color: #193237; /* Change this value to your new color */
   --primary-dark: #418681;  /* Darker shade for hover states */
-  --primary-light: #ecfdf5e7e7; /* Light shade for backgrounds */
-
-  /* Replace #10b981 with #193237
-
-     Replace #059669 with #7c3aed
-
-     Replace #ecfdf5 with #f5f3ff */
-
-
+  --primary-light: #ecfdf5; /* Light shade for backgrounds */
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -95,24 +88,24 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #193237;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #418681;
+  background-color: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #193237;
-  border: 2px solid #193237;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-outline:hover {
-  background-color: #ecfdf5e7;
+  background-color: var(--primary-light)e7;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
 }
@@ -144,14 +137,14 @@ h1 {
 }
 
 .tab-btn:hover {
-  color: #193237;
+  color: var(--primary-color);
   background-color: #f8fafc;
 }
 
 .tab-btn.active {
-  color: #193237;
-  border-bottom-color: #193237;
-  background-color: #ecfdf5e7;
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: var(--primary-light)e7;
 }
 
 /* Tab Content */
@@ -229,12 +222,12 @@ p {
 
 .feature-list li:hover {
   transform: translateX(5px);
-  color: #193237;
+  color: var(--primary-color);
 }
 
 .feature-list li:before {
   content: "✓";
-  color: #193237;
+  color: var(--primary-color);
   font-weight: bold;
   margin-right: 10px;
   font-size: 1.2rem;
@@ -328,7 +321,7 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #193237;
+  border-color: var(--primary-color);
 }
 
 /* Who We Are Styles */
@@ -383,7 +376,7 @@ p {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #193237;
+  color: var(--primary-color);
   margin-bottom: 5px;
 }
 
@@ -423,7 +416,7 @@ p {
 
 .pricing-cta {
   text-align: center;
-  background: linear-gradient(135deg, #193237, #418681);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   color: white;
   padding: 50px 30px;
   border-radius: 12px;
@@ -473,7 +466,7 @@ p {
 .logo-fallback {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #193237, #418681);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -522,7 +515,7 @@ p {
   }
   
   .tab-btn.active {
-      border-bottom-color: #193237;
+      border-bottom-color: var(--primary-color);
   }
   
   .features {
@@ -580,6 +573,92 @@ p {
   }
   
   .stats {
+      grid-template-columns: 1fr;
+  }
+}
+/* ================== RTL SUPPORT ================== */
+
+/* Base RTL direction */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Flip flex containers */
+html[dir="rtl"] .logo-container,
+html[dir="rtl"] .tabs,
+html[dir="rtl"] .services-content,
+html[dir="rtl"] .contact-content,
+html[dir="rtl"] .team-content,
+html[dir="rtl"] .cta-buttons {
+  flex-direction: row-reverse;
+}
+
+/* Tabs reversed */
+html[dir="rtl"] .tabs-container .tabs {
+  flex-direction: row-reverse;
+}
+
+/* Align text inside headings, paragraphs, labels, and tagline */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] p,
+html[dir="rtl"] label,
+html[dir="rtl"] .tagline {
+  text-align: right;
+}
+
+/* Flip form fields */
+html[dir="rtl"] .contact-form {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-group input,
+html[dir="rtl"] .form-group textarea {
+  text-align: right;
+}
+
+/* Feature list checkmarks */
+html[dir="rtl"] .feature-list li:before {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* CTA buttons alignment */
+html[dir="rtl"] .cta-buttons {
+  justify-content: center; /* keeps buttons centered even in RTL */
+}
+
+/* Logo fallback */
+html[dir="rtl"] .logo-fallback {
+  flex-direction: row-reverse;
+}
+
+/* Stats grid for RTL */
+html[dir="rtl"] .stats {
+  direction: rtl;
+}
+
+/* Service & value cards alignment */
+html[dir="rtl"] .service-items,
+html[dir="rtl"] .value-cards {
+  direction: rtl;
+}
+
+/* Responsive fixes for small screens */
+@media (max-width: 768px) {
+  html[dir="rtl"] .tabs {
+      flex-direction: column;
+  }
+  html[dir="rtl"] .cta-buttons {
+      align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html[dir="rtl"] .stats {
       grid-template-columns: 1fr;
   }
 }

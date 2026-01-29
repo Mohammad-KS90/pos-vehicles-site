@@ -1,0 +1,87 @@
+{
+    "title": "スマート自動車POS",
+    "header_title": "スマート自動車POS",
+    "header_tagline": "車両、販売、工場作業、在庫を一つのプラットフォームで管理。",
+    "tab_about": "会社情報",
+    "tab_contact": "お問い合わせ",
+    "tab_who": "私たちについて",
+    "tab_services": "サービス",
+
+    "about_title": "POS – 車両について",
+    "about_desc": "POS – 車両は、自動車ビジネス向けの総合管理ソリューションです。",
+    "features_title": "機能",
+    "feature_inventory": "在庫管理",
+    "feature_tracking": "車両追跡",
+    "feature_sales": "販売と請求書管理",
+    "feature_crm": "顧客管理",
+    "feature_mobile": "モバイルアプリ（iOS & Android）",
+    "feature_cloud": "クラウドサービス",
+
+    "mobile_apps_title": "モバイルアプリ",
+    "app_ios_title": "iOS アプリ",
+    "app_ios_desc": "モダンで高速、レスポンシブなネイティブ体験。",
+    "app_android_title": "Android アプリ",
+    "app_android_desc": "単一コードベースでAndroidとサーバーモデルをサポート。",
+
+    "contact_title": "お問い合わせ",
+    "contact_get_in_touch": "ご連絡ください",
+    "contact_form_title": "メッセージ送信",
+    "contact_name_label": "お名前",
+    "contact_email_label": "メールアドレス",
+    "contact_subject_label": "件名",
+    "contact_message_label": "メッセージ",
+    "contact_btn_send": "送信",
+
+    "who_title": "私たちについて",
+    "who_story_title": "ストーリー",
+    "who_story_desc1": "2020年に創業…",
+    "who_story_desc2": "私たちは完全なプラットフォームを目指しました…",
+    "who_values_title": "価値観",
+    "value_innovation_title": "イノベーション",
+    "value_innovation_desc": "常に新しい技術を追求。",
+    "value_reliability_title": "信頼性",
+    "value_reliability_desc": "常に動作し続けるシステム。",
+    "value_success_title": "お客様の成功",
+    "value_success_desc": "お客様の成長をサポートします。",
+
+    "services_title": "サービス内容",
+    "services_pos_solutions": "POSソリューション",
+  
+    "services_inventory_title": "在庫管理",
+    "services_inventory_desc": "リアルタイム更新と自動アラートによる車両在庫管理。",
+  
+    "services_sales_title": "販売処理",
+    "services_sales_desc": "支払い処理と書類管理を統合した効率的な販売ワークフロー。",
+  
+    "services_crm_title": "顧客関係管理",
+    "services_crm_desc": "顧客とのやり取りとサービス履歴を追跡する総合CRM。",
+  
+    "services_workshop_title": "ワークショップ管理",
+  
+    "services_job_title": "作業スケジューリング",
+    "services_job_desc": "技術者の割り当てと進捗追跡を備えた効率的な作業スケジューリング。",
+  
+    "services_parts_title": "部品在庫",
+    "services_parts_desc": "自動補充通知を備えた部品と用品の在庫管理。",
+  
+    "services_history_title": "サービス履歴",
+    "services_history_desc": "車両の完全なサービス履歴とメンテナンススケジュールの管理。",
+  
+    "services_mobile_title": "モバイルソリューション",
+  
+    "services_ios_title": "iOSアプリ",
+    "services_ios_desc": "外出先での管理と顧客対応が可能なネイティブiOSアプリ。",
+  
+    "services_android_title": "Androidアプリ",
+    "services_android_desc": "共有コードベースで構築されたフル機能のAndroidアプリ。",
+  
+    "services_cloud_title": "クラウド同期",
+    "services_cloud_desc": "すべてのデバイスとプラットフォーム間でリアルタイムデータ同期。",
+  
+    "services_ready_title": "準備はできていますか？",
+    "services_ready_desc": "ビジネスに最適なプランを選択してください",
+  
+    "services_btn_pricing": "料金を見る",
+    "services_btn_demo": "デモを予約"
+  
+}

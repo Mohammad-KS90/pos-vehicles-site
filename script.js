@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initHoverEffects();
     initFormHandling();
     initLanguageSwitcher();
-
+    initThemeToggle();
     console.log('All features initialized');
 });
 
@@ -226,3 +226,39 @@ function applyDirection(lang) {
 function executeRecaptcha() {
     return grecaptcha.execute(recaptcha_key, { action: 'submit' });
 }
+// ================== DARK MODE TOGGLE ================== 
+function initThemeToggle() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    const toggle = document.querySelector('.theme-toggle');
+    
+    if (!toggle) {
+        // Create the toggle button if it doesn't exist
+        const themeToggleBtn = document.createElement('button');
+        themeToggleBtn.className = `theme-toggle ${savedTheme}`;
+        themeToggleBtn.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+        themeToggleBtn.setAttribute('aria-label', 'Toggle dark mode');
+        document.body.appendChild(themeToggleBtn);
+        
+        themeToggleBtn.addEventListener('click', () => toggleTheme(themeToggleBtn));
+    }
+    
+    applyTheme(savedTheme);
+}
+
+function toggleTheme(btn) {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    btn.className = `theme-toggle ${newTheme}`;
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+}
+
+// Initialize in DOMContentLoaded
+// Add this to your existing initLogoHandling call or create a new line:

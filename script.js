@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const EMAILJS_PUBLIC_KEY = "wWfS--QZbMkYohVEp";
 const EMAILJS_SERVICE_ID = "service_b24pfpp";
 const EMAILJS_TEMPLATE_ID = "template_p0tj4ls";
+const recaptcha_key = "6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY";
 
 /* ================= TAB SYSTEM ================= */
 function initTabSystem() {
@@ -223,5 +224,5 @@ function applyDirection(lang) {
 }
 
 function executeRecaptcha() {
-    return grecaptcha.execute('6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY', { action: 'submit' });
+    return grecaptcha.execute(recaptcha_key, { action: 'submit' });
 }

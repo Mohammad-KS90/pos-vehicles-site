@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('All features initialized');
 });
 
-// ------------------ TAB SYSTEM ------------------
+/* ================= EMAILJS CONFIG ================= */
+const EMAILJS_PUBLIC_KEY = "wWfS--QZbMkYohVEp";
+const EMAILJS_SERVICE_ID = "service_b24pfpp";
+const EMAILJS_TEMPLATE_ID = "template_p0tj4ls";
+
+/* ================= TAB SYSTEM ================= */
 function initTabSystem() {
     const tabButtons = document.querySelectorAll('.tab-btn');
 
@@ -23,7 +28,6 @@ function initTabSystem() {
         });
     });
 
-    // Activate first tab if none selected
     const firstTab = tabButtons[0]?.getAttribute('data-tab');
     if (firstTab) switchTab(firstTab);
 }
@@ -47,7 +51,7 @@ window.addEventListener('load', () => {
     if (hash && document.getElementById(hash)) switchTab(hash);
 });
 
-// ------------------ LOGO HANDLING ------------------
+/* ================= LOGO ================= */
 function initLogoHandling() {
     const logo = document.querySelector('.logo');
     if (!logo) return;
@@ -68,7 +72,6 @@ function createLogoFallback() {
     const fallback = document.createElement('div');
     fallback.className = 'logo-fallback';
     fallback.textContent = 'Auto POS';
-    fallback.title = 'Smart Automotive POS';
     container.insertBefore(fallback, container.firstChild);
 
     fallback.addEventListener('click', () => {
@@ -77,11 +80,10 @@ function createLogoFallback() {
     });
 }
 
-// ------------------ BUTTONS ------------------
+/* ================= BUTTONS ================= */
 function initButtonInteractions() {
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', e => {
-            e.preventDefault();
             createRippleEffect(e);
             handleButtonAction(button);
         });
@@ -94,12 +96,11 @@ function createRippleEffect(event) {
     const rect = button.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
 
-    let x = event.clientX - rect.left - size/2;
-    let y = event.clientY - rect.top - size/2;
+    let x = event.clientX - rect.left - size / 2;
+    let y = event.clientY - rect.top - size / 2;
 
-    // Flip for RTL
     if (document.documentElement.getAttribute('dir') === 'rtl') {
-        x = rect.width - x - size; 
+        x = rect.width - x - size;
     }
 
     ripple.style.width = ripple.style.height = size + 'px';
@@ -115,36 +116,48 @@ function createRippleEffect(event) {
 
 function handleButtonAction(button) {
     const text = button.textContent.trim();
-    switch(text) {
-        case 'Get Started': alert('Get Started clicked'); break;
-        case 'Contact Us': switchTab('contact'); break;
-        default: console.log('Button clicked:', text);
-    }
+    if (text === 'Contact Us') switchTab('contact');
 }
 
-// ------------------ FORM HANDLING ------------------
+/* ================= FORM (REAL EMAIL SEND) ================= */
 function initFormHandling() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', e => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
+    
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-
+    
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-
-        setTimeout(() => {
-            alert('Message sent! We will contact you soon.');
+    
+        try {
+            const token = await executeRecaptcha();
+            document.getElementById('g-recaptcha-response').value = token;
+    
+            await emailjs.sendForm(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                form
+            );
+    
+            alert('Message sent successfully!');
             form.reset();
+        } catch (err) {
+            console.error('Send failed:', err);
+            alert('Submission blocked or failed.');
+        } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 1500);
+        }
     });
 }
 
-// ------------------ SCROLL ANIMATIONS ------------------
+/* ================= SCROLL ================= */
 function initScrollAnimations() {
     const sections = document.querySelectorAll('.tab-pane section');
     sections.forEach(section => section.classList.add('fade-in'));
@@ -153,12 +166,12 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1 });
 
     sections.forEach(section => observer.observe(section));
 }
 
-// ------------------ HOVER EFFECTS ------------------
+/* ================= HOVER ================= */
 function initHoverEffects() {
     const items = document.querySelectorAll('.app-item, .service-item, .value-card');
     items.forEach(el => {
@@ -173,7 +186,7 @@ function initHoverEffects() {
     });
 }
 
-// ------------------ LANGUAGE SWITCHER ------------------
+/* ================= LANGUAGE ================= */
 function initLanguageSwitcher() {
     const languageSwitcher = document.getElementById("language-switcher");
     if (!languageSwitcher) return;
@@ -184,39 +197,31 @@ function initLanguageSwitcher() {
     applyDirection(savedLang);
 
     languageSwitcher.addEventListener("change", () => {
-        const selectedLang = languageSwitcher.value;
-        localStorage.setItem("app_lang", selectedLang);
-        loadLanguage(selectedLang);
-        applyDirection(selectedLang);
+        const lang = languageSwitcher.value;
+        localStorage.setItem("app_lang", lang);
+        loadLanguage(lang);
+        applyDirection(lang);
     });
 }
 
 async function loadLanguage(lang) {
     try {
         const res = await fetch(`./languages/${lang}.json`);
-        if (!res.ok) throw new Error("Language file not found");
         const translations = await res.json();
+
         document.querySelectorAll("[data-i18n]").forEach(el => {
             const key = el.getAttribute("data-i18n");
             if (translations[key]) el.textContent = translations[key];
         });
-
-        // RTL handling
-        if (lang === "ar") {
-            document.documentElement.setAttribute("dir", "rtl");
-            document.body.classList.add("rtl");
-        } else {
-            document.documentElement.setAttribute("dir", "ltr");
-            document.body.classList.remove("rtl");
-        }
-
-    } catch(err) {
-        console.error("Language load error:", err);
+    } catch (e) {
+        console.error("Language load error", e);
     }
 }
 
 function applyDirection(lang) {
-    const rtlLanguages = ["ar"];
-    const html = document.documentElement;
-    html.setAttribute("dir", rtlLanguages.includes(lang) ? "rtl" : "ltr");
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+}
+
+function executeRecaptcha() {
+    return grecaptcha.execute('6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY', { action: 'submit' });
 }

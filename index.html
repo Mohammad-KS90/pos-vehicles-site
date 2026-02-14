@@ -21,6 +21,8 @@
     </select>
 
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY"></script>
 
 <body>
     <header>
@@ -96,22 +98,22 @@
                 <div class="contact-info">
                     <h3 data-i18n="contact_get_in_touch">Get in Touch</h3>
                     <!-- it should be comapny name -->
-                    <!-- <div class="contact-item"><strong>Email:</strong> mohmmad90suliman@gmail.com</div> -->
                     <div class="contact-item"><strong data-i18n="contact_phone_label">Phone:</strong> +962 7889 49581 </div>
                     <div class="contact-item"><strong data-i18n="contact_address_label">Address:</strong> Amman - Jordan </div>
                     <!-- <div class="contact-item"><strong data-i18n="contact_hours_label">Business Hours:</strong> Mon-Fri 9AM-6PM</div> -->
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
                 </div>
 
                 <form class="contact-form">
                     <h3 data-i18n="contact_form_title">Send us a Message</h3>
 
                     <div class="form-group">
-                        <label for="name" data-i18n="contact_name_label">Your Name</label>
+                        <label for="name" data-i18n="contact_name_label" required>Your Name</label>
                         <input type="text" id="name">
                     </div>
 
                     <div class="form-group">
-                        <label for="email" data-i18n="contact_email_label">Your Email</label>
+                        <label for="email" data-i18n="contact_email_label" required>Your Email</label>
                         <input type="email" id="email">
                     </div>
 
@@ -121,7 +123,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="message" data-i18n="contact_message_label">Message</label>
+                        <label for="message" data-i18n="contact_message_label" required>Message</label>
                         <textarea id="message" rows="5"></textarea>
                     </div>
 

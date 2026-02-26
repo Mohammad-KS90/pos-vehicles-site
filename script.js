@@ -18,6 +18,11 @@ const EMAILJS_SERVICE_ID = "service_b24pfpp";
 const EMAILJS_TEMPLATE_ID = "template_p0tj4ls";
 const recaptcha_key = "6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY";
 
+/* ================= RECAPTCHA ================= */
+function executeRecaptcha() {
+    return grecaptcha.execute(recaptcha_key, { action: 'submit' });
+}
+
 /* ================= TAB SYSTEM ================= */
 function initTabSystem() {
     const tabButtons = document.querySelectorAll('.tab-btn');

@@ -82,6 +82,13 @@
     "services_ready_desc": "选择适合您业务需求的方案",
   
     "services_btn_pricing": "查看价格",
-    "services_btn_demo": "预约演示"
+    "services_btn_demo": "预约演示",
+
+    "footer_supported_vehicles": "支持的车辆类型",
+    "vehicle_car": "轿车",
+    "vehicle_truck": "卡车",
+    "vehicle_bus": "巴士",
+    "vehicle_motorcycle": "摩托车",
+    "vehicle_all": "所有类型"
   
 }

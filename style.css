@@ -138,6 +138,35 @@ html[data-theme="dark"] {
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
+/* Dark Mode Title Colors */
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .vehicle-support-title {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .app-title {
+  color: #ffffff;
+  -webkit-text-fill-color: unset;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+html[data-theme="dark"] .contact-info h3,
+html[data-theme="dark"] .contact-form h3 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .value-card h4,
+html[data-theme="dark"] .service-item h4 {
+  color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1082,11 +1111,19 @@ html[dir="rtl"] h3,
 html[dir="rtl"] h4,
 html[dir="rtl"] p,
 html[dir="rtl"] label,
-html[dir="rtl"] .tagline {
+html[dir="rtl"] li,
+html[dir="rtl"] ul,
+html[dir="rtl"] .tagline,
+html[dir="rtl"] strong,
+html[dir="rtl"] span {
   text-align: right;
 }
 
-html[dir="rtl"] h2::after {
+html[dir="rtl"] h2::after,
+html[dir="rtl"] h3::after,
+html[dir="rtl"] .service-category h3::after {
+  left: auto;
+  right: 0;
   margin: 20px auto 0;
 }
 
@@ -1094,23 +1131,45 @@ html[dir="rtl"] .logo-container,
 html[dir="rtl"] .tabs,
 html[dir="rtl"] .contact-content,
 html[dir="rtl"] .cta-buttons,
+html[dir="rtl"] .features,
+html[dir="rtl"] .value-cards,
+html[dir="rtl"] .service-items {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .feature-list {
+  list-style-position: inside;
+}
+
 html[dir="rtl"] .feature-list li {
   flex-direction: row-reverse;
+  text-align: right;
+  justify-content: flex-end;
 }
 
 html[dir="rtl"] .feature-list li:before {
   margin-right: 0;
   margin-left: 15px;
+  order: 2;
+}
+
+html[dir="rtl"] .feature-list li:hover {
+  transform: translateX(-8px);
 }
 
 html[dir="rtl"] .contact-form,
-html[dir="rtl"] .contact-info {
+html[dir="rtl"] .contact-info,
+html[dir="rtl"] .app-item,
+html[dir="rtl"] .service-item,
+html[dir="rtl"] .value-card,
+html[dir="rtl"] .app-title {
   text-align: right;
 }
 
 html[dir="rtl"] .form-group input,
 html[dir="rtl"] .form-group textarea {
   text-align: right;
+  direction: rtl;
 }
 
 html[dir="rtl"] .company-info {
@@ -1118,14 +1177,42 @@ html[dir="rtl"] .company-info {
   border-right: 5px solid var(--primary-color);
 }
 
-html[dir="rtl"] .service-category h3::after {
-  left: auto;
-  right: 0;
-}
-
 html[dir="rtl"] .theme-toggle {
   right: auto;
   left: 20px;
+}
+
+html[dir="rtl"] .contact-item {
+  border-left: 2px solid var(--border-color);
+  border-right: none;
+}
+
+html[dir="rtl"] .contact-item:hover {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .app-description {
+  text-align: right;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .vehicle-footer {
+  text-align: center;
+}
+
+html[dir="rtl"] .vehicle-cards {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .service-item::after {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .value-card::before {
+  transform-origin: right;
 }
 
 @media (max-width: 768px) {

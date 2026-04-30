@@ -1,0 +1,94 @@
+{
+    "title": "Akıllı Otomotiv POS",
+    "header_title": "Akıllı Otomotiv POS",
+    "header_tagline": "Araçları, satışları, servis işlerini ve envanteri tek platformdan yönetin.",
+    "tab_about": "Hakkımızda",
+    "tab_contact": "İletişim",
+    "tab_who": "Biz Kimiz",
+    "tab_services": "Hizmetlerimiz",
+
+    "about_title": "POS – Araçlar Hakkında",
+    "about_desc": "POS – Araçlar, otomotiv işletmeleri için eksiksiz bir yönetim çözümüdür.",
+    "features_title": "Özellikler",
+    "feature_inventory": "Envanter yönetimi",
+    "feature_tracking": "Araç takibi",
+    "feature_sales": "Satış ve faturalandırma",
+    "feature_crm": "Müşteri yönetimi",
+    "feature_mobile": "Mobil uygulama (iOS & Android)",
+    "feature_cloud": "Bulut hizmeti",
+
+    "mobile_apps_title": "Mobil Uygulamalar",
+    "app_ios_title": "iOS Uygulaması",
+    "app_ios_desc": "Modern, hızlı ve duyarlı yerel uygulama deneyimi.",
+    "app_android_title": "Android Uygulaması",
+    "app_android_desc": "Android ve sunucu modellerini destekleyen tek kod tabanı.",
+
+    "contact_title": "İletişim",
+    "contact_get_in_touch": "Bizimle İletişime Geçin",
+    "contact_form_title": "Bize Mesaj Gönderin",
+    "contact_name_label": "Adınız",
+    "contact_email_label": "E-posta Adresiniz",
+    "contact_subject_label": "Konu",
+    "contact_message_label": "Mesaj",
+    "contact_btn_send": "Mesaj Gönder",
+
+    "who_title": "Biz Kimiz",
+    "who_story_title": "Hikayemiz",
+    "who_story_desc1": "2020 yılında kuruldu...",
+    "who_story_desc2": "Eksiksiz bir platform oluşturmak için yola çıktık...",
+    "who_values_title": "Değerlerimiz",
+    "value_innovation_title": "Yenilikçilik",
+    "value_innovation_desc": "Sürekli olarak sınırları zorluyoruz...",
+    "value_reliability_title": "Güvenilirlik",
+    "value_reliability_desc": "Güvenebileceğiniz sistemler geliştiriyoruz.",
+    "value_success_title": "Müşteri Başarısı",
+    "value_success_desc": "İşletmenizin büyümesine yardımcı oluyoruz.",
+
+    "services_title": "Hizmetlerimiz",
+    "services_pos_solutions": "POS Çözümleri",
+  
+    "services_inventory_title": "Envanter Yönetimi",
+    "services_inventory_desc": "Gerçek zamanlı güncellemeler ve otomatik uyarılarla kapsamlı araç envanteri takibi.",
+  
+    "services_sales_title": "Satış İşlemleri",
+    "services_sales_desc": "Entegre ödeme işlemleri ve dokümantasyon ile optimize edilmiş satış süreçleri.",
+  
+    "services_crm_title": "Müşteri İlişkileri Yönetimi",
+    "services_crm_desc": "Müşteri etkileşimlerini ve servis geçmişini takip eden kapsamlı CRM.",
+  
+    "services_workshop_title": "Servis Yönetimi",
+  
+    "services_job_title": "İş Planlama",
+    "services_job_desc": "Teknisyen ataması ve ilerleme takibi ile verimli iş planlama.",
+  
+    "services_parts_title": "Parça Envanteri",
+    "services_parts_desc": "Otomatik yeniden sipariş uyarıları ile parça ve malzeme yönetimi.",
+  
+    "services_history_title": "Servis Geçmişi",
+    "services_history_desc": "Araç servis geçmişinin tam takibi ve bakım planlaması.",
+  
+    "services_mobile_title": "Mobil Çözümler",
+  
+    "services_ios_title": "iOS Uygulaması",
+    "services_ios_desc": "Hareket halindeyken yönetim ve müşteri etkileşimleri için yerel iOS uygulaması.",
+  
+    "services_android_title": "Android Uygulaması",
+    "services_android_desc": "Tutarlılık için ortak kod tabanı ile geliştirilmiş tam özellikli Android uygulaması.",
+  
+    "services_cloud_title": "Bulut Senkronizasyonu",
+    "services_cloud_desc": "Tüm cihazlar ve platformlar arasında gerçek zamanlı veri senkronizasyonu.",
+  
+    "services_ready_title": "Başlamaya Hazır mısınız?",
+    "services_ready_desc": "İş ihtiyaçlarınıza en uygun planı seçin",
+  
+    "services_btn_pricing": "Fiyatları Görüntüle",
+    "services_btn_demo": "Demo Planla",
+
+    "footer_supported_vehicles": "Desteklenen Araç Türleri",
+    "vehicle_car": "Arabalar",
+    "vehicle_truck": "Kamyonlar",
+    "vehicle_bus": "Otobüsler",
+    "vehicle_motorcycle": "Motosikletler",
+    "vehicle_all": "Tüm Türler"
+}
+

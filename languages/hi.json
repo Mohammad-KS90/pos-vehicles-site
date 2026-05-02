@@ -77,6 +77,13 @@
     "services_ready_desc": "अपने व्यवसाय के लिए उपयुक्त प्लान चुनें",
   
     "services_btn_pricing": "कीमत देखें",
-    "services_btn_demo": "डेमो शेड्यूल करें"
+    "services_btn_demo": "डेमो शेड्यूल करें",
+
+    "footer_supported_vehicles": "समर्थित वाहन प्रकार",
+    "vehicle_car": "कारें",
+    "vehicle_truck": "ट्रक",
+    "vehicle_bus": "बसें",
+    "vehicle_motorcycle": "मोटरसाइकिलें",
+    "vehicle_all": "सभी प्रकार"
   
 }

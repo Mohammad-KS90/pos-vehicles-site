@@ -82,6 +82,13 @@
     "services_ready_desc": "اختر الخطة التي تناسب احتياجات عملك",
   
     "services_btn_pricing": "عرض الأسعار",
-    "services_btn_demo": "جدولة عرض"
+    "services_btn_demo": "جدولة عرض",
+
+    "footer_supported_vehicles": "أنواع المركبات المدعومة",
+    "vehicle_car": "سيارات",
+    "vehicle_truck": "شاحنات",
+    "vehicle_bus": "حافلات",
+    "vehicle_motorcycle": "دراجات نارية",
+    "vehicle_all": "جميع الأنواع"
     
 }

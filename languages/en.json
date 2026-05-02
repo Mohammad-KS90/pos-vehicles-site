@@ -82,7 +82,14 @@
     "services_ready_desc": "Choose the plan that fits your business needs",
   
     "services_btn_pricing": "View Pricing",
-    "services_btn_demo": "Schedule Demo"
+    "services_btn_demo": "Schedule Demo",
+
+    "footer_supported_vehicles": "Supported Vehicle Types",
+    "vehicle_car": "Cars",
+    "vehicle_truck": "Trucks",
+    "vehicle_bus": "Buses",
+    "vehicle_motorcycle": "Motorcycles",
+    "vehicle_all": "All Types"
   
     
 }

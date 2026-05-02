@@ -77,7 +77,14 @@
     "services_ready_desc": "Chọn gói phù hợp với nhu cầu kinh doanh của bạn",
   
     "services_btn_pricing": "Xem Giá",
-    "services_btn_demo": "Đặt Lịch Demo"
+    "services_btn_demo": "Đặt Lịch Demo",
+
+    "footer_supported_vehicles": "Các loại xe được hỗ trợ",
+    "vehicle_car": "Ô tô",
+    "vehicle_truck": "Xe tải",
+    "vehicle_bus": "Xe buýt",
+    "vehicle_motorcycle": "Xe máy",
+    "vehicle_all": "Tất cả các loại"
   
 
 }

@@ -82,6 +82,13 @@
     "services_ready_desc": "비즈니스에 맞는 요금제를 선택하십시오",
   
     "services_btn_pricing": "요금 보기",
-    "services_btn_demo": "데모 예약"
+    "services_btn_demo": "데모 예약",
+
+    "footer_supported_vehicles": "지원 차량 유형",
+    "vehicle_car": "자동차",
+    "vehicle_truck": "트럭",
+    "vehicle_bus": "버스",
+    "vehicle_motorcycle": "오토바이",
+    "vehicle_all": "모든 유형"
   
 }

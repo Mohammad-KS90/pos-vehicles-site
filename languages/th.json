@@ -77,6 +77,13 @@
     "services_ready_desc": "เลือกแพ็กเกจที่เหมาะกับธุรกิจของคุณ",
   
     "services_btn_pricing": "ดูราคา",
-    "services_btn_demo": "กำหนดการสาธิต"
+    "services_btn_demo": "กำหนดการสาธิต",
+
+    "footer_supported_vehicles": "ประเภทรถที่รองรับ",
+    "vehicle_car": "รถยนต์",
+    "vehicle_truck": "รถบรรทุก",
+    "vehicle_bus": "รถบัส",
+    "vehicle_motorcycle": "รถจักรยานยนต์",
+    "vehicle_all": "ทุกประเภท"
   
 }

@@ -82,6 +82,13 @@
     "services_ready_desc": "Choisissez le plan adapté à vos besoins",
   
     "services_btn_pricing": "Voir les Tarifs",
-    "services_btn_demo": "Planifier une Démo"
+    "services_btn_demo": "Planifier une Démo",
+
+    "footer_supported_vehicles": "Types de véhicules pris en charge",
+    "vehicle_car": "Voitures",
+    "vehicle_truck": "Camions",
+    "vehicle_bus": "Bus",
+    "vehicle_motorcycle": "Motos",
+    "vehicle_all": "Tous types"
   
 }

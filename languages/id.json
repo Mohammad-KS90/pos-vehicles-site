@@ -82,6 +82,13 @@
     "services_ready_desc": "Pilih paket yang sesuai dengan kebutuhan bisnis Anda",
   
     "services_btn_pricing": "Lihat Harga",
-    "services_btn_demo": "Jadwalkan Demo"
+    "services_btn_demo": "Jadwalkan Demo",
+
+    "footer_supported_vehicles": "Jenis Kendaraan yang Didukung",
+    "vehicle_car": "Mobil",
+    "vehicle_truck": "Truk",
+    "vehicle_bus": "Bus",
+    "vehicle_motorcycle": "Sepeda Motor",
+    "vehicle_all": "Semua Jenis"
   
 }

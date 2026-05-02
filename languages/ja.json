@@ -82,6 +82,13 @@
     "services_ready_desc": "ビジネスに最適なプランを選択してください",
   
     "services_btn_pricing": "料金を見る",
-    "services_btn_demo": "デモを予約"
+    "services_btn_demo": "デモを予約",
+
+    "footer_supported_vehicles": "対応車種",
+    "vehicle_car": "自動車",
+    "vehicle_truck": "トラック",
+    "vehicle_bus": "バス",
+    "vehicle_motorcycle": "バイク",
+    "vehicle_all": "全ての種類"
   
 }

@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Smart Automotive POS loaded successfully!');
-
     initLogoHandling();
     initTabSystem();
     initButtonInteractions();
@@ -9,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormHandling();
     initLanguageSwitcher();
     initThemeToggle();
-    console.log('All features initialized');
 });
 
 /* ================= EMAILJS CONFIG ================= */
@@ -228,9 +225,6 @@ function applyDirection(lang) {
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
 }
 
-function executeRecaptcha() {
-    return grecaptcha.execute(recaptcha_key, { action: 'submit' });
-}
 // ================== DARK MODE TOGGLE ================== 
 function initThemeToggle() {
     const savedTheme = localStorage.getItem('theme') || 'light';

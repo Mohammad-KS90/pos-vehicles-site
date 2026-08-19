@@ -43,12 +43,6 @@
   border-color: var(--secondary-color);
 }
 
-.vehicle-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  display: block;
-}
 
 .vehicle-card span {
   font-size: 1.08rem;

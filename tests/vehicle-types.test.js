@@ -1,8 +1,6 @@
 // Tests for the "Supported Vehicle Types" footer section.
 // Run with: npm test   (first time: npm install && npx playwright install chromium)
 //
-// Tests marked { todo } describe the planned redesign. They run and report,
-// but don't fail the suite until the redesign lands and the flag is removed.
 
 const { test, before, after } = require('node:test');
 const assert = require('node:assert/strict');
@@ -78,7 +76,7 @@ const cardInfo = page => page.$$eval('.vehicle-card', cards => cards.map(c => {
   };
 }));
 
-/* ---------------- Current behaviour (must pass) ---------------- */
+/* ---------------- Section behaviour ---------------- */
 
 test('section shows the title and the five vehicle cards in order', async () => {
   const { page, close } = await openPage();
@@ -150,16 +148,16 @@ test('section fits a phone screen without horizontal scrolling', async () => {
   }
 });
 
-/* ---------------- Planned redesign (todo until done) ---------------- */
+/* ---------------- Icon set rules ---------------- */
 
-test('all icons use one format (SVG) so they stay sharp and match', { todo: 'redesign' }, async () => {
+test('all icons use one format (SVG) so they stay sharp and match', async () => {
   const { page, close } = await openPage();
   try {
     for (const c of await cardInfo(page)) assert.match(c.src, /\.svg$/, `${c.src} is not SVG`);
   } finally { await close(); }
 });
 
-test('each icon file is small (under 10 KB)', { todo: 'redesign' }, async () => {
+test('each icon file is small (under 10 KB)', async () => {
   const { page, close } = await openPage();
   try {
     for (const c of await cardInfo(page)) {
@@ -169,7 +167,7 @@ test('each icon file is small (under 10 KB)', { todo: 'redesign' }, async () => 
   } finally { await close(); }
 });
 
-test('icons stay visible in dark mode', { todo: 'redesign' }, async () => {
+test('icons stay visible in dark mode', async () => {
   // Black line-art on a dark card is invisible. Either the card keeps a
   // light background in dark mode, or the icon is inverted.
   const { page, close } = await openPage({ theme: 'dark' });
@@ -185,7 +183,7 @@ test('icons stay visible in dark mode', { todo: 'redesign' }, async () => {
   } finally { await close(); }
 });
 
-test('"All Types" icon is a picture, not baked-in English text', { todo: 'redesign' }, () => {
+test('"All Types" icon is a picture, not baked-in English text', () => {
   const svg = fs.readFileSync(path.join(ROOT, 'assets', 'vehicle-all.svg'), 'utf8');
   assert.doesNotMatch(svg, /<text[\s>]/, 'vehicle-all.svg contains a <text> element');
 });

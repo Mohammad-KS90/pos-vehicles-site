@@ -56,3 +56,5 @@ temp/
 # Optional: Generated assets
 # Uncomment if these are generated automatically
 # assets/generated/
+# Lockfile for the test runner only
+package-lock.json

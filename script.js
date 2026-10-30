@@ -15,6 +15,8 @@ const EMAILJS_SERVICE_ID = "service_b24pfpp";
 const EMAILJS_TEMPLATE_ID = "template_p0tj4ls";
 const recaptcha_key = "6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY";
 
+const SUPPORTED_LANGS = ["ar", "tr", "en", "fr", "zh", "ja", "ko", "id", "th", "vi", "hi"];
+
 /* ================= RECAPTCHA ================= */
 function executeRecaptcha() {
     return grecaptcha.execute(recaptcha_key, { action: 'submit' });
@@ -127,11 +129,26 @@ function initFormHandling() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY,
+        blockHeadless: true,
+        limitRate: { id: 'contact-form', throttle: 30000 }
+    });
 
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
-    
+
+        // Bots fill the hidden honeypot field; pretend success and drop it
+        if (form.querySelector('#website')?.value) {
+            form.reset();
+            return;
+        }
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
     
@@ -194,13 +211,15 @@ function initLanguageSwitcher() {
     const languageSwitcher = document.getElementById("language-switcher");
     if (!languageSwitcher) return;
 
-    const savedLang = localStorage.getItem("app_lang") || "en";
+    const storedLang = localStorage.getItem("app_lang");
+    const savedLang = SUPPORTED_LANGS.includes(storedLang) ? storedLang : "en";
     languageSwitcher.value = savedLang;
     loadLanguage(savedLang);
     applyDirection(savedLang);
 
     languageSwitcher.addEventListener("change", () => {
         const lang = languageSwitcher.value;
+        if (!SUPPORTED_LANGS.includes(lang)) return;
         localStorage.setItem("app_lang", lang);
         loadLanguage(lang);
         applyDirection(lang);
@@ -208,8 +227,10 @@ function initLanguageSwitcher() {
 }
 
 async function loadLanguage(lang) {
+    if (!SUPPORTED_LANGS.includes(lang)) lang = "en";
     try {
         const res = await fetch(`./languages/${lang}.json`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const translations = await res.json();
 
         document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -223,18 +244,19 @@ async function loadLanguage(lang) {
 
 function applyDirection(lang) {
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+    document.documentElement.setAttribute("lang", lang);
 }
 
 // ================== DARK MODE TOGGLE ================== 
 function initThemeToggle() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
     const toggle = document.querySelector('.theme-toggle');
     
     if (!toggle) {
         // Create the toggle button if it doesn't exist
         const themeToggleBtn = document.createElement('button');
         themeToggleBtn.className = `theme-toggle ${savedTheme}`;
-        themeToggleBtn.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+        themeToggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
         themeToggleBtn.setAttribute('aria-label', 'Toggle dark mode');
         document.body.appendChild(themeToggleBtn);
         
@@ -258,6 +280,3 @@ function toggleTheme(btn) {
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
 }
-
-// Initialize in DOMContentLoaded
-// Add this to your existing initLogoHandling call or create a new line:

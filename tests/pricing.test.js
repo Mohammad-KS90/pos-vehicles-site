@@ -206,3 +206,16 @@ test('pricing fits a 375px phone without sideways scrolling', async () => {
     assert.equal(columns, 1);
   } finally { await close(); }
 });
+
+test('"Get started" in Arabic on a phone does not widen the page', async () => {
+  // Regression: the contact form's hidden honeypot field used left:-10000px,
+  // which made right-to-left pages ~10,000px wide (a huge blank area on phones).
+  const { page, close } = await openPricing({ lang: 'ar', width: 375, height: 812 });
+  try {
+    await page.waitForFunction(() => document.documentElement.dir === 'rtl');
+    await page.click('#pricing .plan-card--featured .btn');
+    assert.ok(await page.$eval('#contact', el => el.classList.contains('active')));
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    assert.ok(overflow <= 0, `page is ${overflow}px wider than the screen`);
+  } finally { await close(); }
+});

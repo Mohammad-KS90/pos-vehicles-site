@@ -289,7 +289,13 @@ header {
   text-align: center;
 }
 
+.logo-link {
+  display: inline-flex;
+  border-radius: var(--cv-radius-xl);
+}
+
 .logo {
+  display: block;
   width: 96px;
   height: 96px;
   object-fit: contain;

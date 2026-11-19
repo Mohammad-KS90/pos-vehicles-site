@@ -94,6 +94,12 @@
     "vehicle_bus": "Bus",
     "vehicle_motorcycle": "Sepeda Motor",
     "vehicle_all": "Semua Jenis",
+    "vehicle_car_desc": "Berikan setiap mobil penumpang paspor digital: dekode VIN, simpan foto dan gambar STNK, dan lacak seluruh riwayat servis dan suku cadang di satu tempat.",
+    "vehicle_truck_desc": "Jaga truk ringan dan berat tetap beroperasi dengan perawatan yang terlacak, stok suku cadang yang sesuai untuk tiap truk, serta catatan izin dan odometer armada Anda.",
+    "vehicle_bus_desc": "Kelola bus dan minibus dengan perawatan terjadwal, pemesanan bengkel servis, dan riwayat lengkap yang mengikuti setiap kendaraan.",
+    "vehicle_motorcycle_desc": "Lacak sepeda motor dan skuter seperti mobil: detail VIN, catatan servis, dan suku cadang yang tepat dari inventaris Anda.",
+    "vehicle_all_desc": "Satu platform untuk setiap kendaraan yang Anda miliki, jual, perbaiki, atau derek. Apa pun jenisnya, Carventory menjaga catatannya tetap lengkap dan mudah ditemukan.",
+    "vehicle_back": "Kembali ke beranda",
 
     "pricing_title": "Harga",
     "pricing_subtitle": "Paket bulanan sederhana untuk setiap tahap perjalanan kendaraan.",

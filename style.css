@@ -1088,6 +1088,54 @@ a.contact-value {
   text-align: center;
 }
 
+a.vehicle-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ============ VEHICLE TYPE PAGES (vehicles/<type>/) ============ */
+.vehicle-page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--cv-space-xl) 0;
+}
+
+.vehicle-page-icon {
+  width: 160px;
+  height: 160px;
+  max-width: 60vw;
+  margin-bottom: var(--cv-space-xl);
+}
+
+.vehicle-page-title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--cv-text-primary);
+  margin-bottom: var(--cv-space-md);
+}
+
+.vehicle-page-desc {
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--cv-text-secondary);
+  margin-bottom: var(--cv-space-xl);
+}
+
+html[dir="rtl"] .vehicle-page-main,
+html[dir="rtl"] .vehicle-page-desc {
+  text-align: center;
+}
+
+.vehicle-page-back {
+  text-decoration: none;
+}
+
 /* ================== SITE FOOTER ================== */
 .site-footer {
   margin-top: var(--cv-space-xxxl);

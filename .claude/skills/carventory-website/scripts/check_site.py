@@ -125,5 +125,25 @@ if problems:
         print(f"  - {p}")
     sys.exit(1)
 version = versions[0] if versions else "?"
+# 7. Vehicle type pages: one per footer card, same version, known keys
+ROOT_VERSION = versions[0] if versions else None
+cards = re.findall(r'href="/vehicles/([a-z]+)/"', html_live)
+if not cards:
+    problem("index.html: the Supported Vehicle Types cards do not link to /vehicles/<type>/")
+for slug in cards:
+    rel = f"vehicles/{slug}/index.html"
+    path = ROOT / rel
+    if not path.exists():
+        problem(f"{rel} is missing (linked from index.html)")
+        continue
+    page = path.read_text(encoding="utf-8")
+    page_versions = set(re.findall(r'(?:style\.css|vehicle\.js)\?v=([^"]+)"', page))
+    if page_versions != {ROOT_VERSION}:
+        problem(f"{rel}: ?v= {sorted(page_versions)} does not match index.html ({ROOT_VERSION}); run bump_version.py")
+    for key in sorted(set(re.findall(r'data-i18n="([^"]+)"', page)) - set(en)):
+        problem(f"{rel} uses data-i18n key \"{key}\" that is not in en.json")
+    if f"vehicle_{slug}_desc" not in en:
+        problem(f"languages: missing vehicle_{slug}_desc for {rel}")
+
 legal_note = f", legal pages: {len(legal_draft)} draft (unlinked)" if legal_draft else ", legal pages: final"
 print(f"OK: {len(LANGS)} languages x {len(en)} keys, pricing complete, version {version}{legal_note}")

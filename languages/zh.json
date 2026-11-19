@@ -94,6 +94,12 @@
     "vehicle_bus": "巴士",
     "vehicle_motorcycle": "摩托车",
     "vehicle_all": "所有类型",
+    "vehicle_car_desc": "为每辆乘用车提供数字护照：解码 VIN，保存照片和行驶证图片，在一个地方追踪完整的保养和配件记录。",
+    "vehicle_truck_desc": "通过保养追踪、与每辆卡车匹配的配件库存，以及车队的证照和里程记录，让轻型和重型卡车持续上路。",
+    "vehicle_bus_desc": "通过定期保养、服务中心预约以及伴随每辆车的完整历史记录，管理大巴和中巴。",
+    "vehicle_motorcycle_desc": "像管理汽车一样管理摩托车和踏板车：VIN 信息、保养记录，以及库存中合适的备件。",
+    "vehicle_all_desc": "一个平台管理您拥有、销售、维修或拖运的每一辆车。无论何种类型，Carventory 都能让记录完整且易于查找。",
+    "vehicle_back": "返回首页",
 
     "pricing_title": "价格",
     "pricing_subtitle": "覆盖车辆全生命周期的简单月度套餐。",

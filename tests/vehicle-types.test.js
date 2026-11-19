@@ -21,11 +21,12 @@ const EXPECTED = [
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
   '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg' };
 
-let server, browser, baseUrl;
+let server, browser, baseUrl, origin;
 
 before(async () => {
   server = http.createServer((req, res) => {
-    const file = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]));
+    let file = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]));
+    if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
     if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
       res.writeHead(404).end();
       return;
@@ -34,7 +35,8 @@ before(async () => {
     fs.createReadStream(file).pipe(res);
   });
   await new Promise(r => server.listen(0, r));
-  baseUrl = `http://localhost:${server.address().port}/index.html`;
+  origin = `http://localhost:${server.address().port}`;
+  baseUrl = `${origin}/index.html`;
   browser = await chromium.launch();
 });
 
@@ -45,7 +47,7 @@ after(async () => {
 
 // Third-party scripts (EmailJS, reCAPTCHA) aren't needed here; stub them so
 // the tests run offline.
-async function openPage({ width = 1280, height = 900, lang, theme } = {}) {
+async function openPage({ width = 1280, height = 900, lang, theme, url } = {}) {
   const context = await browser.newContext({ viewport: { width, height } });
   await context.addInitScript(([l, t]) => {
     if (l) localStorage.setItem('app_lang', l);
@@ -56,7 +58,7 @@ async function openPage({ width = 1280, height = 900, lang, theme } = {}) {
   const page = await context.newPage();
   const failed = [];
   page.on('response', r => { if (r.status() >= 400) failed.push(r.url()); });
-  await page.goto(baseUrl);
+  await page.goto(url ? origin + url : baseUrl);
   await page.waitForLoadState('networkidle');
   return { page, failed, close: () => context.close() };
 }
@@ -205,4 +207,61 @@ for (const theme of ['light', 'dark']) {
 test('"All Types" icon is a picture, not baked-in English text', () => {
   const svg = fs.readFileSync(path.join(ROOT, 'assets', 'vehicle-all.svg'), 'utf8');
   assert.doesNotMatch(svg, /<text[\s>]/, 'vehicle-all.svg contains a <text> element');
+});
+
+/* ---------------- Vehicle type pages (vehicles/<type>/) ---------------- */
+
+const SLUGS = ['car', 'truck', 'bus', 'motorcycle', 'all'];
+
+test('each card links to its own vehicle page', async () => {
+  const { page, close } = await openPage();
+  try {
+    const hrefs = await page.$$eval('.vehicle-card', cs => cs.map(c => c.getAttribute('href')));
+    assert.deepEqual(hrefs, SLUGS.map(s => `/vehicles/${s}/`));
+  } finally { await close(); }
+});
+
+test('tapping a card opens its page with the icon and description', async () => {
+  const en = JSON.parse(fs.readFileSync(path.join(ROOT, 'languages', 'en.json'), 'utf8'));
+  const { page, close } = await openPage();
+  try {
+    await page.click('.vehicle-card[href="/vehicles/truck/"]');
+    await page.waitForURL('**/vehicles/truck/');
+    assert.equal((await page.textContent('.vehicle-page-title')).trim(), en.vehicle_truck);
+    assert.equal((await page.textContent('.vehicle-page-desc')).trim(), en.vehicle_truck_desc);
+  } finally { await close(); }
+});
+
+for (const lang of ['en', 'ar']) {
+  test(`every vehicle page shows its icon and description (${lang})`, async () => {
+    const t = JSON.parse(fs.readFileSync(path.join(ROOT, 'languages', `${lang}.json`), 'utf8'));
+    for (const slug of SLUGS) {
+      const { page, failed, close } = await openPage({ lang, url: `/vehicles/${slug}/` });
+      try {
+        await page.waitForFunction(v => document.querySelector('.vehicle-page-desc').textContent === v, t[`vehicle_${slug}_desc`]);
+        assert.equal(await page.getAttribute('html', 'dir'), lang === 'ar' ? 'rtl' : 'ltr');
+        assert.ok(await page.$eval('.vehicle-page-icon', i => i.complete && i.naturalWidth > 0), `${slug} icon did not load`);
+        assert.deepEqual(failed, [], 'some requests failed');
+      } finally { await close(); }
+    }
+  });
+}
+
+test('?lang= in the address picks the language on a vehicle page', async () => {
+  const ar = JSON.parse(fs.readFileSync(path.join(ROOT, 'languages', 'ar.json'), 'utf8'));
+  const { page, close } = await openPage({ url: '/vehicles/bus/?lang=ar' });
+  try {
+    await page.waitForFunction(v => document.querySelector('.vehicle-page-title').textContent === v, ar.vehicle_bus);
+    assert.equal(await page.getAttribute('html', 'dir'), 'rtl');
+  } finally { await close(); }
+});
+
+test('vehicle pages fit a phone screen in Arabic without horizontal scrolling', async () => {
+  for (const slug of SLUGS) {
+    const { page, close } = await openPage({ width: 375, lang: 'ar', url: `/vehicles/${slug}/` });
+    try {
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+      assert.ok(overflow <= 0, `/vehicles/${slug}/ overflows by ${overflow}px at 375px`);
+    } finally { await close(); }
+  }
 });

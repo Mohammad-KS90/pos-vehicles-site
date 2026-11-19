@@ -89,6 +89,12 @@
     "vehicle_bus": "Xe buýt",
     "vehicle_motorcycle": "Xe máy",
     "vehicle_all": "Tất cả các loại",
+    "vehicle_car_desc": "Trao cho mỗi xe du lịch một hộ chiếu số: giải mã VIN, lưu ảnh và hình giấy phép, theo dõi toàn bộ lịch sử bảo dưỡng và phụ tùng ở một nơi.",
+    "vehicle_truck_desc": "Giữ xe tải nhẹ và nặng luôn vận hành với bảo dưỡng được theo dõi, kho phụ tùng phù hợp từng xe, cùng hồ sơ giấy phép và số km của đội xe.",
+    "vehicle_bus_desc": "Quản lý xe buýt và xe khách nhỏ với lịch bảo dưỡng, đặt lịch trung tâm dịch vụ và lịch sử đầy đủ theo từng xe.",
+    "vehicle_motorcycle_desc": "Theo dõi xe máy và xe tay ga như ô tô: thông tin VIN, hồ sơ bảo dưỡng và đúng phụ tùng từ kho của bạn.",
+    "vehicle_all_desc": "Một nền tảng cho mọi phương tiện bạn sở hữu, bán, sửa chữa hay cứu hộ. Dù là loại nào, Carventory giữ hồ sơ đầy đủ và dễ tìm.",
+    "vehicle_back": "Về trang chủ",
 
     "pricing_title": "Bảng giá",
     "pricing_subtitle": "Các gói hằng tháng đơn giản cho mọi giai đoạn của phương tiện.",

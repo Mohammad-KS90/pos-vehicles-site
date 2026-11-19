@@ -94,6 +94,12 @@
     "vehicle_bus": "버스",
     "vehicle_motorcycle": "오토바이",
     "vehicle_all": "모든 유형",
+    "vehicle_car_desc": "모든 승용차에 디지털 여권을: VIN을 해독하고, 사진과 면허 이미지를 보관하며, 정비 및 부품 이력 전체를 한곳에서 확인하세요.",
+    "vehicle_truck_desc": "정비 추적, 트럭별로 맞춘 부품 재고, 차량 대열의 면허 및 주행거리 기록으로 소형·대형 트럭을 계속 운행하세요.",
+    "vehicle_bus_desc": "정기 정비, 서비스 센터 예약, 차량마다 따라가는 완전한 이력으로 버스와 미니버스를 관리하세요.",
+    "vehicle_motorcycle_desc": "오토바이와 스쿠터도 자동차처럼 관리하세요: VIN 정보, 정비 기록, 재고에서 찾은 알맞은 부품.",
+    "vehicle_all_desc": "소유하고, 판매하고, 수리하고, 견인하는 모든 차량을 하나의 플랫폼에서. 어떤 유형이든 Carventory가 기록을 완전하고 찾기 쉽게 유지합니다.",
+    "vehicle_back": "홈으로 돌아가기",
 
     "pricing_title": "요금",
     "pricing_subtitle": "차량 여정의 모든 단계를 위한 간단한 월간 요금제.",

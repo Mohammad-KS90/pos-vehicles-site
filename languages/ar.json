@@ -6,6 +6,7 @@
     "tab_contact": "اتصل بنا",
     "tab_who": "من نكون",
     "tab_services": "خدماتنا",
+    "tab_pricing": "الأسعار",
 
     "about_title": "عن - Carventory - جواز المركبة",
     "about_desc": "جواز المركبة حل متكامل لإدارة وكالات السيارات ومراكز الصيانة والمحلات.",
@@ -89,6 +90,63 @@
     "vehicle_truck": "شاحنات",
     "vehicle_bus": "حافلات",
     "vehicle_motorcycle": "دراجات نارية",
-    "vehicle_all": "جميع الأنواع"
-    
+    "vehicle_all": "جميع الأنواع",
+
+    "pricing_title": "الأسعار",
+    "pricing_subtitle": "خطط شهرية بسيطة لكل مرحلة من رحلة المركبة.",
+    "pricing_segment_label": "نوع العميل",
+    "pricing_b2b": "للشركات",
+    "pricing_b2c": "لمالكي المركبات",
+    "pricing_role_label": "نوع النشاط",
+    "pricing_currency_label": "العملة",
+    "pricing_role_autoparts": "نظام نقاط بيع قطع الغيار",
+    "pricing_role_towing": "سائق شاحنة / مزوّد سحب",
+    "pricing_role_servicecenter": "مركز صيانة",
+    "pricing_role_owner": "مالك المركبة",
+    "pricing_plan_basic": "أساسي",
+    "pricing_plan_pro": "احترافي",
+    "pricing_plan_enterprise": "مؤسسات",
+    "pricing_plan_free": "مجاني",
+    "pricing_per_month": "/ شهريًا",
+    "pricing_popular": "الأكثر طلبًا",
+    "pricing_cta": "ابدأ الآن",
+    "pricing_subject": "الأسعار: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

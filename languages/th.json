@@ -6,6 +6,7 @@
     "tab_contact": "ติดต่อเรา",
     "tab_who": "เราคือใคร",
     "tab_services": "บริการของเรา",
+    "tab_pricing": "ราคา",
     "about_title": "เกี่ยวกับ - Carventory - พาสปอร์ตยานพาหนะ",
     "about_desc": "พาสปอร์ตยานพาหนะเป็นโซลูชันการจัดการครบวงจรสำหรับธุรกิจยานยนต์",
     "features_title": "คุณสมบัติ",
@@ -84,6 +85,63 @@
     "vehicle_truck": "รถบรรทุก",
     "vehicle_bus": "รถบัส",
     "vehicle_motorcycle": "รถจักรยานยนต์",
-    "vehicle_all": "ทุกประเภท"
-  
+    "vehicle_all": "ทุกประเภท",
+
+    "pricing_title": "ราคา",
+    "pricing_subtitle": "แพ็กเกจรายเดือนที่เรียบง่ายสำหรับทุกช่วงของการใช้รถ",
+    "pricing_segment_label": "ประเภทลูกค้า",
+    "pricing_b2b": "สำหรับธุรกิจ",
+    "pricing_b2c": "สำหรับเจ้าของรถ",
+    "pricing_role_label": "ประเภทธุรกิจ",
+    "pricing_currency_label": "สกุลเงิน",
+    "pricing_role_autoparts": "ระบบ POS อะไหล่รถยนต์",
+    "pricing_role_towing": "คนขับรถบรรทุก / ผู้ให้บริการรถลาก",
+    "pricing_role_servicecenter": "ศูนย์บริการ",
+    "pricing_role_owner": "เจ้าของรถ",
+    "pricing_plan_basic": "เบสิก",
+    "pricing_plan_pro": "โปร",
+    "pricing_plan_enterprise": "องค์กร",
+    "pricing_plan_free": "ฟรี",
+    "pricing_per_month": "/ เดือน",
+    "pricing_popular": "ยอดนิยม",
+    "pricing_cta": "เริ่มต้นใช้งาน",
+    "pricing_subject": "ราคา: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

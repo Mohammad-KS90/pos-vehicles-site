@@ -12,13 +12,13 @@
     <meta name="theme-color" content="#0A0A0B">
     <link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Bump ?v= on both lines after every change so browsers fetch fresh files -->
-    <link rel="stylesheet" href="style.css?v=2026-11-19">
+    <link rel="stylesheet" href="style.css?v=2026-11-19.2">
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"
             integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS"
             crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY"></script>
-    <script src="script.js?v=2026-11-19"></script>
+    <script src="script.js?v=2026-11-19.2"></script>
 </head>
 <body>
     <header>
@@ -54,6 +54,7 @@
             <button class="tab-btn" data-tab="contact" data-i18n="tab_contact">Contact Us</button>
             <button class="tab-btn" data-tab="who-we-are" data-i18n="tab_who">Who We Are</button>
             <button class="tab-btn" data-tab="services" data-i18n="tab_services">Our Services</button>
+            <button class="tab-btn" data-tab="pricing" data-i18n="tab_pricing">Pricing</button>
         </div>
     </nav>
 
@@ -305,14 +306,41 @@
                     <p data-i18n="services_ready_desc">Choose the plan that fits your business needs</p>
         
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" data-i18n="services_btn_pricing">View Pricing</a>
-                        <a href="#" class="btn btn-outline" data-i18n="services_btn_demo">Schedule Demo</a>
+                        <a href="#pricing" class="btn btn-primary" data-action="pricing" data-i18n="services_btn_pricing">View Pricing</a>
+                        <a href="#contact" class="btn btn-outline" data-action="contact" data-i18n="services_btn_demo">Schedule Demo</a>
                     </div>
                 </div>
         
             </div>
         </section>
-        
+
+        <!-- PRICING (cards are rendered by initPricing() in script.js from pricing.json) -->
+        <section id="pricing" class="tab-pane">
+            <h2 data-i18n="pricing_title">Pricing</h2>
+            <p class="pricing-subtitle" data-i18n="pricing_subtitle">Simple monthly plans for every part of the vehicle journey.</p>
+
+            <div class="pricing-controls">
+                <div class="chip-group" role="radiogroup" data-pricing="segment" aria-label="Customer type" data-i18n-aria="pricing_segment_label">
+                    <button type="button" class="chip" role="radio" data-value="b2b" data-i18n="pricing_b2b">For businesses</button>
+                    <button type="button" class="chip" role="radio" data-value="b2c" data-i18n="pricing_b2c">For vehicle owners</button>
+                </div>
+
+                <div class="pricing-b2b-only chip-group" role="radiogroup" data-pricing="role" aria-label="Business type" data-i18n-aria="pricing_role_label">
+                    <button type="button" class="chip" role="radio" data-value="autoparts" data-i18n="pricing_role_autoparts">Auto parts POS</button>
+                    <button type="button" class="chip" role="radio" data-value="towing" data-i18n="pricing_role_towing">Truck driver / tow provider</button>
+                    <button type="button" class="chip" role="radio" data-value="servicecenter" data-i18n="pricing_role_servicecenter">Service center</button>
+                </div>
+
+                <div class="pricing-b2b-only chip-group chip-group--compact" role="radiogroup" data-pricing="currency" aria-label="Currency" data-i18n-aria="pricing_currency_label">
+                    <button type="button" class="chip" role="radio" data-value="JOD">JOD</button>
+                    <button type="button" class="chip" role="radio" data-value="USD">USD</button>
+                    <button type="button" class="chip" role="radio" data-value="AED">AED</button>
+                </div>
+            </div>
+
+            <div class="plan-grid" aria-live="polite"></div>
+        </section>
+
     </main>
     <!-- Vehicle Support Section -->
     <div class="vehicle-footer">

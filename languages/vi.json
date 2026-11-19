@@ -6,6 +6,7 @@
     "tab_contact": "Liên Hệ",
     "tab_who": "Chúng Tôi Là Ai",
     "tab_services": "Dịch Vụ Của Chúng Tôi",
+    "tab_pricing": "Bảng giá",
     "about_title": "Giới thiệu - Carventory - Hộ Chiếu Phương Tiện",
     "about_desc": "Hộ Chiếu Phương Tiện là giải pháp quản lý hoàn chỉnh cho doanh nghiệp ô tô",
     "features_title": "Tính Năng",
@@ -84,7 +85,63 @@
     "vehicle_truck": "Xe tải",
     "vehicle_bus": "Xe buýt",
     "vehicle_motorcycle": "Xe máy",
-    "vehicle_all": "Tất cả các loại"
-  
+    "vehicle_all": "Tất cả các loại",
 
+    "pricing_title": "Bảng giá",
+    "pricing_subtitle": "Các gói hằng tháng đơn giản cho mọi giai đoạn của phương tiện.",
+    "pricing_segment_label": "Loại khách hàng",
+    "pricing_b2b": "Cho doanh nghiệp",
+    "pricing_b2c": "Cho chủ phương tiện",
+    "pricing_role_label": "Loại hình kinh doanh",
+    "pricing_currency_label": "Tiền tệ",
+    "pricing_role_autoparts": "POS phụ tùng ô tô",
+    "pricing_role_towing": "Tài xế xe tải / đơn vị cứu hộ",
+    "pricing_role_servicecenter": "Trung tâm dịch vụ",
+    "pricing_role_owner": "Chủ phương tiện",
+    "pricing_plan_basic": "Cơ bản",
+    "pricing_plan_pro": "Pro",
+    "pricing_plan_enterprise": "Doanh nghiệp",
+    "pricing_plan_free": "Miễn phí",
+    "pricing_per_month": "/ tháng",
+    "pricing_popular": "Phổ biến nhất",
+    "pricing_cta": "Bắt đầu",
+    "pricing_subject": "Bảng giá: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

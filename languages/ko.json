@@ -6,6 +6,7 @@
     "tab_contact": "문의하기",
     "tab_who": "우리는 누구인가",
     "tab_services": "서비스",
+    "tab_pricing": "요금",
 
     "about_title": "소개 - Carventory - 차량 여권",
     "about_desc": "차량 여권은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
@@ -89,6 +90,63 @@
     "vehicle_truck": "트럭",
     "vehicle_bus": "버스",
     "vehicle_motorcycle": "오토바이",
-    "vehicle_all": "모든 유형"
-  
+    "vehicle_all": "모든 유형",
+
+    "pricing_title": "요금",
+    "pricing_subtitle": "차량 여정의 모든 단계를 위한 간단한 월간 요금제.",
+    "pricing_segment_label": "고객 유형",
+    "pricing_b2b": "기업용",
+    "pricing_b2c": "차량 소유자용",
+    "pricing_role_label": "업종",
+    "pricing_currency_label": "통화",
+    "pricing_role_autoparts": "자동차 부품 POS",
+    "pricing_role_towing": "트럭 운전사 / 견인 업체",
+    "pricing_role_servicecenter": "서비스 센터",
+    "pricing_role_owner": "차량 소유자",
+    "pricing_plan_basic": "베이직",
+    "pricing_plan_pro": "프로",
+    "pricing_plan_enterprise": "엔터프라이즈",
+    "pricing_plan_free": "무료",
+    "pricing_per_month": "/ 월",
+    "pricing_popular": "가장 인기",
+    "pricing_cta": "시작하기",
+    "pricing_subject": "요금: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

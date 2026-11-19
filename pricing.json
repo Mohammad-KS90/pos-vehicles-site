@@ -1,0 +1,66 @@
+{
+  "_comment": "Monthly prices per currency. Fill in every null before merging - tests fail while any price is null.",
+  "currencies": [
+    "JOD",
+    "USD",
+    "AED"
+  ],
+  "b2b": {
+    "autoparts": {
+      "basic": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "pro": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "enterprise": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      }
+    },
+    "towing": {
+      "basic": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "pro": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "enterprise": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      }
+    },
+    "servicecenter": {
+      "basic": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "pro": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      },
+      "enterprise": {
+        "JOD": null,
+        "USD": null,
+        "AED": null
+      }
+    }
+  },
+  "b2c": {
+    "owner": {
+      "price": 0
+    }
+  }
+}

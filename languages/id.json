@@ -6,6 +6,7 @@
     "tab_contact": "Hubungi Kami",
     "tab_who": "Siapa Kami",
     "tab_services": "Layanan",
+    "tab_pricing": "Harga",
 
     "about_title": "Tentang - Carventory - Paspor Kendaraan",
     "about_desc": "Paspor Kendaraan adalah solusi manajemen lengkap untuk bisnis otomotif.",
@@ -89,6 +90,63 @@
     "vehicle_truck": "Truk",
     "vehicle_bus": "Bus",
     "vehicle_motorcycle": "Sepeda Motor",
-    "vehicle_all": "Semua Jenis"
-  
+    "vehicle_all": "Semua Jenis",
+
+    "pricing_title": "Harga",
+    "pricing_subtitle": "Paket bulanan sederhana untuk setiap tahap perjalanan kendaraan.",
+    "pricing_segment_label": "Jenis pelanggan",
+    "pricing_b2b": "Untuk bisnis",
+    "pricing_b2c": "Untuk pemilik kendaraan",
+    "pricing_role_label": "Jenis bisnis",
+    "pricing_currency_label": "Mata uang",
+    "pricing_role_autoparts": "POS suku cadang",
+    "pricing_role_towing": "Sopir truk / penyedia derek",
+    "pricing_role_servicecenter": "Pusat servis",
+    "pricing_role_owner": "Pemilik kendaraan",
+    "pricing_plan_basic": "Dasar",
+    "pricing_plan_pro": "Pro",
+    "pricing_plan_enterprise": "Enterprise",
+    "pricing_plan_free": "Gratis",
+    "pricing_per_month": "/ bulan",
+    "pricing_popular": "Paling populer",
+    "pricing_cta": "Mulai sekarang",
+    "pricing_subject": "Harga: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

@@ -822,6 +822,166 @@ section {
   border-color: var(--cv-on-inverse);
 }
 
+/* ================== PRICING ================== */
+.pricing-subtitle {
+  text-align: center;
+  max-width: 560px;
+  margin: calc(-1 * var(--cv-space-lg)) auto var(--cv-space-xl);
+}
+
+.pricing-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--cv-space-md);
+  margin-bottom: var(--cv-space-xxl);
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--cv-space-sm);
+}
+
+/* Same look as the tab chips, separate class so switchTab() leaves them alone */
+.chip {
+  min-height: 40px;
+  padding: var(--cv-space-sm) 20px;
+  background: var(--cv-surface-elevated);
+  border: 1px solid var(--cv-border);
+  border-radius: var(--cv-radius-pill);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--cv-text-primary);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  background: var(--cv-surface);
+  border-color: var(--cv-text-tertiary);
+}
+
+.chip.active {
+  background: var(--cv-primary-container);
+  border-color: var(--cv-primary-container);
+  color: var(--cv-on-primary-container);
+  font-weight: 600;
+}
+
+.chip-group--compact .chip {
+  min-height: 34px;
+  padding: 6px var(--cv-space-lg);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+#pricing.is-b2c .pricing-b2b-only {
+  display: none;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--cv-space-lg);
+  align-items: stretch;
+}
+
+.plan-grid--single {
+  grid-template-columns: minmax(0, 420px);
+  justify-content: center;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--cv-space-xl);
+  background: var(--cv-surface);
+  border: 1px solid var(--cv-border);
+  border-radius: var(--cv-radius-lg);
+}
+
+.plan-card--featured {
+  border: 2px solid var(--cv-primary);
+  background: var(--cv-surface-elevated);
+}
+
+.plan-badge {
+  position: absolute;
+  top: calc(-1 * var(--cv-space-md));
+  inset-inline-start: var(--cv-space-xl);
+  padding: var(--cv-space-xxs) var(--cv-space-md);
+  border-radius: var(--cv-radius-pill);
+  background: var(--cv-primary-container);
+  color: var(--cv-on-primary-container);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.plan-card .plan-name {
+  margin: 0 0 var(--cv-space-sm);
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.plan-price {
+  margin-bottom: var(--cv-space-lg);
+  color: var(--cv-text-primary);
+}
+
+.plan-amount {
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-period {
+  font-size: 15px;
+  color: var(--cv-text-secondary);
+}
+
+.plan-features {
+  list-style: none;
+  display: grid;
+  gap: var(--cv-space-sm);
+  margin-bottom: var(--cv-space-xl);
+  flex: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--cv-space-sm);
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--cv-text-secondary);
+}
+
+.plan-features li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--cv-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--cv-primary-container);
+  color: var(--cv-on-primary-container);
+}
+
+.plan-card .btn {
+  width: 100%;
+}
+
 /* ================== VEHICLE FOOTER ================== */
 .vehicle-footer {
   background: var(--cv-surface);
@@ -953,6 +1113,11 @@ section {
 @media (max-width: 768px) {
   body {
     padding: var(--cv-space-lg);
+  }
+
+  .plan-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--cv-space-xl);
   }
 
   .theme-toggle {
@@ -1142,6 +1307,7 @@ html[dir="rtl"] .contact-item {
 }
 
 html[dir="rtl"] header p,
+html[dir="rtl"] .pricing-subtitle,
 html[dir="rtl"] .pricing-cta h3,
 html[dir="rtl"] .pricing-cta p,
 html[dir="rtl"] .stat,

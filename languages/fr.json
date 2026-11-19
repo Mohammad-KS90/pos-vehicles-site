@@ -6,6 +6,7 @@
     "tab_contact": "Contact",
     "tab_who": "Qui sommes-nous",
     "tab_services": "Nos Services",
+    "tab_pricing": "Tarifs",
 
     "about_title": "À propos - Carventory - Passeport Véhicule",
     "about_desc": "Passeport Véhicule est une solution complète pour les concessionnaires et ateliers automobiles.",
@@ -89,6 +90,63 @@
     "vehicle_truck": "Camions",
     "vehicle_bus": "Bus",
     "vehicle_motorcycle": "Motos",
-    "vehicle_all": "Tous types"
-  
+    "vehicle_all": "Tous types",
+
+    "pricing_title": "Tarifs",
+    "pricing_subtitle": "Des forfaits mensuels simples pour chaque étape de la vie du véhicule.",
+    "pricing_segment_label": "Type de client",
+    "pricing_b2b": "Pour les entreprises",
+    "pricing_b2c": "Pour les propriétaires de véhicules",
+    "pricing_role_label": "Type d'activité",
+    "pricing_currency_label": "Devise",
+    "pricing_role_autoparts": "POS pièces auto",
+    "pricing_role_towing": "Chauffeur routier / dépanneur",
+    "pricing_role_servicecenter": "Centre de service",
+    "pricing_role_owner": "Propriétaire de véhicule",
+    "pricing_plan_basic": "Basique",
+    "pricing_plan_pro": "Pro",
+    "pricing_plan_enterprise": "Entreprise",
+    "pricing_plan_free": "Gratuit",
+    "pricing_per_month": "/ mois",
+    "pricing_popular": "Le plus populaire",
+    "pricing_cta": "Commencer",
+    "pricing_subject": "Tarifs : {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

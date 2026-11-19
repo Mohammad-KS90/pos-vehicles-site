@@ -6,6 +6,7 @@
     "tab_contact": "联系我们",
     "tab_who": "我们是谁",
     "tab_services": "我们的服务",
+    "tab_pricing": "价格",
 
     "about_title": "关于 - Carventory - 车辆护照",
     "about_desc": "车辆护照是一套完整的汽车行业管理解决方案。",
@@ -89,6 +90,63 @@
     "vehicle_truck": "卡车",
     "vehicle_bus": "巴士",
     "vehicle_motorcycle": "摩托车",
-    "vehicle_all": "所有类型"
-  
+    "vehicle_all": "所有类型",
+
+    "pricing_title": "价格",
+    "pricing_subtitle": "覆盖车辆全生命周期的简单月度套餐。",
+    "pricing_segment_label": "客户类型",
+    "pricing_b2b": "企业版",
+    "pricing_b2c": "车主版",
+    "pricing_role_label": "业务类型",
+    "pricing_currency_label": "货币",
+    "pricing_role_autoparts": "汽车配件 POS",
+    "pricing_role_towing": "卡车司机 / 拖车服务商",
+    "pricing_role_servicecenter": "维修服务中心",
+    "pricing_role_owner": "车主",
+    "pricing_plan_basic": "基础版",
+    "pricing_plan_pro": "专业版",
+    "pricing_plan_enterprise": "企业版",
+    "pricing_plan_free": "免费",
+    "pricing_per_month": "/ 月",
+    "pricing_popular": "最受欢迎",
+    "pricing_cta": "立即开始",
+    "pricing_subject": "价格：{role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "TODO: feature list"
+            ],
+            "pro": [
+                "TODO: feature list"
+            ],
+            "enterprise": [
+                "TODO: feature list"
+            ]
+        },
+        "owner": [
+            "TODO: feature list"
+        ]
+    }
 }

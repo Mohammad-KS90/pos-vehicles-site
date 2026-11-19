@@ -46,6 +46,10 @@ tests/
   vehicle-types.test.js   Vehicle types section
   pricing.test.js         Pricing data, translations and the Pricing tab UI
 docs/PROJECT_STATUS.md    This file
+.claude/skills/carventory-website/
+  SKILL.md                How to change the site safely (rules, checklist, gotchas) for Claude and people
+  scripts/check_site.py   Consistency checks: translations, pricing, version, RTL offsets
+  scripts/bump_version.py Bumps the ?v= cache-busting version in index.html
 ```
 
 ### Page sections

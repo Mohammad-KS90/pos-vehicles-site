@@ -114,39 +114,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 agence, 2 utilisateurs",
+                "Point de vente et facturation",
+                "Stock de pièces avec alertes de stock bas",
+                "Applications iOS et Android"
             ],
             "pro": [
-                "TODO: feature list"
+                "Tout le plan Basique",
+                "Jusqu'à 3 agences, 10 utilisateurs",
+                "Comptes clients et ventes à crédit",
+                "Rapports de ventes et de stock"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Tout le plan Pro",
+                "Agences et utilisateurs illimités",
+                "Transferts de stock entre agences",
+                "Support prioritaire et accompagnement"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 chauffeur / véhicule",
+                "Demandes d'intervention et historique",
+                "Fiches clients et véhicules",
+                "Application mobile"
             ],
             "pro": [
-                "TODO: feature list"
+                "Tout le plan Basique",
+                "Jusqu'à 5 camions",
+                "Suivi des interventions en temps réel",
+                "Facturation et paiements"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Tout le plan Pro",
+                "Flotte illimitée",
+                "Tableau de répartition",
+                "Support prioritaire"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 site, 3 utilisateurs",
+                "Fiches de travaux d'atelier",
+                "Historique d'entretien des véhicules",
+                "Facturation"
             ],
             "pro": [
-                "TODO: feature list"
+                "Tout le plan Basique",
+                "Jusqu'à 10 utilisateurs",
+                "Planification des techniciens",
+                "Stock de pièces et alertes de réapprovisionnement"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Tout le plan Pro",
+                "Plusieurs sites, utilisateurs illimités",
+                "Rapports multi-sites",
+                "Support prioritaire et accompagnement"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "Passeport numérique du véhicule",
+            "Historique d'entretien complet",
+            "Trouver garages et dépanneurs",
+            "Rappels d'entretien"
         ]
     }
 }

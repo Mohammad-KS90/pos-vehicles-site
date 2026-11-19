@@ -114,39 +114,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 branch, 2 users",
+                "Point of sale & invoicing",
+                "Parts inventory with low-stock alerts",
+                "iOS & Android apps"
             ],
             "pro": [
-                "TODO: feature list"
+                "Everything in Basic",
+                "Up to 3 branches, 10 users",
+                "Customer accounts & credit sales",
+                "Sales & stock reports"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Everything in Pro",
+                "Unlimited branches & users",
+                "Stock transfers between branches",
+                "Priority support & onboarding"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 driver / vehicle",
+                "Job requests & history",
+                "Customer & vehicle records",
+                "Mobile app"
             ],
             "pro": [
-                "TODO: feature list"
+                "Everything in Basic",
+                "Up to 5 trucks",
+                "Live job tracking",
+                "Invoicing & payments"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Everything in Pro",
+                "Unlimited fleet",
+                "Dispatch dashboard",
+                "Priority support"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 location, 3 users",
+                "Workshop job cards",
+                "Vehicle service history",
+                "Invoicing"
             ],
             "pro": [
-                "TODO: feature list"
+                "Everything in Basic",
+                "Up to 10 users",
+                "Technician scheduling",
+                "Parts inventory & reorder alerts"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Everything in Pro",
+                "Multiple locations, unlimited users",
+                "Reports across all branches",
+                "Priority support & onboarding"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "Digital vehicle passport",
+            "Full service history",
+            "Find service centers & tow help",
+            "Maintenance reminders"
         ]
     }
 }

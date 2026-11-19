@@ -114,39 +114,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 cabang, 2 pengguna",
+                "Kasir (POS) dan faktur",
+                "Stok suku cadang dengan peringatan stok menipis",
+                "Aplikasi iOS dan Android"
             ],
             "pro": [
-                "TODO: feature list"
+                "Semua fitur Dasar",
+                "Hingga 3 cabang, 10 pengguna",
+                "Akun pelanggan dan penjualan kredit",
+                "Laporan penjualan dan stok"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Semua fitur Pro",
+                "Cabang dan pengguna tanpa batas",
+                "Transfer stok antarcabang",
+                "Dukungan prioritas dan bantuan penyiapan"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 sopir / kendaraan",
+                "Permintaan pekerjaan dan riwayat",
+                "Data pelanggan dan kendaraan",
+                "Aplikasi seluler"
             ],
             "pro": [
-                "TODO: feature list"
+                "Semua fitur Dasar",
+                "Hingga 5 truk",
+                "Pelacakan pekerjaan secara langsung",
+                "Faktur dan pembayaran"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Semua fitur Pro",
+                "Armada tanpa batas",
+                "Dasbor penugasan",
+                "Dukungan prioritas"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 lokasi, 3 pengguna",
+                "Kartu kerja bengkel",
+                "Riwayat servis kendaraan",
+                "Faktur"
             ],
             "pro": [
-                "TODO: feature list"
+                "Semua fitur Dasar",
+                "Hingga 10 pengguna",
+                "Penjadwalan teknisi",
+                "Stok suku cadang dan peringatan pemesanan ulang"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Semua fitur Pro",
+                "Banyak lokasi, pengguna tanpa batas",
+                "Laporan semua cabang",
+                "Dukungan prioritas dan bantuan penyiapan"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "Paspor kendaraan digital",
+            "Riwayat servis lengkap",
+            "Cari bengkel dan layanan derek",
+            "Pengingat perawatan"
         ]
     }
 }

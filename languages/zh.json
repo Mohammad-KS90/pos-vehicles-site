@@ -114,39 +114,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 家门店，2 个用户",
+                "收银（POS）与开票",
+                "配件库存及低库存提醒",
+                "iOS 和 Android 应用"
             ],
             "pro": [
-                "TODO: feature list"
+                "包含基础版全部功能",
+                "最多 3 家门店、10 个用户",
+                "客户账户与赊销",
+                "销售与库存报表"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "包含专业版全部功能",
+                "门店和用户数量不限",
+                "门店间库存调拨",
+                "优先支持与上线协助"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 名司机 / 1 辆车",
+                "任务请求与历史记录",
+                "客户与车辆档案",
+                "移动应用"
             ],
             "pro": [
-                "TODO: feature list"
+                "包含基础版全部功能",
+                "最多 5 辆卡车",
+                "任务实时跟踪",
+                "开票与收款"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "包含专业版全部功能",
+                "车队规模不限",
+                "调度看板",
+                "优先支持"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 个地点，3 个用户",
+                "维修工单",
+                "车辆维修记录",
+                "开票"
             ],
             "pro": [
-                "TODO: feature list"
+                "包含基础版全部功能",
+                "最多 10 个用户",
+                "技师排班",
+                "配件库存与补货提醒"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "包含专业版全部功能",
+                "多个地点，用户不限",
+                "跨门店报表",
+                "优先支持与上线协助"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "电子车辆护照",
+            "完整维修记录",
+            "查找维修中心和拖车服务",
+            "保养提醒"
         ]
     }
 }

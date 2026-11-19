@@ -114,39 +114,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 şube, 2 kullanıcı",
+                "Satış noktası ve faturalama",
+                "Düşük stok uyarılı parça envanteri",
+                "iOS ve Android uygulamaları"
             ],
             "pro": [
-                "TODO: feature list"
+                "Temel plandaki her şey",
+                "3 şube ve 10 kullanıcıya kadar",
+                "Müşteri hesapları ve veresiye satış",
+                "Satış ve stok raporları"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Pro plandaki her şey",
+                "Sınırsız şube ve kullanıcı",
+                "Şubeler arası stok transferi",
+                "Öncelikli destek ve kurulum yardımı"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 sürücü / araç",
+                "İş talepleri ve geçmişi",
+                "Müşteri ve araç kayıtları",
+                "Mobil uygulama"
             ],
             "pro": [
-                "TODO: feature list"
+                "Temel plandaki her şey",
+                "5 araca kadar",
+                "İşlerin canlı takibi",
+                "Faturalama ve ödemeler"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Pro plandaki her şey",
+                "Sınırsız filo",
+                "Görev dağıtım paneli",
+                "Öncelikli destek"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 lokasyon, 3 kullanıcı",
+                "Atölye iş emirleri",
+                "Araç servis geçmişi",
+                "Faturalama"
             ],
             "pro": [
-                "TODO: feature list"
+                "Temel plandaki her şey",
+                "10 kullanıcıya kadar",
+                "Teknisyen planlama",
+                "Parça envanteri ve yeniden sipariş uyarıları"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Pro plandaki her şey",
+                "Birden fazla lokasyon, sınırsız kullanıcı",
+                "Tüm şubeler için raporlar",
+                "Öncelikli destek ve kurulum yardımı"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "Dijital araç pasaportu",
+            "Eksiksiz servis geçmişi",
+            "Servis merkezi ve çekici bulma",
+            "Bakım hatırlatıcıları"
         ]
     }
 }

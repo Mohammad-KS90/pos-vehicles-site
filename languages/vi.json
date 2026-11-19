@@ -109,39 +109,69 @@
     "pricing_features": {
         "autoparts": {
             "basic": [
-                "TODO: feature list"
+                "1 chi nhánh, 2 người dùng",
+                "Bán hàng (POS) và hóa đơn",
+                "Kho phụ tùng với cảnh báo sắp hết hàng",
+                "Ứng dụng iOS và Android"
             ],
             "pro": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Cơ bản",
+                "Tối đa 3 chi nhánh, 10 người dùng",
+                "Tài khoản khách hàng và bán chịu",
+                "Báo cáo bán hàng và tồn kho"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Pro",
+                "Không giới hạn chi nhánh và người dùng",
+                "Chuyển kho giữa các chi nhánh",
+                "Hỗ trợ ưu tiên và hướng dẫn triển khai"
             ]
         },
         "towing": {
             "basic": [
-                "TODO: feature list"
+                "1 tài xế / xe",
+                "Yêu cầu công việc và lịch sử",
+                "Hồ sơ khách hàng và phương tiện",
+                "Ứng dụng di động"
             ],
             "pro": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Cơ bản",
+                "Tối đa 5 xe tải",
+                "Theo dõi công việc trực tiếp",
+                "Hóa đơn và thanh toán"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Pro",
+                "Không giới hạn đội xe",
+                "Bảng điều phối",
+                "Hỗ trợ ưu tiên"
             ]
         },
         "servicecenter": {
             "basic": [
-                "TODO: feature list"
+                "1 địa điểm, 3 người dùng",
+                "Phiếu công việc xưởng",
+                "Lịch sử bảo dưỡng xe",
+                "Hóa đơn"
             ],
             "pro": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Cơ bản",
+                "Tối đa 10 người dùng",
+                "Lên lịch kỹ thuật viên",
+                "Kho phụ tùng và cảnh báo đặt hàng lại"
             ],
             "enterprise": [
-                "TODO: feature list"
+                "Mọi tính năng của gói Pro",
+                "Nhiều địa điểm, không giới hạn người dùng",
+                "Báo cáo cho mọi chi nhánh",
+                "Hỗ trợ ưu tiên và hướng dẫn triển khai"
             ]
         },
         "owner": [
-            "TODO: feature list"
+            "Hộ chiếu phương tiện điện tử",
+            "Lịch sử bảo dưỡng đầy đủ",
+            "Tìm trung tâm dịch vụ và cứu hộ",
+            "Nhắc lịch bảo dưỡng"
         ]
     }
 }

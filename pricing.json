@@ -1,5 +1,5 @@
 {
-  "_comment": "Monthly prices per currency. Fill in every null before merging - tests fail while any price is null.",
+  "_comment": "Monthly prices, set by hand per currency (JOD is the base; USD and AED are within ~3% of the pegged rates). Auto parts POS is the main product and priced highest.",
   "currencies": [
     "JOD",
     "USD",
@@ -8,53 +8,53 @@
   "b2b": {
     "autoparts": {
       "basic": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 19,
+        "USD": 27,
+        "AED": 99
       },
       "pro": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 39,
+        "USD": 55,
+        "AED": 199
       },
       "enterprise": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 79,
+        "USD": 109,
+        "AED": 399
       }
     },
     "towing": {
       "basic": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 7,
+        "USD": 10,
+        "AED": 35
       },
       "pro": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 15,
+        "USD": 21,
+        "AED": 79
       },
       "enterprise": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 35,
+        "USD": 49,
+        "AED": 179
       }
     },
     "servicecenter": {
       "basic": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 15,
+        "USD": 21,
+        "AED": 79
       },
       "pro": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 29,
+        "USD": 41,
+        "AED": 149
       },
       "enterprise": {
-        "JOD": null,
-        "USD": null,
-        "AED": null
+        "JOD": 59,
+        "USD": 83,
+        "AED": 299
       }
     }
   },

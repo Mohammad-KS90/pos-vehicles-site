@@ -26,6 +26,9 @@
 
     "contact_title": "Contact Us",
     "contact_get_in_touch": "Get in Touch",
+    "contact_phone_label": "Phone",
+    "contact_address_label": "Address",
+    "contact_address_value": "Amman, Jordan",
     "contact_form_title": "Send us a Message",
     "contact_name_label": "Your Name",
     "contact_email_label": "Your Email",

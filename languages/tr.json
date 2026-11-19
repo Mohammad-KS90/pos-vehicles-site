@@ -26,6 +26,9 @@
 
     "contact_title": "İletişim",
     "contact_get_in_touch": "Bizimle İletişime Geçin",
+    "contact_phone_label": "Telefon",
+    "contact_address_label": "Adres",
+    "contact_address_value": "Amman, Ürdün",
     "contact_form_title": "Bize Mesaj Gönderin",
     "contact_name_label": "Adınız",
     "contact_email_label": "E-posta Adresiniz",

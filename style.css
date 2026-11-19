@@ -615,10 +615,32 @@ section {
 }
 
 .contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--cv-space-xs);
   padding: var(--cv-space-lg) 0;
   border-bottom: 1px solid var(--cv-border);
-  color: var(--cv-text-secondary);
+}
+
+/* Small caption above each value, so label and value don't read as one line */
+.contact-label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--cv-text-tertiary);
+}
+
+.contact-value {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--cv-text-primary);
   font-variant-numeric: tabular-nums;
+}
+
+a.contact-value {
+  color: var(--cv-primary);
 }
 
 .contact-item:first-of-type {

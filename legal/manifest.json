@@ -1,0 +1,48 @@
+{
+  "generated": "2026-11-19",
+  "status": "draft",
+  "documents": {
+    "privacy": {
+      "url": "https://www.carventory.co/privacy/",
+      "version": "0.1",
+      "last_updated": null,
+      "status": "draft",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "titles": {
+        "en": "Carventory Privacy Policy",
+        "ar": "سياسة الخصوصية — Carventory"
+      }
+    },
+    "terms": {
+      "url": "https://www.carventory.co/terms/",
+      "version": "0.1",
+      "last_updated": null,
+      "status": "draft",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "titles": {
+        "en": "Carventory Terms of Use — Car Owners",
+        "ar": "شروط الاستخدام — أصحاب السيارات — Carventory"
+      }
+    },
+    "terms_business": {
+      "url": "https://www.carventory.co/terms/business/",
+      "version": "0.1",
+      "last_updated": null,
+      "status": "draft",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "titles": {
+        "en": "Carventory Terms of Service — Businesses",
+        "ar": "شروط الخدمة — الأعمال — Carventory"
+      }
+    }
+  }
+}

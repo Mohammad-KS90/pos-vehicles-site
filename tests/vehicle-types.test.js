@@ -167,21 +167,40 @@ test('each icon file is small (under 10 KB)', async () => {
   } finally { await close(); }
 });
 
-test('icons stay visible in dark mode', async () => {
-  // Black line-art on a dark card is invisible. Either the card keeps a
-  // light background in dark mode, or the icon is inverted.
-  const { page, close } = await openPage({ theme: 'dark' });
-  try {
-    const results = await page.$$eval('.vehicle-card', cards => cards.map(c => {
-      const img = c.querySelector('img');
-      const bg = getComputedStyle(c).backgroundColor.match(/\d+/g).slice(0, 3).map(Number);
-      const lum = (bg[0] * 299 + bg[1] * 587 + bg[2] * 114) / 1000;
-      const inverted = /invert\((1|100%)\)/.test(getComputedStyle(img).filter);
-      return { src: img.getAttribute('src'), ok: lum > 128 || inverted };
-    }));
-    for (const r of results) assert.ok(r.ok, `${r.src} is dark-on-dark in dark mode`);
-  } finally { await close(); }
-});
+// WCAG relative luminance / contrast for "#rrggbb" or [r, g, b]
+function luminance(rgb) {
+  const [r, g, b] = rgb.map(v => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+const hexToRgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
+const contrast = (a, b) => {
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+};
+
+for (const theme of ['light', 'dark']) {
+  test(`icons have at least 3:1 contrast with their card (${theme} mode)`, async () => {
+    // Icons are drawn in the brand Electric Blue; they must stay readable on
+    // the card surface in both themes (WCAG non-text contrast).
+    const { page, close } = await openPage({ theme });
+    try {
+      const cards = await page.$$eval('.vehicle-card', cs => cs.map(c => ({
+        src: c.querySelector('img').getAttribute('src'),
+        bg: getComputedStyle(c).backgroundColor.match(/\d+/g).slice(0, 3).map(Number),
+      })));
+      for (const c of cards) {
+        const svg = fs.readFileSync(path.join(ROOT, c.src), 'utf8');
+        const stroke = svg.match(/stroke="(#[0-9a-fA-F]{6})"/);
+        assert.ok(stroke, `${c.src} has no hex stroke colour`);
+        const ratio = contrast(hexToRgb(stroke[1]), c.bg);
+        assert.ok(ratio >= 3, `${c.src} contrast ${ratio.toFixed(2)}:1 in ${theme} mode`);
+      }
+    } finally { await close(); }
+  });
+}
 
 test('"All Types" icon is a picture, not baked-in English text', () => {
   const svg = fs.readFileSync(path.join(ROOT, 'assets', 'vehicle-all.svg'), 'utf8');

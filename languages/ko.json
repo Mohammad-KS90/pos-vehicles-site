@@ -1,14 +1,14 @@
 {
-    "title": "스마트 자동차 POS",
-    "header_title": "스마트 자동차 POS",
+    "title": "Carventory - 차량 여권",
+    "header_title": "Carventory - 차량 여권",
     "header_tagline": "차량, 판매, 정비 작업, 재고를 하나의 플랫폼에서 관리합니다.",
     "tab_about": "회사 소개",
     "tab_contact": "문의하기",
     "tab_who": "우리는 누구인가",
     "tab_services": "서비스",
 
-    "about_title": "POS – 차량 소개",
-    "about_desc": "POS – 차량은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
+    "about_title": "소개 - Carventory - 차량 여권",
+    "about_desc": "차량 여권은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
     "features_title": "기능",
     "feature_inventory": "재고 관리",
     "feature_tracking": "차량 추적",

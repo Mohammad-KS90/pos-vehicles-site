@@ -1,14 +1,14 @@
 {
-    "title": "نظام نقاط البيع للسيارات",
-    "header_title": "نظام نقاط البيع للسيارات",
+    "title": "Carventory - جواز المركبة",
+    "header_title": "Carventory - جواز المركبة",
     "header_tagline": "إدارة المركبات والمبيعات والورشة والمخزون من منصة واحدة.",
     "tab_about": "من نحن",
     "tab_contact": "اتصل بنا",
     "tab_who": "من نكون",
     "tab_services": "خدماتنا",
 
-    "about_title": "عن نظام مركبات POS",
-    "about_desc": "حل متكامل لإدارة وكالات السيارات ومراكز الصيانة والمحلات.",
+    "about_title": "عن - Carventory - جواز المركبة",
+    "about_desc": "جواز المركبة حل متكامل لإدارة وكالات السيارات ومراكز الصيانة والمحلات.",
     "features_title": "الميزات",
     "feature_inventory": "إدارة المخزون",
     "feature_tracking": "تتبع المركبات",

@@ -279,4 +279,7 @@ function toggleTheme(btn) {
 
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    // The Carventory mark has a light and a dark variant
+    const logo = document.querySelector('.logo');
+    if (logo) logo.src = `./assets/logo-mark-${theme === 'dark' ? 'dark' : 'light'}.svg`;
 }

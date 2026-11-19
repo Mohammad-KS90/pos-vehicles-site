@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Quick consistency checks for the Carventory website. Standard library only.
+
+Run from anywhere:  python3 -I .claude/skills/carventory-website/scripts/check_site.py
+Exits with status 1 and lists every problem if something is wrong.
+"""
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[4]   # repo root
+LANGS = ["ar", "en", "fr", "hi", "id", "ja", "ko", "th", "tr", "vi", "zh"]
+ROLES = ["autoparts", "towing", "servicecenter"]
+TIERS = ["basic", "pro", "enterprise"]
+CURRENCIES = ["JOD", "USD", "AED"]
+
+problems = []
+
+
+def problem(msg):
+    problems.append(msg)
+
+
+def load_json(rel):
+    try:
+        return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001 - report any parse/read error
+        problem(f"{rel}: cannot read JSON ({e})")
+        return None
+
+
+# 1. Language files: same keys, non-empty strings, finished feature lists
+langs = {lang: load_json(f"languages/{lang}.json") for lang in LANGS}
+en = langs.get("en") or {}
+for lang, data in langs.items():
+    if data is None:
+        continue
+    missing = sorted(set(en) - set(data))
+    extra = sorted(set(data) - set(en))
+    if missing:
+        problem(f"languages/{lang}.json is missing keys: {', '.join(missing)}")
+    if extra:
+        problem(f"languages/{lang}.json has keys not in en.json: {', '.join(extra)}")
+    for key, value in data.items():
+        if isinstance(value, str) and not value.strip():
+            problem(f"languages/{lang}.json: \"{key}\" is empty")
+    feats = data.get("pricing_features", {})
+    lists = [(f"{r}.{t}", feats.get(r, {}).get(t)) for r in ROLES for t in TIERS] + [("owner", feats.get("owner"))]
+    for where, items in lists:
+        if not isinstance(items, list) or not items:
+            problem(f"languages/{lang}.json: pricing_features.{where} is missing")
+        elif any(not isinstance(i, str) or not i.strip() or re.search("todo", i, re.I) for i in items):
+            problem(f"languages/{lang}.json: pricing_features.{where} has an empty or TODO item")
+
+# 2. Every data-i18n / data-i18n-aria key used in index.html exists in en.json
+html = (ROOT / "index.html").read_text(encoding="utf-8")
+html_live = re.sub(r"<!--.*?-->", "", html, flags=re.S)   # ignore commented-out markup
+used = set(re.findall(r'data-i18n(?:-aria)?="([^"]+)"', html_live))
+for key in sorted(used - set(en)):
+    problem(f"index.html uses data-i18n key \"{key}\" that is not in en.json")
+
+# 3. pricing.json complete
+pricing = load_json("pricing.json")
+if pricing is not None:
+    if pricing.get("currencies") != CURRENCIES:
+        problem(f"pricing.json: currencies should be {CURRENCIES}")
+    for r in ROLES:
+        for t in TIERS:
+            for c in CURRENCIES:
+                v = pricing.get("b2b", {}).get(r, {}).get(t, {}).get(c)
+                if not isinstance(v, (int, float)) or v < 0:
+                    problem(f"pricing.json: b2b.{r}.{t}.{c} is missing or not a number ({v!r})")
+    if pricing.get("b2c", {}).get("owner", {}).get("price") != 0:
+        problem("pricing.json: b2c.owner.price should be 0 (free)")
+
+# 4. Cache-busting version is the same on the stylesheet and the script
+versions = re.findall(r'(?:style\.css|script\.js)\?v=([^"]+)"', html)
+if len(versions) != 2:
+    problem(f"index.html: expected ?v= on style.css and script.js, found {len(versions)}")
+elif versions[0] != versions[1]:
+    problem(f"index.html: ?v= differs between style.css ({versions[0]}) and script.js ({versions[1]})")
+
+# 5. No big negative offsets (they make RTL pages thousands of px wide)
+css = (ROOT / "style.css").read_text(encoding="utf-8")
+# blank out comments but keep line breaks so line numbers stay right
+css = re.sub(r"/\*.*?\*/", lambda m: re.sub(r"[^\n]", " ", m.group(0)), css, flags=re.S)
+for n, line in enumerate(css.splitlines(), 1):
+    if re.search(r"\b(left|right|inset-inline-start|inset-inline-end|margin-left|margin-right)\s*:\s*-\d{3,}px", line):
+        problem(f"style.css:{n}: large negative offset widens RTL pages: {line.strip()}")
+
+if problems:
+    print(f"{len(problems)} problem(s):")
+    for p in problems:
+        print(f"  - {p}")
+    sys.exit(1)
+version = versions[0] if versions else "?"
+print(f"OK: {len(LANGS)} languages x {len(en)} keys, pricing complete, version {version}")

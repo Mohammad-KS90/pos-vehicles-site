@@ -605,6 +605,7 @@ section {
 
 .contact-info,
 .contact-form {
+  position: relative; /* keeps the hidden honeypot field inside the form */
   padding: var(--cv-space-xxl);
 }
 
@@ -1179,13 +1180,22 @@ a.contact-value {
   cursor: pointer;
 }
 
-/* Honeypot field for the contact form */
+/* Honeypot field for the contact form.
+   Visually hidden in place: an off-screen offset like left:-10000px makes
+   right-to-left (Arabic) pages 10,000px wide, which shows as a huge blank area. */
 .hp-field {
   position: absolute;
-  left: -10000px;
+  top: 0;
+  inset-inline-start: 0;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {

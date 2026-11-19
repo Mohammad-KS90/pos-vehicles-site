@@ -86,7 +86,7 @@ The plan limits in the feature lists (users, branches, trucks) are **suggestions
 
 ## 4. Rules for changing the site
 
-1. **Bump the version after every change** to `style.css`, `script.js`, `pricing.json` or `languages/*.json`. Edit the `?v=` value on **both** lines in `index.html` (currently `2026-11-19.8`). Without this, visitors may see old files for up to 10 minutes.
+1. **Bump the version after every change** to `style.css`, `script.js`, `pricing.json` or `languages/*.json`. Edit the `?v=` value on **both** lines in `index.html` (currently `2026-11-20`). Without this, visitors may see old files for up to 10 minutes.
 2. **Every language file must have the same keys.** When you add text, add it to all 11 files. Names (Carventory, Mohammad Khaleel Suliman) stay in Latin letters.
 3. **Use the design tokens.** Colours, spacing, radius and type come from the `--cv-*` variables at the top of `style.css`, which mirror the Figma file. Don't add new hard-coded colours.
 4. **Electric Blue (`#2F6BFF`)** is for the logo, icons and graphics only. Buttons and links use Action Blue (`--cv-primary`). Red is only for destructive actions.

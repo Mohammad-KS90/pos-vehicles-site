@@ -1,3 +1,10 @@
+// Cache-busting version, taken from this script's own ?v= in index.html,
+// so language files are refetched whenever the site version is bumped.
+const ASSET_VERSION = (() => {
+    try { return new URL(document.currentScript.src).searchParams.get("v") || ""; }
+    catch { return ""; }
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
     initLogoHandling();
     initTabSystem();
@@ -229,7 +236,7 @@ function initLanguageSwitcher() {
 async function loadLanguage(lang) {
     if (!SUPPORTED_LANGS.includes(lang)) lang = "en";
     try {
-        const res = await fetch(`./languages/${lang}.json`);
+        const res = await fetch(`./languages/${lang}.json${ASSET_VERSION ? `?v=${ASSET_VERSION}` : ""}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const translations = await res.json();
 

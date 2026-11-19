@@ -3,6 +3,8 @@
 
 A responsive website for Carventory - Vehicle Passport, featuring multi-language support and dark/light mode toggle. The design follows the Carventory Brand & Design System in Figma.
 
+> **Project status, rules for changes and what's next:** see [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md).
+
 ## Quick Start
 
 To run the development server:

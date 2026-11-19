@@ -12,13 +12,13 @@
     <meta name="theme-color" content="#0A0A0B">
     <link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Bump ?v= on both lines after every change so browsers fetch fresh files -->
-    <link rel="stylesheet" href="style.css?v=2026-11-19.5">
+    <link rel="stylesheet" href="style.css?v=2026-11-19.6">
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"
             integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS"
             crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY"></script>
-    <script src="script.js?v=2026-11-19.5"></script>
+    <script src="script.js?v=2026-11-19.6"></script>
 </head>
 <body>
     <header>
@@ -87,17 +87,23 @@
                 <h3 data-i18n="mobile_apps_title">Mobile Applications</h3>
 
                 <div class="app-item">
-                    <div class="app-title" data-i18n="app_ios_title">iOS App</div>
-                    <p class="app-description" data-i18n="app_ios_desc">
-                        Modern, fast, responsive native app experience.
-                    </p>
+                    <img src="assets/app-icon.svg" class="app-icon" width="64" height="64" alt="">
+                    <div class="app-text">
+                        <div class="app-title" data-i18n="app_ios_title">iOS App</div>
+                        <p class="app-description" data-i18n="app_ios_desc">
+                            Modern, fast, responsive native app experience.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="app-item">
-                    <div class="app-title" data-i18n="app_android_title">Android App</div>
-                    <p class="app-description" data-i18n="app_android_desc">
-                        Single codebase powering Android and server models.
-                    </p>
+                    <img src="assets/app-icon.svg" class="app-icon" width="64" height="64" alt="">
+                    <div class="app-text">
+                        <div class="app-title" data-i18n="app_android_title">Android App</div>
+                        <p class="app-description" data-i18n="app_android_desc">
+                            Single codebase powering Android and server models.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

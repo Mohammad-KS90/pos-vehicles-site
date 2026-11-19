@@ -553,8 +553,23 @@ section {
 }
 
 .app-item {
+  display: flex;
+  align-items: center;
+  gap: var(--cv-space-lg);
   margin-bottom: var(--cv-space-md);
   padding: var(--cv-space-xl);
+}
+
+/* Carventory app icon, shown like an app store listing */
+.app-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+
+.app-text {
+  min-width: 0;
 }
 
 .app-item:hover {

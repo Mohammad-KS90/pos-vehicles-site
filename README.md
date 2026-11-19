@@ -1,7 +1,7 @@
 
-# Smart Automotive POS - Website
+# Vehicle Passport - Website
 
-A responsive website for Smart Automotive POS, featuring multi-language support and dark/light mode toggle.
+A responsive website for Vehicle Passport, featuring multi-language support and dark/light mode toggle. The design follows the Carventory Brand & Design System in Figma.
 
 ## Quick Start
 
@@ -35,7 +35,8 @@ pos-vehicles-site/
 │   ├── tr.json        # Turkish
 │   ├── vi.json        # Vietnamese
 │   └── zh.json        # Chinese
-├── assets/            # Static assets
+├── assets/            # Logo, icons and self-hosted fonts
+├── tests/             # Playwright tests (npm test)
 └── CNAME              # Domain configuration
 ```
 
@@ -89,13 +90,23 @@ Once your language file is ready with all translations, update the language sele
   - `de.json` for German
   - etc.
 
+## Running the Tests
+
+The tests use Playwright and need **Node.js 20 or newer**:
+
+```bash
+npm install
+npx playwright install chromium
+npm test
+```
+
 ## Features
 
 - Multi-language support (11+ languages)
 - Dark/Light mode toggle
 - Responsive design
-- Complete POS management solution for automotive businesses
+- Complete management solution for automotive businesses
 
 ## About
 
-This web page represents our startup company's Smart Automotive POS platform, designed for managing vehicles, sales, workshop jobs, and inventory from one unified platform. 
+This web page represents our startup company's Vehicle Passport platform, designed for managing vehicles, sales, workshop jobs, and inventory from one unified platform. 

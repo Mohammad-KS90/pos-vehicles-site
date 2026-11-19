@@ -15,7 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguageSwitcher();
     initThemeToggle();
     initPricing();
+    initFooterYear();
 });
+
+// Keep the copyright year current
+function initFooterYear() {
+    const year = document.querySelector('.copyright-year');
+    if (year) year.textContent = String(new Date().getFullYear());
+}
 
 /* ================= EMAILJS CONFIG ================= */
 const EMAILJS_PUBLIC_KEY = "wWfS--QZbMkYohVEp";

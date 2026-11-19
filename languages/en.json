@@ -178,5 +178,7 @@
             "Find service centers & tow help",
             "Maintenance reminders"
         ]
-    }
+    },
+    "footer_coming_soon": "Carventory - Vehicle Passport is coming soon",
+    "footer_rights": "All rights reserved."
 }

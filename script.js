@@ -14,7 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormHandling();
     initLanguageSwitcher();
     initThemeToggle();
+    initPricing();
+    initFooterYear();
 });
+
+// Keep the copyright year current
+function initFooterYear() {
+    const year = document.querySelector('.copyright-year');
+    if (year) year.textContent = String(new Date().getFullYear());
+}
 
 /* ================= EMAILJS CONFIG ================= */
 const EMAILJS_PUBLIC_KEY = "wWfS--QZbMkYohVEp";
@@ -40,8 +48,11 @@ function initTabSystem() {
         });
     });
 
+    // Open the tab named in the address (e.g. /#pricing), otherwise the first one
+    const hashTab = window.location.hash.substring(1);
     const firstTab = tabButtons[0]?.getAttribute('data-tab');
-    if (firstTab) switchTab(firstTab);
+    const startTab = hashTab && document.querySelector(`.tab-btn[data-tab="${CSS.escape(hashTab)}"]`) ? hashTab : firstTab;
+    if (startTab) switchTab(startTab);
 }
 
 function switchTab(tabName) {
@@ -57,11 +68,6 @@ function switchTab(tabName) {
         history.replaceState(null, null, `#${tabName}`);
     }
 }
-
-window.addEventListener('load', () => {
-    const hash = window.location.hash.substring(1);
-    if (hash && document.getElementById(hash)) switchTab(hash);
-});
 
 /* ================= LOGO ================= */
 function initLogoHandling() {
@@ -97,7 +103,7 @@ function initButtonInteractions() {
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', e => {
             createRippleEffect(e);
-            handleButtonAction(button);
+            handleButtonAction(button, e);
         });
     });
 }
@@ -126,9 +132,13 @@ function createRippleEffect(event) {
     setTimeout(() => ripple.remove(), 600);
 }
 
-function handleButtonAction(button) {
-    const text = button.textContent.trim();
-    if (text === 'Contact Us') switchTab('contact');
+// Buttons declare where they go with data-action="<tab id>", so this works in every language
+function handleButtonAction(button, event) {
+    const target = button.dataset.action;
+    if (!target || !document.getElementById(target)) return;
+    event?.preventDefault();
+    switchTab(target);
+    document.querySelector('.tabs-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ================= FORM (REAL EMAIL SEND) ================= */
@@ -233,6 +243,15 @@ function initLanguageSwitcher() {
     });
 }
 
+// The translations currently on screen, used by parts of the page rendered from JS (pricing)
+let currentTranslations = {};
+let currentLang = "en";
+
+function t(key, fallback = "") {
+    const value = currentTranslations[key];
+    return typeof value === "string" ? value : fallback;
+}
+
 async function loadLanguage(lang) {
     if (!SUPPORTED_LANGS.includes(lang)) lang = "en";
     try {
@@ -242,8 +261,16 @@ async function loadLanguage(lang) {
 
         document.querySelectorAll("[data-i18n]").forEach(el => {
             const key = el.getAttribute("data-i18n");
-            if (translations[key]) el.textContent = translations[key];
+            if (typeof translations[key] === "string") el.textContent = translations[key];
         });
+        document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+            const key = el.getAttribute("data-i18n-aria");
+            if (typeof translations[key] === "string") el.setAttribute("aria-label", translations[key]);
+        });
+
+        currentTranslations = translations;
+        currentLang = lang;
+        document.dispatchEvent(new CustomEvent("languagechange", { detail: { lang } }));
     } catch (e) {
         console.error("Language load error", e);
     }
@@ -289,4 +316,188 @@ function applyTheme(theme) {
     // The Carventory mark has a light and a dark variant
     const logo = document.querySelector('.logo');
     if (logo) logo.src = `./assets/logo-mark-${theme === 'dark' ? 'dark' : 'light'}.svg`;
+}
+
+/* ================= PRICING ================= */
+// Plans and prices come from pricing.json; labels and feature lists from the language files.
+const PRICING_TIERS = ["basic", "pro", "enterprise"];
+const PRICING_FEATURED_TIER = "pro";
+
+function readStored(key) {
+    try { return localStorage.getItem(key); } catch { return null; }
+}
+
+function writeStored(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* private mode etc. */ }
+}
+
+async function initPricing() {
+    const section = document.getElementById("pricing");
+    const grid = section?.querySelector(".plan-grid");
+    if (!grid) return;
+
+    let pricing;
+    try {
+        const res = await fetch(`./pricing.json${ASSET_VERSION ? `?v=${ASSET_VERSION}` : ""}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        pricing = await res.json();
+    } catch (e) {
+        console.error("Pricing load error", e);
+        return;
+    }
+
+    const roles = Object.keys(pricing.b2b);
+    const storedCurrency = readStored("pricing_currency");
+    const state = {
+        segment: "b2b",
+        role: roles[0],
+        // Explicit choice wins; otherwise Arabic visitors see JOD, everyone else USD
+        currency: pricing.currencies.includes(storedCurrency) ? storedCurrency : null,
+    };
+
+    const groups = {};
+    section.querySelectorAll("[data-pricing]").forEach(group => {
+        const name = group.dataset.pricing;
+        groups[name] = group;
+        group.addEventListener("click", e => {
+            const chip = e.target.closest(".chip");
+            if (!chip || !group.contains(chip)) return;
+            state[name] = chip.dataset.value;
+            if (name === "currency") writeStored("pricing_currency", state.currency);
+            render();
+        });
+    });
+
+    function currencyFor() {
+        return state.currency || (currentLang === "ar" ? "JOD" : "USD");
+    }
+
+    function syncChips() {
+        const values = { segment: state.segment, role: state.role, currency: currencyFor() };
+        Object.entries(groups).forEach(([name, group]) => {
+            group.querySelectorAll(".chip").forEach(chip => {
+                const on = chip.dataset.value === values[name];
+                chip.classList.toggle("active", on);
+                chip.setAttribute("aria-checked", String(on));
+            });
+        });
+        section.classList.toggle("is-b2c", state.segment === "b2c");
+    }
+
+    function formatPrice(amount, currency) {
+        if (amount === null || amount === undefined) return "—";
+        try {
+            return new Intl.NumberFormat(currentLang, {
+                style: "currency", currency, currencyDisplay: "code",
+                // Whole prices without decimals ("JOD 25"); fractions keep up to 3 (JOD uses fils)
+                minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+                maximumFractionDigits: Number.isInteger(amount) ? 0 : 3,
+            }).format(amount);
+        } catch {
+            return `${amount} ${currency}`;
+        }
+    }
+
+    function features(role, tier) {
+        const all = currentTranslations.pricing_features || {};
+        const list = tier ? all[role]?.[tier] : all[role];
+        return Array.isArray(list) ? list : [];
+    }
+
+    function card({ role, tier, title, planLabel, priceText, perMonth, featured, badge }) {
+        const el = document.createElement("article");
+        el.className = "plan-card" + (featured ? " plan-card--featured" : "");
+
+        if (badge) {
+            const tag = document.createElement("span");
+            tag.className = "plan-badge";
+            tag.textContent = badge;
+            el.appendChild(tag);
+        }
+
+        const name = document.createElement("h3");
+        name.className = "plan-name";
+        name.textContent = title;
+        el.appendChild(name);
+
+        const price = document.createElement("p");
+        price.className = "plan-price";
+        const amount = document.createElement("span");
+        amount.className = "plan-amount";
+        amount.textContent = priceText;
+        price.appendChild(amount);
+        if (perMonth) {
+            const per = document.createElement("span");
+            per.className = "plan-period";
+            per.textContent = " " + t("pricing_per_month", "/ month");
+            price.appendChild(per);
+        }
+        el.appendChild(price);
+
+        const list = document.createElement("ul");
+        list.className = "plan-features";
+        features(role, tier).forEach(text => {
+            const li = document.createElement("li");
+            li.textContent = text;
+            list.appendChild(li);
+        });
+        el.appendChild(list);
+
+        const cta = document.createElement("button");
+        cta.type = "button";
+        cta.className = "btn " + (featured ? "btn-primary" : "btn-outline");
+        cta.textContent = t("pricing_cta", "Get started");
+        cta.addEventListener("click", () => startContact(role, planLabel));
+        el.appendChild(cta);
+
+        return el;
+    }
+
+    // Open the contact form with the chosen plan in the subject
+    function startContact(role, planLabel) {
+        const subject = t("pricing_subject", "Pricing: {role} – {plan}")
+            .replace("{role}", t(`pricing_role_${role}`, role))
+            .replace("{plan}", planLabel);
+        const input = document.getElementById("subject");
+        if (input) input.value = subject.slice(0, Number(input.maxLength) > 0 ? input.maxLength : 150);
+        switchTab("contact");
+        document.querySelector(".tabs-container")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("name")?.focus({ preventScroll: true });
+    }
+
+    function render() {
+        syncChips();
+        grid.replaceChildren();
+        if (state.segment === "b2c") {
+            grid.classList.add("plan-grid--single");
+            grid.appendChild(card({
+                role: "owner",
+                tier: null,
+                title: t("pricing_role_owner", "Vehicle owner"),
+                planLabel: t("pricing_plan_free", "Free"),
+                priceText: t("pricing_plan_free", "Free"),
+                perMonth: false,
+                featured: true,
+                badge: null,
+            }));
+            return;
+        }
+        grid.classList.remove("plan-grid--single");
+        const currency = currencyFor();
+        PRICING_TIERS.forEach(tier => {
+            grid.appendChild(card({
+                role: state.role,
+                tier,
+                title: t(`pricing_plan_${tier}`, tier),
+                planLabel: t(`pricing_plan_${tier}`, tier),
+                priceText: formatPrice(pricing.b2b[state.role]?.[tier]?.[currency], currency),
+                perMonth: true,
+                featured: tier === PRICING_FEATURED_TIER,
+                badge: tier === PRICING_FEATURED_TIER ? t("pricing_popular", "Most popular") : null,
+            }));
+        });
+    }
+
+    document.addEventListener("languagechange", render);
+    render();
 }

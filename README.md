@@ -23,6 +23,7 @@ pos-vehicles-site/
 ├── index.html          # Main HTML file
 ├── script.js           # JavaScript functionality
 ├── style.css           # Styling
+├── pricing.json        # Monthly plan prices (JOD / USD / AED)
 ├── languages/          # Translation files
 │   ├── en.json        # English
 │   ├── ar.json        # Arabic
@@ -39,6 +40,15 @@ pos-vehicles-site/
 ├── tests/             # Playwright tests (npm test)
 └── CNAME              # Domain configuration
 ```
+
+## Updating Pricing
+
+The **Pricing** tab is built from two places:
+
+- **Prices:** `pricing.json`. Each business role (`autoparts`, `towing`, `servicecenter`) has `basic`, `pro` and `enterprise`, each with a monthly price in `JOD`, `USD` and `AED`. Vehicle owners (`b2c.owner`) are free.
+- **Text and feature lists:** the `pricing_*` keys and the `pricing_features` lists in every file in `languages/`.
+
+`npm test` fails while any price is `null` or a feature list still says `TODO`. After editing, bump `?v=` in `index.html` (see below).
 
 ## Publishing Changes
 

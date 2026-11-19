@@ -6,6 +6,7 @@
     "tab_contact": "联系我们",
     "tab_who": "我们是谁",
     "tab_services": "我们的服务",
+    "tab_pricing": "价格",
 
     "about_title": "关于 - Carventory - 车辆护照",
     "about_desc": "车辆护照是一套完整的汽车行业管理解决方案。",
@@ -89,6 +90,95 @@
     "vehicle_truck": "卡车",
     "vehicle_bus": "巴士",
     "vehicle_motorcycle": "摩托车",
-    "vehicle_all": "所有类型"
-  
+    "vehicle_all": "所有类型",
+
+    "pricing_title": "价格",
+    "pricing_subtitle": "覆盖车辆全生命周期的简单月度套餐。",
+    "pricing_segment_label": "客户类型",
+    "pricing_b2b": "企业版",
+    "pricing_b2c": "车主版",
+    "pricing_role_label": "业务类型",
+    "pricing_currency_label": "货币",
+    "pricing_role_autoparts": "汽车配件 POS",
+    "pricing_role_towing": "卡车司机 / 拖车服务商",
+    "pricing_role_servicecenter": "维修服务中心",
+    "pricing_role_owner": "车主",
+    "pricing_plan_basic": "基础版",
+    "pricing_plan_pro": "专业版",
+    "pricing_plan_enterprise": "企业版",
+    "pricing_plan_free": "免费",
+    "pricing_per_month": "/ 月",
+    "pricing_popular": "最受欢迎",
+    "pricing_cta": "立即开始",
+    "pricing_subject": "价格：{role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "1 家门店，2 个用户",
+                "收银（POS）与开票",
+                "配件库存及低库存提醒",
+                "iOS 和 Android 应用"
+            ],
+            "pro": [
+                "包含基础版全部功能",
+                "最多 3 家门店、10 个用户",
+                "客户账户与赊销",
+                "销售与库存报表"
+            ],
+            "enterprise": [
+                "包含专业版全部功能",
+                "门店和用户数量不限",
+                "门店间库存调拨",
+                "优先支持与上线协助"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "1 名司机 / 1 辆车",
+                "任务请求与历史记录",
+                "客户与车辆档案",
+                "移动应用"
+            ],
+            "pro": [
+                "包含基础版全部功能",
+                "最多 5 辆卡车",
+                "任务实时跟踪",
+                "开票与收款"
+            ],
+            "enterprise": [
+                "包含专业版全部功能",
+                "车队规模不限",
+                "调度看板",
+                "优先支持"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "1 个地点，3 个用户",
+                "维修工单",
+                "车辆维修记录",
+                "开票"
+            ],
+            "pro": [
+                "包含基础版全部功能",
+                "最多 10 个用户",
+                "技师排班",
+                "配件库存与补货提醒"
+            ],
+            "enterprise": [
+                "包含专业版全部功能",
+                "多个地点，用户不限",
+                "跨门店报表",
+                "优先支持与上线协助"
+            ]
+        },
+        "owner": [
+            "电子车辆护照",
+            "完整维修记录",
+            "查找维修中心和拖车服务",
+            "保养提醒"
+        ]
+    },
+    "footer_coming_soon": "Carventory - 车辆护照 即将上线",
+    "footer_rights": "保留所有权利。"
 }

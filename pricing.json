@@ -1,0 +1,66 @@
+{
+  "_comment": "Monthly prices, set by hand per currency (JOD is the base; USD and AED are within ~3% of the pegged rates). Auto parts POS is the main product and priced highest.",
+  "currencies": [
+    "JOD",
+    "USD",
+    "AED"
+  ],
+  "b2b": {
+    "autoparts": {
+      "basic": {
+        "JOD": 19,
+        "USD": 27,
+        "AED": 99
+      },
+      "pro": {
+        "JOD": 39,
+        "USD": 55,
+        "AED": 199
+      },
+      "enterprise": {
+        "JOD": 79,
+        "USD": 109,
+        "AED": 399
+      }
+    },
+    "towing": {
+      "basic": {
+        "JOD": 7,
+        "USD": 10,
+        "AED": 35
+      },
+      "pro": {
+        "JOD": 15,
+        "USD": 21,
+        "AED": 79
+      },
+      "enterprise": {
+        "JOD": 35,
+        "USD": 49,
+        "AED": 179
+      }
+    },
+    "servicecenter": {
+      "basic": {
+        "JOD": 15,
+        "USD": 21,
+        "AED": 79
+      },
+      "pro": {
+        "JOD": 29,
+        "USD": 41,
+        "AED": 149
+      },
+      "enterprise": {
+        "JOD": 59,
+        "USD": 83,
+        "AED": 299
+      }
+    }
+  },
+  "b2c": {
+    "owner": {
+      "price": 0
+    }
+  }
+}

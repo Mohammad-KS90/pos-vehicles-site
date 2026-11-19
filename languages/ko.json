@@ -6,6 +6,7 @@
     "tab_contact": "문의하기",
     "tab_who": "우리는 누구인가",
     "tab_services": "서비스",
+    "tab_pricing": "요금",
 
     "about_title": "소개 - Carventory - 차량 여권",
     "about_desc": "차량 여권은 자동차 비즈니스를 위한 종합 관리 솔루션입니다.",
@@ -89,6 +90,95 @@
     "vehicle_truck": "트럭",
     "vehicle_bus": "버스",
     "vehicle_motorcycle": "오토바이",
-    "vehicle_all": "모든 유형"
-  
+    "vehicle_all": "모든 유형",
+
+    "pricing_title": "요금",
+    "pricing_subtitle": "차량 여정의 모든 단계를 위한 간단한 월간 요금제.",
+    "pricing_segment_label": "고객 유형",
+    "pricing_b2b": "기업용",
+    "pricing_b2c": "차량 소유자용",
+    "pricing_role_label": "업종",
+    "pricing_currency_label": "통화",
+    "pricing_role_autoparts": "자동차 부품 POS",
+    "pricing_role_towing": "트럭 운전사 / 견인 업체",
+    "pricing_role_servicecenter": "서비스 센터",
+    "pricing_role_owner": "차량 소유자",
+    "pricing_plan_basic": "베이직",
+    "pricing_plan_pro": "프로",
+    "pricing_plan_enterprise": "엔터프라이즈",
+    "pricing_plan_free": "무료",
+    "pricing_per_month": "/ 월",
+    "pricing_popular": "가장 인기",
+    "pricing_cta": "시작하기",
+    "pricing_subject": "요금: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "지점 1개, 사용자 2명",
+                "POS 판매 및 송장 발행",
+                "재고 부족 알림이 있는 부품 재고",
+                "iOS 및 Android 앱"
+            ],
+            "pro": [
+                "베이직의 모든 기능",
+                "최대 지점 3개, 사용자 10명",
+                "고객 계정 및 외상 판매",
+                "판매 및 재고 보고서"
+            ],
+            "enterprise": [
+                "프로의 모든 기능",
+                "지점 및 사용자 무제한",
+                "지점 간 재고 이동",
+                "우선 지원 및 도입 지원"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "기사 1명 / 차량 1대",
+                "작업 요청 및 이력",
+                "고객 및 차량 기록",
+                "모바일 앱"
+            ],
+            "pro": [
+                "베이직의 모든 기능",
+                "최대 트럭 5대",
+                "작업 실시간 추적",
+                "송장 및 결제"
+            ],
+            "enterprise": [
+                "프로의 모든 기능",
+                "차량 무제한",
+                "배차 대시보드",
+                "우선 지원"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "지점 1개, 사용자 3명",
+                "정비 작업 지시서",
+                "차량 정비 이력",
+                "송장 발행"
+            ],
+            "pro": [
+                "베이직의 모든 기능",
+                "최대 사용자 10명",
+                "정비사 일정 관리",
+                "부품 재고 및 재주문 알림"
+            ],
+            "enterprise": [
+                "프로의 모든 기능",
+                "다중 지점, 사용자 무제한",
+                "전 지점 보고서",
+                "우선 지원 및 도입 지원"
+            ]
+        },
+        "owner": [
+            "디지털 차량 여권",
+            "전체 정비 이력",
+            "정비소 및 견인 서비스 찾기",
+            "정비 알림"
+        ]
+    },
+    "footer_coming_soon": "Carventory - 차량 여권 곧 출시",
+    "footer_rights": "모든 권리 보유."
 }

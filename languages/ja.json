@@ -6,6 +6,7 @@
     "tab_contact": "お問い合わせ",
     "tab_who": "私たちについて",
     "tab_services": "サービス",
+    "tab_pricing": "料金",
 
     "about_title": "概要 - Carventory - 車両パスポート",
     "about_desc": "車両パスポートは、自動車ビジネス向けの総合管理ソリューションです。",
@@ -89,6 +90,95 @@
     "vehicle_truck": "トラック",
     "vehicle_bus": "バス",
     "vehicle_motorcycle": "バイク",
-    "vehicle_all": "全ての種類"
-  
+    "vehicle_all": "全ての種類",
+
+    "pricing_title": "料金",
+    "pricing_subtitle": "車両のライフサイクル全体に対応するシンプルな月額プラン。",
+    "pricing_segment_label": "お客様の種類",
+    "pricing_b2b": "法人向け",
+    "pricing_b2c": "車両オーナー向け",
+    "pricing_role_label": "業種",
+    "pricing_currency_label": "通貨",
+    "pricing_role_autoparts": "自動車部品POS",
+    "pricing_role_towing": "トラック運転手 / レッカー業者",
+    "pricing_role_servicecenter": "サービスセンター",
+    "pricing_role_owner": "車両オーナー",
+    "pricing_plan_basic": "ベーシック",
+    "pricing_plan_pro": "プロ",
+    "pricing_plan_enterprise": "エンタープライズ",
+    "pricing_plan_free": "無料",
+    "pricing_per_month": "/ 月",
+    "pricing_popular": "一番人気",
+    "pricing_cta": "始める",
+    "pricing_subject": "料金：{role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "1店舗・2ユーザー",
+                "POSレジと請求書発行",
+                "在庫僅少アラート付き部品在庫",
+                "iOS・Androidアプリ"
+            ],
+            "pro": [
+                "ベーシックの全機能",
+                "最大3店舗・10ユーザー",
+                "顧客アカウントと掛け売り",
+                "売上・在庫レポート"
+            ],
+            "enterprise": [
+                "プロの全機能",
+                "店舗数・ユーザー数無制限",
+                "店舗間の在庫移動",
+                "優先サポートと導入支援"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "ドライバー1名 / 車両1台",
+                "作業依頼と履歴",
+                "顧客・車両の記録",
+                "モバイルアプリ"
+            ],
+            "pro": [
+                "ベーシックの全機能",
+                "最大5台のトラック",
+                "作業のリアルタイム追跡",
+                "請求と支払い"
+            ],
+            "enterprise": [
+                "プロの全機能",
+                "車両台数無制限",
+                "配車ダッシュボード",
+                "優先サポート"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "1拠点・3ユーザー",
+                "整備作業指示書",
+                "車両整備履歴",
+                "請求書発行"
+            ],
+            "pro": [
+                "ベーシックの全機能",
+                "最大10ユーザー",
+                "整備士のスケジュール管理",
+                "部品在庫と発注アラート"
+            ],
+            "enterprise": [
+                "プロの全機能",
+                "複数拠点・ユーザー無制限",
+                "全拠点のレポート",
+                "優先サポートと導入支援"
+            ]
+        },
+        "owner": [
+            "デジタル車両パスポート",
+            "完全な整備履歴",
+            "整備工場・レッカーを検索",
+            "メンテナンスのリマインダー"
+        ]
+    },
+    "footer_coming_soon": "Carventory - 車両パスポート まもなく公開",
+    "footer_rights": "無断転載を禁じます。"
 }

@@ -6,6 +6,7 @@
     "tab_contact": "Contact Us",
     "tab_who": "Who We Are",
     "tab_services": "Our Services",
+    "tab_pricing": "Pricing",
 
     "about_title": "About - Carventory - Vehicle Passport",
     "about_desc": "Vehicle Passport is a complete management solution for automotive businesses.",
@@ -89,7 +90,95 @@
     "vehicle_truck": "Trucks",
     "vehicle_bus": "Buses",
     "vehicle_motorcycle": "Motorcycles",
-    "vehicle_all": "All Types"
-  
-    
+    "vehicle_all": "All Types",
+
+    "pricing_title": "Pricing",
+    "pricing_subtitle": "Simple monthly plans for every part of the vehicle journey.",
+    "pricing_segment_label": "Customer type",
+    "pricing_b2b": "For businesses",
+    "pricing_b2c": "For vehicle owners",
+    "pricing_role_label": "Business type",
+    "pricing_currency_label": "Currency",
+    "pricing_role_autoparts": "Auto parts POS",
+    "pricing_role_towing": "Truck driver / tow provider",
+    "pricing_role_servicecenter": "Service center",
+    "pricing_role_owner": "Vehicle owner",
+    "pricing_plan_basic": "Basic",
+    "pricing_plan_pro": "Pro",
+    "pricing_plan_enterprise": "Enterprise",
+    "pricing_plan_free": "Free",
+    "pricing_per_month": "/ month",
+    "pricing_popular": "Most popular",
+    "pricing_cta": "Get started",
+    "pricing_subject": "Pricing: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "1 branch, 2 users",
+                "Point of sale & invoicing",
+                "Parts inventory with low-stock alerts",
+                "iOS & Android apps"
+            ],
+            "pro": [
+                "Everything in Basic",
+                "Up to 3 branches, 10 users",
+                "Customer accounts & credit sales",
+                "Sales & stock reports"
+            ],
+            "enterprise": [
+                "Everything in Pro",
+                "Unlimited branches & users",
+                "Stock transfers between branches",
+                "Priority support & onboarding"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "1 driver / vehicle",
+                "Job requests & history",
+                "Customer & vehicle records",
+                "Mobile app"
+            ],
+            "pro": [
+                "Everything in Basic",
+                "Up to 5 trucks",
+                "Live job tracking",
+                "Invoicing & payments"
+            ],
+            "enterprise": [
+                "Everything in Pro",
+                "Unlimited fleet",
+                "Dispatch dashboard",
+                "Priority support"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "1 location, 3 users",
+                "Workshop job cards",
+                "Vehicle service history",
+                "Invoicing"
+            ],
+            "pro": [
+                "Everything in Basic",
+                "Up to 10 users",
+                "Technician scheduling",
+                "Parts inventory & reorder alerts"
+            ],
+            "enterprise": [
+                "Everything in Pro",
+                "Multiple locations, unlimited users",
+                "Reports across all branches",
+                "Priority support & onboarding"
+            ]
+        },
+        "owner": [
+            "Digital vehicle passport",
+            "Full service history",
+            "Find service centers & tow help",
+            "Maintenance reminders"
+        ]
+    },
+    "footer_coming_soon": "Carventory - Vehicle Passport is coming soon",
+    "footer_rights": "All rights reserved."
 }

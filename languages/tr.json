@@ -6,6 +6,7 @@
     "tab_contact": "İletişim",
     "tab_who": "Biz Kimiz",
     "tab_services": "Hizmetlerimiz",
+    "tab_pricing": "Fiyatlandırma",
 
     "about_title": "Hakkında - Carventory - Araç Pasaportu",
     "about_desc": "Araç Pasaportu, otomotiv işletmeleri için eksiksiz bir yönetim çözümüdür.",
@@ -89,6 +90,95 @@
     "vehicle_truck": "Kamyonlar",
     "vehicle_bus": "Otobüsler",
     "vehicle_motorcycle": "Motosikletler",
-    "vehicle_all": "Tüm Türler"
-}
+    "vehicle_all": "Tüm Türler",
 
+    "pricing_title": "Fiyatlandırma",
+    "pricing_subtitle": "Araç yolculuğunun her aşaması için basit aylık planlar.",
+    "pricing_segment_label": "Müşteri türü",
+    "pricing_b2b": "İşletmeler için",
+    "pricing_b2c": "Araç sahipleri için",
+    "pricing_role_label": "İşletme türü",
+    "pricing_currency_label": "Para birimi",
+    "pricing_role_autoparts": "Yedek parça POS",
+    "pricing_role_towing": "Tır şoförü / çekici hizmeti",
+    "pricing_role_servicecenter": "Servis merkezi",
+    "pricing_role_owner": "Araç sahibi",
+    "pricing_plan_basic": "Temel",
+    "pricing_plan_pro": "Pro",
+    "pricing_plan_enterprise": "Kurumsal",
+    "pricing_plan_free": "Ücretsiz",
+    "pricing_per_month": "/ ay",
+    "pricing_popular": "En popüler",
+    "pricing_cta": "Hemen başla",
+    "pricing_subject": "Fiyatlandırma: {role} – {plan}",
+    "pricing_features": {
+        "autoparts": {
+            "basic": [
+                "1 şube, 2 kullanıcı",
+                "Satış noktası ve faturalama",
+                "Düşük stok uyarılı parça envanteri",
+                "iOS ve Android uygulamaları"
+            ],
+            "pro": [
+                "Temel plandaki her şey",
+                "3 şube ve 10 kullanıcıya kadar",
+                "Müşteri hesapları ve veresiye satış",
+                "Satış ve stok raporları"
+            ],
+            "enterprise": [
+                "Pro plandaki her şey",
+                "Sınırsız şube ve kullanıcı",
+                "Şubeler arası stok transferi",
+                "Öncelikli destek ve kurulum yardımı"
+            ]
+        },
+        "towing": {
+            "basic": [
+                "1 sürücü / araç",
+                "İş talepleri ve geçmişi",
+                "Müşteri ve araç kayıtları",
+                "Mobil uygulama"
+            ],
+            "pro": [
+                "Temel plandaki her şey",
+                "5 araca kadar",
+                "İşlerin canlı takibi",
+                "Faturalama ve ödemeler"
+            ],
+            "enterprise": [
+                "Pro plandaki her şey",
+                "Sınırsız filo",
+                "Görev dağıtım paneli",
+                "Öncelikli destek"
+            ]
+        },
+        "servicecenter": {
+            "basic": [
+                "1 lokasyon, 3 kullanıcı",
+                "Atölye iş emirleri",
+                "Araç servis geçmişi",
+                "Faturalama"
+            ],
+            "pro": [
+                "Temel plandaki her şey",
+                "10 kullanıcıya kadar",
+                "Teknisyen planlama",
+                "Parça envanteri ve yeniden sipariş uyarıları"
+            ],
+            "enterprise": [
+                "Pro plandaki her şey",
+                "Birden fazla lokasyon, sınırsız kullanıcı",
+                "Tüm şubeler için raporlar",
+                "Öncelikli destek ve kurulum yardımı"
+            ]
+        },
+        "owner": [
+            "Dijital araç pasaportu",
+            "Eksiksiz servis geçmişi",
+            "Servis merkezi ve çekici bulma",
+            "Bakım hatırlatıcıları"
+        ]
+    },
+    "footer_coming_soon": "Carventory - Araç Pasaportu çok yakında",
+    "footer_rights": "Tüm hakları saklıdır."
+}

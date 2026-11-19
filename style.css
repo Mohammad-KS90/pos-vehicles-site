@@ -289,7 +289,13 @@ header {
   text-align: center;
 }
 
+.logo-link {
+  display: inline-flex;
+  border-radius: var(--cv-radius-xl);
+}
+
 .logo {
+  display: block;
   width: 96px;
   height: 96px;
   object-fit: contain;
@@ -553,8 +559,23 @@ section {
 }
 
 .app-item {
+  display: flex;
+  align-items: center;
+  gap: var(--cv-space-lg);
   margin-bottom: var(--cv-space-md);
   padding: var(--cv-space-xl);
+}
+
+/* Carventory app icon, shown like an app store listing */
+.app-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+
+.app-text {
+  min-width: 0;
 }
 
 .app-item:hover {
@@ -594,10 +615,32 @@ section {
 }
 
 .contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--cv-space-xs);
   padding: var(--cv-space-lg) 0;
   border-bottom: 1px solid var(--cv-border);
-  color: var(--cv-text-secondary);
+}
+
+/* Small caption above each value, so label and value don't read as one line */
+.contact-label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--cv-text-tertiary);
+}
+
+.contact-value {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--cv-text-primary);
   font-variant-numeric: tabular-nums;
+}
+
+a.contact-value {
+  color: var(--cv-primary);
 }
 
 .contact-item:first-of-type {

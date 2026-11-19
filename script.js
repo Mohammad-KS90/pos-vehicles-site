@@ -70,32 +70,23 @@ function switchTab(tabName) {
 }
 
 /* ================= LOGO ================= */
+// The logo is a link (index.html) that opens the site in a new browser tab
 function initLogoHandling() {
     const logo = document.querySelector('.logo');
     if (!logo) return;
-
     logo.addEventListener('error', createLogoFallback);
-    logo.addEventListener('click', () => {
-        switchTab('about');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 }
 
+// If the logo image fails to load, show a text badge inside the same link
 function createLogoFallback() {
     const logo = document.querySelector('.logo');
-    const container = document.querySelector('.logo-container');
-    if (!logo || !container) return;
+    if (!logo) return;
 
     logo.style.display = 'none';
-    const fallback = document.createElement('div');
+    const fallback = document.createElement('span');
     fallback.className = 'logo-fallback';
-    fallback.textContent = 'Auto POS';
-    container.insertBefore(fallback, container.firstChild);
-
-    fallback.addEventListener('click', () => {
-        switchTab('about');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    fallback.textContent = 'Carventory';
+    logo.insertAdjacentElement('afterend', fallback);
 }
 
 /* ================= BUTTONS ================= */

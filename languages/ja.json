@@ -26,6 +26,9 @@
 
     "contact_title": "お問い合わせ",
     "contact_get_in_touch": "ご連絡ください",
+    "contact_phone_label": "電話番号",
+    "contact_address_label": "住所",
+    "contact_address_value": "ヨルダン・アンマン",
     "contact_form_title": "メッセージ送信",
     "contact_name_label": "お名前",
     "contact_email_label": "メールアドレス",

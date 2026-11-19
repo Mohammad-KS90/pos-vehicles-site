@@ -26,6 +26,9 @@
 
     "contact_title": "اتصل بنا",
     "contact_get_in_touch": "تواصل معنا",
+    "contact_phone_label": "الهاتف",
+    "contact_address_label": "العنوان",
+    "contact_address_value": "عمّان، الأردن",
     "contact_form_title": "أرسل رسالة",
     "contact_name_label": "اسمك",
     "contact_email_label": "بريدك الإلكتروني",

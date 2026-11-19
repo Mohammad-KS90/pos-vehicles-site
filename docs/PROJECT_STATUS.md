@@ -1,0 +1,136 @@
+# Carventory – Vehicle Passport · Web Portal Status
+
+Reference for anyone (people or AI assistants) picking up work on this site.
+Last updated: **2026-11-19**. Owner: Mohammad Khaleel Suliman (Carventory).
+
+---
+
+## 1. What this is
+
+The public marketing website for **Carventory – Vehicle Passport**, live at **https://www.carventory.co**.
+It explains the product, lists pricing for each customer type and collects enquiries through a contact form.
+
+| | |
+|---|---|
+| Hosting | GitHub Pages, deployed from the `main` branch (custom domain in `CNAME`) |
+| Stack | Plain HTML + CSS + JavaScript. No framework and no build step |
+| Languages | 11: ar (right-to-left), en, fr, hi, id, ja, ko, th, tr, vi, zh |
+| Design source | Figma file **"Carventory — Brand & Design System"** (key `rdtuNnIAxJFm6oftK9Af3g`, frame `10:268`) |
+| Contact form | EmailJS (sends the email) and Google reCAPTCHA v3 (spam check) |
+| Tests | Playwright, run with `npm test` (needs **Node.js 20+**) |
+
+### Customer types (roles)
+| Segment | Role | Plans |
+|---|---|---|
+| B2B | Auto parts POS (**main revenue product**) | Basic · Pro · Enterprise |
+| B2B | Truck driver / tow provider | Basic · Pro · Enterprise |
+| B2B | Service center | Basic · Pro · Enterprise |
+| B2C | Vehicle owner | Free |
+
+---
+
+## 2. File map
+
+```
+index.html            Page structure: header, 5 tabs, vehicle types, footer
+style.css             All styling. Carventory tokens (--cv-*) at the top
+script.js             Tabs, language switching, theme, pricing cards, contact form
+pricing.json          Monthly prices per role / plan / currency (JOD, USD, AED)
+languages/*.json      All visible text, one file per language (same keys in every file)
+assets/
+  logo-mark-light.svg / logo-mark-dark.svg   Header logo (swaps with the theme)
+  app-icon.svg, favicon-32.png, apple-touch-icon.png   Browser tab and home-screen icon
+  vehicle-*.svg       Supported vehicle type icons (Electric Blue line art)
+  fonts/              Self-hosted Inter and IBM Plex Sans Arabic (OFL licences included)
+tests/
+  vehicle-types.test.js   Vehicle types section
+  pricing.test.js         Pricing data, translations and the Pricing tab UI
+docs/PROJECT_STATUS.md    This file
+```
+
+### Page sections
+1. **Header:** logo (opens the site in a new browser tab), title, tagline, language menu, dark-mode button
+2. **Tabs:** About Us · Contact Us · Who We Are · Our Services · **Pricing**. A link like `/#pricing` opens that tab directly.
+3. **About Us:** product description, features, Mobile Applications (iOS / Android cards with the app icon)
+4. **Contact Us:** phone (tap to call), address, contact form
+5. **Who We Are:** company info and values (a stats block is commented out in `index.html`)
+6. **Our Services:** POS, workshop and mobile service cards, plus "View Pricing" and "Schedule Demo" buttons
+7. **Pricing:** switches for businesses/vehicle owners, role and currency; 3 plan cards. "Get started" opens the contact form with the plan pre-filled in the subject.
+8. **Supported Vehicle Types:** cars, trucks, buses, motorcycles, all types
+9. **Footer:** "Carventory – Vehicle Passport is coming soon" and "© {year} Mohammad Khaleel Suliman. All rights reserved."
+
+---
+
+## 3. Done so far
+
+| PR | What |
+|---|---|
+| #14 | Security hardening for the site and contact form (CSP, honeypot field, rate limit) |
+| #15 | Redesigned the Supported Vehicle Types icons as one SVG set, with tests |
+| #16 | **Full restyle to the Carventory Figma design system**: flat black and Action Blue palette, light and dark mode, Inter / IBM Plex Sans Arabic fonts, pill buttons and chip tabs, new logo, tab icon. Renamed to **Carventory – Vehicle Passport** in all languages |
+| #17 | Cache-busting: `?v=` version on CSS, JS and language files so visitors get fresh files after a deploy |
+| #18 | **Pricing tab** (B2B and B2C, JOD/USD/AED, suggested prices and feature lists in all languages), site footer, the "View Pricing" button working in every language, `/#tab` links |
+| #19 *(open)* | App icon in the Mobile Applications cards, logo opens a new tab, translated contact labels and address |
+
+### Current prices (monthly, suggested; see `pricing.json`)
+| | Basic | Pro | Enterprise |
+|---|---|---|---|
+| Auto parts POS | 19 JOD · 27 USD · 99 AED | 39 JOD · 55 USD · 199 AED | 79 JOD · 109 USD · 399 AED |
+| Service center | 15 · 21 · 79 | 29 · 41 · 149 | 59 · 83 · 299 |
+| Truck driver / tow | 7 · 10 · 35 | 15 · 21 · 79 | 35 · 49 · 179 |
+| Vehicle owner | Free | | |
+
+The plan limits in the feature lists (users, branches, trucks) are **suggestions** and must match what the apps enforce.
+
+---
+
+## 4. Rules for changing the site
+
+1. **Bump the version after every change** to `style.css`, `script.js`, `pricing.json` or `languages/*.json`. Edit the `?v=` value on **both** lines in `index.html` (currently `2026-11-19.8`). Without this, visitors may see old files for up to 10 minutes.
+2. **Every language file must have the same keys.** When you add text, add it to all 11 files. Names (Carventory, Mohammad Khaleel Suliman) stay in Latin letters.
+3. **Use the design tokens.** Colours, spacing, radius and type come from the `--cv-*` variables at the top of `style.css`, which mirror the Figma file. Don't add new hard-coded colours.
+4. **Electric Blue (`#2F6BFF`)** is for the logo, icons and graphics only. Buttons and links use Action Blue (`--cv-primary`). Red is only for destructive actions.
+5. **Test Arabic (RTL) and phone width (375px)** for any layout change.
+6. **Prices:** edit `pricing.json` only. Feature text: `pricing_features` in each language file. `npm test` fails if a price is `null` or a feature still says `TODO`.
+7. **Branch from `main` and open a PR.** GitHub Pages deploys automatically when `main` changes.
+
+### Running locally
+```bash
+python3 -m http.server 8765
+```
+Then open **http://localhost:8765/** (plain `http`, not `https`).
+
+### Running the tests
+```bash
+npm install && npx playwright install chromium && npm test
+```
+This needs Node.js 20 or newer. The default `node` on the main dev Mac is v16, and the Homebrew Node upgrade was still building at the time of writing.
+
+---
+
+## 5. What's next
+
+### Must do (before relying on the site)
+- [ ] **Merge PR #19** (app icon, logo new tab, translated contact details).
+- [ ] **Run `npm test` once on Node 20+.** The Playwright tests (`vehicle-types.test.js`, `pricing.test.js`) have **never been run** since the redesign; all checks so far were manual, in the browser.
+- [ ] **Confirm prices and plan limits** with a few real customers (parts shops and service centres first), then update `pricing.json` and the feature lists.
+- [ ] **Have native speakers review the translations**, especially Arabic (the main market), then Thai and Korean ("passport" wording) and the plan features.
+- [ ] **Check the contact form on the live site** end to end: a message arrives through EmailJS, and reCAPTCHA is also verified on the EmailJS side, not only in the browser. The reCAPTCHA site key's domain list should include `www.carventory.co`.
+
+### Should do
+- [ ] **Privacy policy and terms pages.** The site collects names and emails through the contact form and shows paid plans.
+- [ ] **SEO basics:** `<meta name="description">`, Open Graph and Twitter tags (title, description, image), and a sitemap. The translations are loaded by JavaScript, so search engines mostly see the English text.
+- [ ] **Run the tests on GitHub (CI).** The `.github/` folder is empty. A small GitHub Actions workflow running `npm test` on each PR would catch broken translations or prices automatically.
+- [ ] **App store links:** when the iOS and Android apps launch, add App Store / Google Play badges to the Mobile Applications cards, and update or remove the "coming soon" notice in the footer (`footer_coming_soon`).
+- [ ] **Accessibility pass:** add tab roles and keyboard arrow navigation for the main tabs, and re-check colour contrast in dark mode.
+
+### Nice to have
+- [ ] Yearly billing (with a discount) on the Pricing tab. Today it's monthly only.
+- [ ] Re-enable the **Who We Are stats** (500+ businesses, 10K+ vehicles, 99.9% uptime) once the numbers are real; it's commented out in `index.html`.
+- [ ] **Business hours** in Contact (also commented out in `index.html`).
+- [ ] Analytics (privacy-friendly) to see which roles and plans visitors look at.
+- [ ] Rename the repository from `pos-vehicles-site` to match the brand (e.g. `carventory-web`).
+
+### Known limitations
+- The Figma MCP connection is on the **Starter plan** and hits its call limit quickly. The App Icon was rebuilt by hand from the exported logo mark.
+- "Get started" on the Pricing tab goes to the contact form. There's no online sign-up or payment yet.

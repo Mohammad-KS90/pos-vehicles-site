@@ -12,18 +12,20 @@
     <meta name="theme-color" content="#0A0A0B">
     <link rel="preload" href="assets/fonts/Inter-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Bump ?v= on both lines after every change so browsers fetch fresh files -->
-    <link rel="stylesheet" href="style.css?v=2026-11-19.5">
+    <link rel="stylesheet" href="style.css?v=2026-11-19.8">
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"
             integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS"
             crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcNOmssAAAAABUy0Xzt9B5LGY8xFxnw1aJ-PfeY"></script>
-    <script src="script.js?v=2026-11-19.5"></script>
+    <script src="script.js?v=2026-11-19.8"></script>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="./assets/logo-mark-light.svg" class="logo" width="96" height="96" alt="Carventory logo">
+            <a class="logo-link" href="./" target="_blank" rel="noopener" aria-label="Carventory (opens in a new tab)">
+                <img src="./assets/logo-mark-light.svg" class="logo" width="96" height="96" alt="Carventory logo">
+            </a>
             <div class="logo-text">
                 <h1 data-i18n="title">Carventory - Vehicle Passport</h1>
                 <p class="tagline" data-i18n="header_tagline">
@@ -87,17 +89,23 @@
                 <h3 data-i18n="mobile_apps_title">Mobile Applications</h3>
 
                 <div class="app-item">
-                    <div class="app-title" data-i18n="app_ios_title">iOS App</div>
-                    <p class="app-description" data-i18n="app_ios_desc">
-                        Modern, fast, responsive native app experience.
-                    </p>
+                    <img src="assets/app-icon.svg" class="app-icon" width="64" height="64" alt="">
+                    <div class="app-text">
+                        <div class="app-title" data-i18n="app_ios_title">iOS App</div>
+                        <p class="app-description" data-i18n="app_ios_desc">
+                            Modern, fast, responsive native app experience.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="app-item">
-                    <div class="app-title" data-i18n="app_android_title">Android App</div>
-                    <p class="app-description" data-i18n="app_android_desc">
-                        Single codebase powering Android and server models.
-                    </p>
+                    <img src="assets/app-icon.svg" class="app-icon" width="64" height="64" alt="">
+                    <div class="app-text">
+                        <div class="app-title" data-i18n="app_android_title">Android App</div>
+                        <p class="app-description" data-i18n="app_android_desc">
+                            Single codebase powering Android and server models.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,8 +118,14 @@
                 <div class="contact-info">
                     <h3 data-i18n="contact_get_in_touch">Get in Touch</h3>
                     <!-- it should be comapny name -->
-                    <div class="contact-item"><strong data-i18n="contact_phone_label">Phone:</strong> +962 7889 49581 </div>
-                    <div class="contact-item"><strong data-i18n="contact_address_label">Address:</strong> Amman - Jordan </div>
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="contact_phone_label">Phone</span>
+                        <a class="contact-value" href="tel:+962788949581" dir="ltr">+962 7889 49581</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="contact_address_label">Address</span>
+                        <span class="contact-value" data-i18n="contact_address_value">Amman, Jordan</span>
+                    </div>
                     <!-- <div class="contact-item"><strong data-i18n="contact_hours_label">Business Hours:</strong> Mon-Fri 9AM-6PM</div> -->
                 </div>
 

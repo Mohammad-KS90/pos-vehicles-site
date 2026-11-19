@@ -26,6 +26,9 @@
 
     "contact_title": "문의하기",
     "contact_get_in_touch": "연락하기",
+    "contact_phone_label": "전화",
+    "contact_address_label": "주소",
+    "contact_address_value": "요르단 암만",
     "contact_form_title": "메시지 보내기",
     "contact_name_label": "이름",
     "contact_email_label": "이메일",

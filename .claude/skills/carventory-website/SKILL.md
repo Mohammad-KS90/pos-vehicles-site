@@ -28,6 +28,7 @@ The public site for **Carventory – Vehicle Passport**. It's plain HTML, CSS an
 | Logo | `assets/logo-mark-light.svg` / `logo-mark-dark.svg` (swapped by `applyTheme` in `script.js`) |
 | Tab icon / home-screen icon | `assets/app-icon.svg`, `favicon-32.png`, `apple-touch-icon.png` |
 | Contact form sending | EmailJS and reCAPTCHA settings at the top of `script.js` |
+| Vehicle type pages (`/vehicles/<type>/`) | Description text: `vehicle_<type>_desc` in all 11 language files (plus the English fallback in `vehicles/<type>/index.html`). Language/theme: `vehicle.js` |
 | Privacy Policy / Terms | **Not here.** Edit the drafts in the app repo, then run `tools/sync_legal.py` (see "Legal pages") |
 
 Languages: `ar en fr hi id ja ko th tr vi zh`. Arabic is right-to-left and is the main market.

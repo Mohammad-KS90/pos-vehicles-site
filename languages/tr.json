@@ -94,6 +94,12 @@
     "vehicle_bus": "Otobüsler",
     "vehicle_motorcycle": "Motosikletler",
     "vehicle_all": "Tüm Türler",
+    "vehicle_car_desc": "Her binek otomobile dijital bir pasaport verin: VIN'i çözün, fotoğrafları ve ruhsat görsellerini saklayın, tüm bakım ve parça geçmişini tek yerden takip edin.",
+    "vehicle_truck_desc": "Hafif ve ağır kamyonları yolda tutun: takip edilen bakım, her kamyona uygun parça stoku ve filonuz için ruhsat ve kilometre kayıtları.",
+    "vehicle_bus_desc": "Otobüs ve minibüsleri planlı bakım, servis merkezi randevuları ve her aracı izleyen eksiksiz bir geçmişle yönetin.",
+    "vehicle_motorcycle_desc": "Motosiklet ve scooterları otomobiller gibi takip edin: VIN bilgileri, bakım kayıtları ve stoğunuzdaki doğru yedek parçalar.",
+    "vehicle_all_desc": "Sahip olduğunuz, sattığınız, onardığınız veya çektiğiniz her araç için tek platform. Türü ne olursa olsun, Carventory kaydını eksiksiz ve kolay bulunur tutar.",
+    "vehicle_back": "Ana sayfaya dön",
 
     "pricing_title": "Fiyatlandırma",
     "pricing_subtitle": "Araç yolculuğunun her aşaması için basit aylık planlar.",

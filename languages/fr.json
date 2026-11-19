@@ -94,6 +94,12 @@
     "vehicle_bus": "Bus",
     "vehicle_motorcycle": "Motos",
     "vehicle_all": "Tous types",
+    "vehicle_car_desc": "Donnez à chaque voiture un passeport numérique : décodez le VIN, conservez photos et images du permis, et suivez tout l'historique d'entretien et de pièces au même endroit.",
+    "vehicle_truck_desc": "Gardez vos camions légers et lourds sur la route grâce au suivi de l'entretien, à un stock de pièces adapté à chaque camion et aux registres de permis et de kilométrage de votre flotte.",
+    "vehicle_bus_desc": "Gérez bus et minibus avec un entretien planifié, des réservations en centre de service et un historique complet qui suit chaque véhicule.",
+    "vehicle_motorcycle_desc": "Suivez motos et scooters comme les voitures : détails du VIN, historique d'entretien et les bonnes pièces de votre stock.",
+    "vehicle_all_desc": "Une seule plateforme pour chaque véhicule que vous possédez, vendez, réparez ou remorquez. Quel que soit le type, Carventory garde son dossier complet et facile à retrouver.",
+    "vehicle_back": "Retour à l'accueil",
 
     "pricing_title": "Tarifs",
     "pricing_subtitle": "Des forfaits mensuels simples pour chaque étape de la vie du véhicule.",

@@ -94,6 +94,12 @@
     "vehicle_bus": "Buses",
     "vehicle_motorcycle": "Motorcycles",
     "vehicle_all": "All Types",
+    "vehicle_car_desc": "Give every passenger car a digital passport: decode the VIN, keep photos and licence images, and track its full service and parts history in one place.",
+    "vehicle_truck_desc": "Keep light and heavy trucks on the road with tracked maintenance, parts stock matched to each truck, and licence and odometer records for your fleet.",
+    "vehicle_bus_desc": "Manage buses and minibuses with scheduled maintenance, service center bookings and a complete history that follows each vehicle.",
+    "vehicle_motorcycle_desc": "Track motorcycles and scooters the same way as cars: VIN details, service records and the right spare parts from your inventory.",
+    "vehicle_all_desc": "One platform for every vehicle you own, sell, repair or tow. Whatever the type, Carventory keeps its record complete and easy to find.",
+    "vehicle_back": "Back to home",
 
     "pricing_title": "Pricing",
     "pricing_subtitle": "Simple monthly plans for every part of the vehicle journey.",

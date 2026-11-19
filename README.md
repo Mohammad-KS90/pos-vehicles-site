@@ -40,6 +40,12 @@ pos-vehicles-site/
 └── CNAME              # Domain configuration
 ```
 
+## Publishing Changes
+
+GitHub Pages lets browsers keep a saved copy of each file for up to 10 minutes, so visitors can see a mix of old and new files after a deploy.
+To avoid that, **bump the `?v=` date in `index.html`** (on both the `style.css` and `script.js` lines) whenever you change
+`style.css`, `script.js` or any file in `languages/`. The script reuses that version for the language files automatically.
+
 ## Adding a New Language
 
 ### Step 1: Create a New Language File

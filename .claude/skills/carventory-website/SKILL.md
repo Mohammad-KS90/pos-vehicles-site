@@ -1,6 +1,6 @@
 ---
 name: carventory-website
-description: How to change the Carventory – Vehicle Passport marketing website (www.carventory.co) in this repo - text and translations in 11 languages, pricing plans, design tokens from the Carventory Figma system, tabs and sections, contact form, cache-busting version, tests and PR flow. Use for any edit to index.html, style.css, script.js, pricing.json, languages/*.json or assets/, and for questions about how the site works.
+description: How to change the Carventory – Vehicle Passport marketing website (www.carventory.co) in this repo - text and translations in 11 languages, pricing plans, legal pages (privacy, terms) synced from the app repo, design tokens from the Carventory Figma system, tabs and sections, contact form, cache-busting version, tests and PR flow. Use for any edit to index.html, style.css, script.js, legal.js, pricing.json, languages/*.json, privacy/, terms/ or assets/, and for questions about how the site works.
 ---
 
 # Carventory website
@@ -13,7 +13,7 @@ The public site for **Carventory – Vehicle Passport**. It's plain HTML, CSS an
 2. Make the change following the rules below.
 3. **Bump the asset version** if you touched `style.css`, `script.js`, `pricing.json` or any `languages/*.json`:
    `python3 -I .claude/skills/carventory-website/scripts/bump_version.py`
-4. **Run the checks:** `python3 -I .claude/skills/carventory-website/scripts/check_site.py` (no dependencies) and, on Node 20+, `npm test`.
+4. **Run the checks:** `python3 -I .claude/skills/carventory-website/scripts/check_site.py` (no dependencies; required). `npm test` (Playwright, Node 20+) is an optional extra, not part of publishing.
 5. **Look at it in a browser:** `python3 -m http.server 8765`, then open http://localhost:8765/. Check English, **Arabic (RTL)**, **375px phone width**, and **dark mode**.
 6. Commit with a message that says what and why, push, and open a PR against `main`. Update `docs/PROJECT_STATUS.md` when the state, prices, version or to-dos change.
 
@@ -28,6 +28,7 @@ The public site for **Carventory – Vehicle Passport**. It's plain HTML, CSS an
 | Logo | `assets/logo-mark-light.svg` / `logo-mark-dark.svg` (swapped by `applyTheme` in `script.js`) |
 | Tab icon / home-screen icon | `assets/app-icon.svg`, `favicon-32.png`, `apple-touch-icon.png` |
 | Contact form sending | EmailJS and reCAPTCHA settings at the top of `script.js` |
+| Privacy Policy / Terms | **Not here.** Edit the drafts in the app repo, then run `tools/sync_legal.py` (see "Legal pages") |
 
 Languages: `ar en fr hi id ja ko th tr vi zh`. Arabic is right-to-left and is the main market.
 Roles: `autoparts` (main revenue product), `towing`, `servicecenter` (B2B, with `basic|pro|enterprise` tiers) and `owner` (B2C, free).
@@ -75,9 +76,37 @@ Roles: `autoparts` (main revenue product), `towing`, `servicecenter` (B2B, with 
 ### Cache-busting
 GitHub Pages sends `max-age=600`. `index.html` loads `style.css?v=…` and `script.js?v=…`, and the script reuses the same `v` for language files and `pricing.json`. **One value, bumped on every content change.** Otherwise visitors see a mix of old and new files for up to 10 minutes after a deploy.
 
+## Legal pages
+
+| Page | Source draft (EN + `.ar.md`) |
+|---|---|
+| `privacy/index.html` → `/privacy/` | `PRIVACY_POLICY.md` |
+| `terms/index.html` → `/terms/` (car owners) | `TERMS_OF_USE.md` |
+| `terms/business/index.html` → `/terms/business/` | `TERMS_OF_SERVICE.md` |
+
+- **The drafts are the source of truth.** They live in the private app repo (`vehiclepos`, `docs/Carventory_doc/06_Legal/`) and the site copy must match them word for word. **Never hand-edit** the generated pages or `legal/manifest.json`.
+- **To update:** `python3 -I tools/sync_legal.py` (from GitHub with your `gh` login, `--ref <branch|sha>` optional) or `--from-dir <local 06_Legal folder>`. Then run `check_site.py` and open a PR. The script reuses the current `?v=` from `index.html`.
+- **The converter** supports only what the drafts use: `#`/`##`/`###`, paragraphs (wrapped lines are joined), `-` lists with 2-space nesting, `|` tables, `>` notice, `**bold**`, `` `code` ``, and links between the three `.md` files (rewritten to the page URLs, keeping `?lang=ar`). If a draft starts using something else, extend `markdown_to_html()` and check the output.
+- **One page per document holds both languages** (`<article data-lang-part="en|ar">`). `legal.js` shows one: `?lang=en|ar` wins, otherwise the site's saved `app_lang` (`ar` → Arabic, anything else → English).
+- **While a draft has `[OWNER TO FILL]`, `[LAWYER]` or "DRAFT",** its page gets `noindex`, the manifest says `"status": "draft"`, and **`check_site.py` fails if `index.html` links to it**.
+- **Go-live, once the drafts are final:**
+  1. sync
+  2. add footer links "Privacy Policy · Terms of Use · Terms for Businesses" (new keys in all 11 languages; link with `?lang=ar` only from Arabic, the rest English)
+  3. bump `?v=`
+  4. open a PR
+- **Mobile apps** open `https://www.carventory.co/privacy/?lang=ar|en`, `/terms/` and `/terms/business/` in an in-app browser, and may read `/legal/manifest.json` (`version`, `status`, `last_updated` per document) to ask users to review a new version. Use the same privacy URL in App Store Connect and Google Play.
+- Use the trailing slash (`/privacy/`): GitHub Pages redirects `/privacy` to it.
+
 ## Testing
 
-- `scripts/check_site.py` checks, with no dependencies: identical keys across languages, no empty strings, every `data-i18n` key exists, `pricing.json` is complete with no `null`, no `TODO` in feature lists, both `?v=` values match, and there are no huge negative offsets in CSS.
+- `scripts/check_site.py` checks, with no dependencies:
+  - identical keys across languages, with no empty strings
+  - every `data-i18n` key exists
+  - `pricing.json` is complete, with no `null`, and no `TODO` in feature lists
+  - `?v=` is the same on every page
+  - there are no huge negative offsets in CSS
+  - the legal pages are bilingual, and no draft is linked from the site
+- `scripts/bump_version.py` never moves the version backwards: an older value may still be cached by browsers, and a teammate's clock may differ.
 - `npm test` runs the Playwright suites (`tests/*.test.js`). It **needs Node 20+**. Each test starts its own static server and stubs EmailJS and reCAPTCHA. `pricing.test.js` serves sample prices for the UI tests and also checks the real data.
 - Add a regression test for every bug you fix (see the Arabic "Get started" width test).
 

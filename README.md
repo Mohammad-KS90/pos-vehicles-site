@@ -1,7 +1,7 @@
 
-# Vehicle Passport - Website
+# Carventory - Vehicle Passport
 
-A responsive website for Vehicle Passport, featuring multi-language support and dark/light mode toggle. The design follows the Carventory Brand & Design System in Figma.
+A responsive website for Carventory - Vehicle Passport, featuring multi-language support and dark/light mode toggle. The design follows the Carventory Brand & Design System in Figma.
 
 ## Quick Start
 
@@ -109,4 +109,4 @@ npm test
 
 ## About
 
-This web page represents our startup company's Vehicle Passport platform, designed for managing vehicles, sales, workshop jobs, and inventory from one unified platform. 
+This web page represents Vehicle Passport, the platform from our startup company Carventory, designed for managing vehicles, sales, workshop jobs, and inventory from one unified platform. 

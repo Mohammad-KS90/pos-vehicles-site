@@ -19,7 +19,7 @@ const EXPECTED = [
   { key: 'vehicle_all', alt: 'All Types' },
 ];
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
-  '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg' };
+  '.json': 'application/json', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
 
 let server, browser, baseUrl, origin;
 
@@ -150,64 +150,52 @@ test('section fits a phone screen without horizontal scrolling', async () => {
   }
 });
 
-/* ---------------- Icon set rules ---------------- */
+/* ---------------- Image set rules ---------------- */
 
-test('all icons use one format (SVG) so they stay sharp and match', async () => {
+// Every local file named in an <img> src/srcset, relative to the site root
+const imageFiles = img => [img.src, ...(img.srcset || '').split(',').map(c => c.trim().split(/\s+/)[0])]
+  .filter(Boolean).map(u => u.replace(/^\//, ''));
+
+test('all vehicle images are WebP 3D renders with a 1x and 2x size', async () => {
   const { page, close } = await openPage();
   try {
-    for (const c of await cardInfo(page)) assert.match(c.src, /\.svg$/, `${c.src} is not SVG`);
-  } finally { await close(); }
-});
-
-test('each icon file is small (under 10 KB)', async () => {
-  const { page, close } = await openPage();
-  try {
-    for (const c of await cardInfo(page)) {
-      const kb = fs.statSync(path.join(ROOT, c.src)).size / 1024;
-      assert.ok(kb < 10, `${c.src} is ${kb.toFixed(1)} KB`);
+    const imgs = await page.$$eval('.vehicle-card img', is => is.map(i => ({
+      src: i.getAttribute('src'), srcset: i.getAttribute('srcset') })));
+    for (const img of imgs) {
+      const files = imageFiles(img);
+      assert.ok(files.length >= 3, `${img.src} has no srcset`);
+      for (const f of files) {
+        assert.match(f, /^assets\/vehicles\/[a-z]+-\d+\.webp$/, `${f} is not a vehicle WebP`);
+        assert.ok(fs.existsSync(path.join(ROOT, f)), `${f} is missing`);
+      }
     }
   } finally { await close(); }
 });
 
-// WCAG relative luminance / contrast for "#rrggbb" or [r, g, b]
-function luminance(rgb) {
-  const [r, g, b] = rgb.map(v => {
-    const c = v / 255;
-    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-  });
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-}
-const hexToRgb = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16));
-const contrast = (a, b) => {
-  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
-  return (hi + 0.05) / (lo + 0.05);
-};
+test('card images stay light (1x under 20 KB) and do not shift the layout', async () => {
+  const { page, close } = await openPage();
+  try {
+    const imgs = await page.$$eval('.vehicle-card img', is => is.map(i => ({
+      src: i.getAttribute('src'), w: i.getAttribute('width'), h: i.getAttribute('height'),
+      loading: i.getAttribute('loading') })));
+    for (const img of imgs) {
+      const kb = fs.statSync(path.join(ROOT, img.src)).size / 1024;
+      assert.ok(kb < 20, `${img.src} is ${kb.toFixed(1)} KB`);
+      assert.ok(img.w && img.h, `${img.src} has no width/height`);
+      assert.equal(img.loading, 'lazy', `${img.src} is not lazy-loaded`);
+    }
+  } finally { await close(); }
+});
 
 for (const theme of ['light', 'dark']) {
-  test(`icons have at least 3:1 contrast with their card (${theme} mode)`, async () => {
-    // Icons are drawn in the brand Electric Blue; they must stay readable on
-    // the card surface in both themes (WCAG non-text contrast).
+  test(`renders sit on a white tile so they read in ${theme} mode`, async () => {
     const { page, close } = await openPage({ theme });
     try {
-      const cards = await page.$$eval('.vehicle-card', cs => cs.map(c => ({
-        src: c.querySelector('img').getAttribute('src'),
-        bg: getComputedStyle(c).backgroundColor.match(/\d+/g).slice(0, 3).map(Number),
-      })));
-      for (const c of cards) {
-        const svg = fs.readFileSync(path.join(ROOT, c.src), 'utf8');
-        const stroke = svg.match(/stroke="(#[0-9a-fA-F]{6})"/);
-        assert.ok(stroke, `${c.src} has no hex stroke colour`);
-        const ratio = contrast(hexToRgb(stroke[1]), c.bg);
-        assert.ok(ratio >= 3, `${c.src} contrast ${ratio.toFixed(2)}:1 in ${theme} mode`);
-      }
+      const bgs = await page.$$eval('.vehicle-card img', is => is.map(i => getComputedStyle(i).backgroundColor));
+      for (const bg of bgs) assert.equal(bg, 'rgb(255, 255, 255)');
     } finally { await close(); }
   });
 }
-
-test('"All Types" icon is a picture, not baked-in English text', () => {
-  const svg = fs.readFileSync(path.join(ROOT, 'assets', 'vehicle-all.svg'), 'utf8');
-  assert.doesNotMatch(svg, /<text[\s>]/, 'vehicle-all.svg contains a <text> element');
-});
 
 /* ---------------- Vehicle type pages (vehicles/<type>/) ---------------- */
 

@@ -40,7 +40,8 @@ languages/*.json      All visible text, one file per language (same keys in ever
 assets/
   logo-mark-light.svg / logo-mark-dark.svg   Header logo (swaps with the theme)
   app-icon.svg, favicon-32.png, apple-touch-icon.png   Browser tab and home-screen icon
-  vehicle-*.svg       Supported vehicle type icons (Electric Blue line art)
+  vehicles/<type>-<w>.webp  Supported vehicle type images: 3D renders from Figma, 320/640/960 px
+                      (built by tools/build_vehicle_images.py from "assets/Vehicle 3D/")
   fonts/              Self-hosted Inter and IBM Plex Sans Arabic (OFL licences included)
 tests/
   vehicle-types.test.js   Vehicle types section
@@ -68,7 +69,7 @@ docs/PROJECT_STATUS.md    This file
 5. **Who We Are:** company info and values (a stats block is commented out in `index.html`)
 6. **Our Services:** POS, workshop and mobile service cards, plus "View Pricing" and "Schedule Demo" buttons
 7. **Pricing:** switches for businesses/vehicle owners, role and currency; 3 plan cards. "Get started" opens the contact form with the plan pre-filled in the subject.
-8. **Supported Vehicle Types:** cars, trucks, buses, motorcycles, all types. Each card opens its own page `/vehicles/<type>/` with the icon and a short description (`vehicle_<type>_desc` keys, all 11 languages; `?lang=` works too).
+8. **Supported Vehicle Types:** cars, trucks, buses, motorcycles, all types. Each card opens its own page `/vehicles/<type>/` with its 3D render and a short description (`vehicle_<type>_desc` keys, all 11 languages; `?lang=` works too).
 9. **Footer:** "Carventory – Vehicle Passport is coming soon" and "© {year} Mohammad Khaleel Suliman. All rights reserved."
 10. **Legal pages** (separate pages, **not linked from the site yet**): `/privacy/`, `/terms/` (car owners), `/terms/business/`. English and Arabic on the same page, chosen with `?lang=en|ar` or the language picked on the site.
 
@@ -87,7 +88,8 @@ docs/PROJECT_STATUS.md    This file
 | #20 | Fixed the blank white area in Arabic after "Get started" (hidden form field widened RTL pages) |
 | #21 | Claude skill `.claude/skills/carventory-website/` with `check_site.py` and `bump_version.py` |
 | #22 | **Legal pages** for the website and the mobile apps, generated from the drafts (still draft, unlinked) |
-| *(open)* | **Vehicle type pages**: each Supported Vehicle Types card opens a page with its icon and description |
+| #23 | **Vehicle type pages**: each Supported Vehicle Types card opens a page with its icon and description |
+| *(open)* | **3D vehicle renders** from Figma replace the line icons in Supported Vehicle Types and on the vehicle pages (WebP 320/640/960, "All Types" is a 2x2 grid); the site keeps working when EmailJS/reCAPTCHA are blocked |
 
 ### Current prices (monthly, suggested; see `pricing.json`)
 | | Basic | Pro | Enterprise |

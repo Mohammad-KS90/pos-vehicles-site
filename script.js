@@ -6,16 +6,22 @@ const ASSET_VERSION = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-    initLogoHandling();
-    initTabSystem();
-    initButtonInteractions();
-    initScrollAnimations();
-    initHoverEffects();
-    initFormHandling();
-    initLanguageSwitcher();
-    initThemeToggle();
-    initPricing();
-    initFooterYear();
+    // Each init runs on its own so one failure (e.g. a blocked third-party
+    // script) can't stop the language, theme or pricing from loading.
+    [
+        initLogoHandling,
+        initTabSystem,
+        initButtonInteractions,
+        initScrollAnimations,
+        initHoverEffects,
+        initFormHandling,
+        initLanguageSwitcher,
+        initThemeToggle,
+        initPricing,
+        initFooterYear,
+    ].forEach(init => {
+        try { init(); } catch (err) { console.error(`${init.name} failed:`, err); }
+    });
 });
 
 // Keep the copyright year current
@@ -34,7 +40,28 @@ const SUPPORTED_LANGS = ["ar", "tr", "en", "fr", "zh", "ja", "ko", "id", "th", "
 
 /* ================= RECAPTCHA ================= */
 function executeRecaptcha() {
-    return grecaptcha.execute(recaptcha_key, { action: 'submit' });
+    if (!window.grecaptcha?.execute) {
+        return Promise.reject(new Error('reCAPTCHA did not load'));
+    }
+    return window.grecaptcha.execute(recaptcha_key, { action: 'submit' });
+}
+
+/* ================= EMAILJS ================= */
+// EmailJS and reCAPTCHA load from CDNs that ad/tracker blockers often block,
+// so never assume they exist. Initialise EmailJS on first use.
+let emailjsReady = false;
+function getEmailJS() {
+    const ejs = window.emailjs;
+    if (!ejs?.sendForm) return null;
+    if (!emailjsReady) {
+        ejs.init({
+            publicKey: EMAILJS_PUBLIC_KEY,
+            blockHeadless: true,
+            limitRate: { id: 'contact-form', throttle: 30000 }
+        });
+        emailjsReady = true;
+    }
+    return ejs;
 }
 
 /* ================= TAB SYSTEM ================= */
@@ -137,12 +164,6 @@ function initFormHandling() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    emailjs.init({
-        publicKey: EMAILJS_PUBLIC_KEY,
-        blockHeadless: true,
-        limitRate: { id: 'contact-form', throttle: 30000 }
-    });
-
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
@@ -164,10 +185,13 @@ function initFormHandling() {
         submitBtn.disabled = true;
     
         try {
+            const ejs = getEmailJS();
+            if (!ejs) throw new Error('EmailJS did not load');
+
             const token = await executeRecaptcha();
             document.getElementById('g-recaptcha-response').value = token;
     
-            await emailjs.sendForm(
+            await ejs.sendForm(
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 form

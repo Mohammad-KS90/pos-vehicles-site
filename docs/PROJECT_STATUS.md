@@ -89,7 +89,7 @@ docs/PROJECT_STATUS.md    This file
 | #21 | Claude skill `.claude/skills/carventory-website/` with `check_site.py` and `bump_version.py` |
 | #22 | **Legal pages** for the website and the mobile apps, generated from the drafts (still draft, unlinked) |
 | #23 | **Vehicle type pages**: each Supported Vehicle Types card opens a page with its icon and description |
-| *(open)* | **3D vehicle renders** from Figma replace the line icons in Supported Vehicle Types and on the vehicle pages (WebP 320/640/960, "All Types" is a 2x2 grid) |
+| *(open)* | **3D vehicle renders** from Figma replace the line icons in Supported Vehicle Types and on the vehicle pages (WebP 320/640/960, "All Types" is a 2x2 grid); the site keeps working when EmailJS/reCAPTCHA are blocked |
 
 ### Current prices (monthly, suggested; see `pricing.json`)
 | | Basic | Pro | Enterprise |

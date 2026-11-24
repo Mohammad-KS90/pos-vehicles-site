@@ -41,8 +41,9 @@ assets/
   logo-mark-light.svg / logo-mark-dark.svg   Header logo (swaps with the theme)
   app-icon.svg, favicon-32.png, apple-touch-icon.png   Browser tab and home-screen icon
   vehicles/<type>-<w>.webp  Supported vehicle type images: 3D renders from Figma, 320/640/960 px
-                      (built by tools/build_vehicle_images.py from "assets/Vehicle 3D/")
+                      (built by tools/build_vehicle_images.py from _design/vehicle-3d/)
   fonts/              Self-hosted Inter and IBM Plex Sans Arabic (OFL licences included)
+_design/vehicle-3d/   Figma 3D render sources (PNG). Not published: Jekyll skips "_" folders
 tests/
   vehicle-types.test.js   Vehicle types section
   pricing.test.js         Pricing data, translations and the Pricing tab UI
@@ -89,7 +90,8 @@ docs/PROJECT_STATUS.md    This file
 | #21 | Claude skill `.claude/skills/carventory-website/` with `check_site.py` and `bump_version.py` |
 | #22 | **Legal pages** for the website and the mobile apps, generated from the drafts (still draft, unlinked) |
 | #23 | **Vehicle type pages**: each Supported Vehicle Types card opens a page with its icon and description |
-| *(open)* | **3D vehicle renders** from Figma replace the line icons in Supported Vehicle Types and on the vehicle pages (WebP 320/640/960, "All Types" is a 2x2 grid); the site keeps working when EmailJS/reCAPTCHA are blocked |
+| #24 | **3D vehicle renders** from Figma replace the line icons in Supported Vehicle Types and on the vehicle pages (WebP 320/640/960, "All Types" is a 2x2 grid); the site keeps working when EmailJS/reCAPTCHA are blocked |
+| *(open)* | Moved the 3D render sources to `_design/vehicle-3d/` so GitHub Pages no longer publishes them (36 MB) |
 
 ### Current prices (monthly, suggested; see `pricing.json`)
 | | Basic | Pro | Enterprise |

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the Supported Vehicle Types images from the Figma 3D renders.
 
-Source: assets/Vehicle 3D/<Name> (<slug>)@3x.png  (960x720, black vehicle on white)
+Source: _design/vehicle-3d/<Name> (<slug>)@3x.png  (960x720, black vehicle on white)
 Output: assets/vehicles/<type>-<width>.webp      (4:3, widths below)
 
 "all" has no render of its own, so it is a 2x2 grid of the other four. The
@@ -14,7 +14,8 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "assets" / "Vehicle 3D"
+# Leading "_": GitHub Pages (Jekyll) leaves the folder out of the published site.
+SRC = ROOT / "_design" / "vehicle-3d"
 OUT = ROOT / "assets" / "vehicles"
 WIDTHS = (320, 640, 960)
 QUALITY = 82

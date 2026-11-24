@@ -24,6 +24,7 @@ The public site for **Carventory – Vehicle Passport**. It's plain HTML, CSS an
 | Any visible text | `languages/<lang>.json` (**all 11 files**), plus the English fallback text in `index.html` |
 | Prices | `pricing.json` only: `b2b.<role>.<tier>.{JOD,USD,AED}` |
 | Plan feature lists | `pricing_features` in every language file |
+| Supported Vehicle Types images | `assets/vehicles/<type>-<w>.webp`, generated: `python3 -I tools/build_vehicle_images.py` from the Figma renders in `_design/vehicle-3d/` (edit `SOURCES` to remap a type) |
 | Colours, spacing, radius, type | `--cv-*` tokens at the top of `style.css` |
 | Logo | `assets/logo-mark-light.svg` / `logo-mark-dark.svg` (swapped by `applyTheme` in `script.js`) |
 | Tab icon / home-screen icon | `assets/app-icon.svg`, `favicon-32.png`, `apple-touch-icon.png` |
@@ -113,6 +114,7 @@ GitHub Pages sends `max-age=600`. `index.html` loads `style.css?v=…` and `scri
 
 ## Gotchas
 
+- Everything in the repo is published (Jekyll) except folders starting with `_` or `.`. Keep design sources and other unpublished files in one, like `_design/`.
 - Screenshots right after a tab switch look faded, because of the `fadeInUp` animation. Wait about 1s.
 - The preview browser in the Claude desktop app can't open `target="_blank"` pop-ups. Check the link attributes instead.
 - Visit **http://**localhost:8765, not https. The Python server logs garbled 400 lines for https attempts, and they're harmless.
